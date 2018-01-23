@@ -1,0 +1,315 @@
+@import "config";
+@charset "UTF-8";
+
+section[id^="Box"] {
+  padding-bottom: 15px;
+}
+.media * ,
+.media *:hover {
+  text-decoration: none;
+}
+.media {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+.media:hover {
+  background-color: rgba(100,100,100,.08);
+  border-radius: 4px;
+}
+.media .media-body {
+}
+.media a {
+  display: block;
+}
+.media a .six-content {
+  color: #555;
+}
+.media .six-avatar {
+  padding: 0 6px;
+  margin: 0;
+}
+
+.list-group-item-success {
+  color: #fff;
+  background-color: #37c3c2;
+}
+a.list-group-item-success {
+  color: #fff;
+}
+a.list-group-item-success .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-success:hover,
+a.list-group-item-success:focus {
+  color: #fff;
+  background-color: #5ec7c6;
+}
+a.list-group-item-success.active,
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  color: #fff;
+  background-color: #37c3c2;
+  border-color: #37c3c2;
+}
+
+/*------預設按鈕------*/
+
+.btn.btn-circle {
+    border-radius: 50%;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*------區塊------*/
+
+/*Panel*/
+.panel {
+  background-color: $colorCf;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.175);
+  min-height: 30px;
+  .panel-heading {
+    background-color: transparent;
+    border-bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .panel-footer {
+    background-color: transparent;
+    border-top: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  &.panel-default {
+    .panel-heading {
+      background-color: #eee;
+      border-bottom: 1px dashed $colorC4;
+    }
+    .panel-footer {
+      background-color: #f3f3f3;
+      border-top: 1px dashed $colorC4;
+    }
+  }
+  &.panel-primary {
+    border-color: $colorA3;
+    .panel-heading {
+      background-color: $colorA3;
+      color: #fff;
+    }
+    .panel-footer {
+      background-color: $colorA5;
+    }
+  }
+  &.panel-success {
+    border-color: $colorB2;
+    .panel-heading {
+      background-color: $colorB2;
+      color: #fff;
+    }
+    .panel-footer {
+      background-color: $colorB5;
+    }
+  }
+  &.panel-1020 {
+    width: 100%;
+    max-width: 1020px;
+  }
+  &.panel-950 {
+    width: 100%;
+    max-width: 950px;
+  }
+  &.panel-750 {
+    width: 100%;
+    max-width: 750px;
+  }
+}
+
+/*------上下頁------*/
+
+
+
+
+/*Tabs*/
+.six-tabs {
+  .nav-tabs {
+    border-color: $colorA1;
+    >li {
+      border-bottom: 1px solid $colorA1;
+      >a {
+        background-color: $colorB4;
+        color: $colorA3;
+        &:hover {
+          background-color: $colorB3;
+          color: $colorA1;
+        }
+      }
+      &.active {
+        >a {
+          border-color: transparent;
+          background: $colorA3;
+          color: #fff;
+          &:focus {
+            border-color: transparent;
+            background: $colorA3;
+            color: #fff;
+          }
+          &:hover {
+            border-color: transparent;
+            background-color: $colorA4;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  &.btn-primary {
+    color: #fff;
+    background-color: $colorA5;
+    border-color: transparent;
+    &:hover {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+    &:focus {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+  }
+  &.btn-success {
+    color: #fff;
+    background-color: $colorA5;
+    border-color: transparent;
+    &:hover {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+    &:focus {
+      color: #fff;
+      background-color: $colorA4;
+      border-color: transparent;
+    }
+  }
+  &.btn-info {
+    color: $colorCf;
+    background-color: $colorCa;
+    border-color: transparent;
+    &:hover {
+      color: #fff;
+      background-color: $colorC3;
+      border-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      background-color: $colorC2;
+      border-color: transparent;
+    }
+    &:focus {
+      color: #fff;
+      background-color: $colorC3;
+      border-color: transparent;
+    }
+  }
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+  background-color: rgba(255,255,255,.1);
+  border-radius: 4px;
+}
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+

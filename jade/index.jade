@@ -1,0 +1,272 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
+	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	script.
+		$(document).ready(function () {
+			var owlC = $('#showCarousel');
+			owlC.owlCarousel({
+				animateOut: 'slideOutDown',
+				animateIn: 'flipInX',
+				margin: 0,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				loop: true,
+				items: 1,
+				autoHeight: true,
+				nav: true,
+				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+			})
+			var owlF = $('#farmCarousel');
+			owlF.owlCarousel({
+				animateOut: 'slideOutDown',
+				animateIn: 'flipInX',
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				loop: true,
+				responsive:{
+					0:{
+						items:4,
+						nav:true
+					},
+					600:{
+						items:8,
+						nav:false
+					},
+					1400:{
+						items:12,
+						nav:true
+					}
+				},
+				autoHeight: true,
+				nav: true,
+				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+			})
+		});
+
+block header
+	-var page ="buyer"
+	include ./_header.jade
+
+block content
+	#six-container.main
+		.container-fluid
+			section#carousel
+				#showCarousel.owl-carousel.owl-theme(data-val="1")
+					.owl-item(style="background-image:url('../images/carousel.jpg');" , )
+						a(href='#', title='農莊名稱')
+							.caption 廣告標題
+					.owl-item(style="background-image:url('../images/carousel.jpg');")
+						a(href='#', title='農莊名稱')
+							.caption 廣告標題
+					.owl-item(style="background-image:url('../images/carousel.jpg');")
+						a(href='#', title='農莊名稱')
+							.caption 廣告標題
+					.owl-item(style="background-image:url('../images/carousel.jpg');")
+						a(href='#', title='農莊名稱')
+							.caption 廣告標題
+
+			section#recommendedfarm
+				.panel
+					.panel-heading
+						| 每日推薦農莊
+						.pull-right
+							.btn-group
+
+								button.btn.btn-primary.btn-xs(type='button')
+									| MORE
+					.panel-body
+						.inner
+							#farmCarousel.owl-carousel.owl-theme
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+								.owl-item
+									a(href='#', title='農莊名稱')
+										.pic
+											img(src='../images/formLogo.jpg', alt='農莊名稱')
+										.caption
+											.farmname 農莊名稱
+			section#goodslist
+				.panel
+					.panel-heading
+					.panel-body
+						.inner
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inside
+									figure
+										a(href='#', title='')
+											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.body
+										h4.name
+											a(href='#', title='') 南瓜米胚芽鳳梨酥
+										.price
+											del NT.9999
+											| NT.9999
+										.medal
+											| 1
+										button.btn.btn-info.toLove
+										button.btn.btn-info.toCart
+

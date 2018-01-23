@@ -1,0 +1,663 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
+	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	script.
+		$(document).ready(function () {
+			var owl = $('.owl-carousel');
+			owl.owlCarousel({
+				margin: 0,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				loop: true,
+				items: 1,
+				autoHeight: true,
+				nav: true,
+				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+			})
+		});
+
+block header
+	-var page ="seller"
+	include	./_header.jade
+block content
+	#six-container.item
+		.container-fluid
+			section#itemTitleBox
+				h2.title
+					| 山豬園果子狸咖啡
+				.tolove
+					button.btn.btn-info
+					span (7500 人氣)
+				.subtitle
+					| 以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆
+
+			section#carouselBox
+				.owl-carousel
+					.item
+						img(src='//placehold.it/800x450.png')
+					.item
+						img(src='//placehold.it/800x450.png')
+					.item
+						img(src='//placehold.it/800x450.png')
+					.item
+						img(src='//placehold.it/800x450.png')
+					.item
+						img(src='//placehold.it/800x450.png')
+					.item
+						img(src='//placehold.it/800x450.png')
+
+			section#itemPriceBox
+				.price
+					del 定價 NT.9999
+					span NT.9999
+				.toCart
+					button.btn.btn-primary
+						| 我要購買
+				.reserve
+					span 目前尚有庫存
+
+			section#itemAboutBox
+				.panel
+					.panel-heading
+						| 關於本商品
+					.panel-body
+						.inner
+							| 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+
+			section#itemOwnerBox
+				.panel
+					.panel-heading
+						| 農莊主人
+					.panel-body
+						.inner
+							.pic
+								img(src="../images/owner.jpg")
+							.name 阮勇光
+							.info
+								| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
+							.clear
+			section#itemNutrientBox
+				.panel
+					.panel-heading
+						| 營養成分
+					.panel-body
+						.inner
+							ul
+								li
+									span 每一份量
+									| 200 公克(或毫升)
+								li
+									span 本包裝含
+									| 1 份
+							img(src="../images/nutrientcontent.png")
+			section#itemCertificateBox
+				.panel
+					.panel-heading
+						| 認證標章
+					.panel-body
+						.inner
+							ul
+								li
+									img(src="../images/certificate1.jpg")
+								li
+									img(src="../images/certificate2.jpg")
+			section#itemSeasonBox
+				.panel
+					.panel-heading
+						| 商品產季
+					.panel-body
+						.inner
+							| 每年11月至隔年4月
+			section#itemStorageBox
+				.panel
+					.panel-heading
+						| 保存方式
+					.panel-body
+						.inner
+							| 常溫保存3個月
+			section#itemPlantingAreaBox
+				.panel
+					.panel-heading
+						| 栽種面積
+					.panel-body
+						.inner
+							| 3公頃
+			section#itemRecipeBox
+				.panel
+					.panel-heading
+						| 烹調食譜
+					.panel-body
+						.inner
+							.items
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+								.item
+									a(href='#', title='食譜名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 食譜名稱
+			section#itemAddressBox
+				.panel
+					.panel-heading
+						| 產地位置
+					.panel-body
+						.inner
+							.add 台東縣卑南鄉龍過脈112號
+							.map
+								iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0523471663555!2d121.09390545154055!3d22.874524584954656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fbab570a366db%3A0x8f4da6cb310cc84c!2z5bGx6LGs5ZySLyDmnpzlrZDni7jlkpbllaE!5e0!3m2!1szh-TW!2stw!4v1516564425316" width="800" height="400" frameborder="0" style="border:0" allowfullscreen)
+			section#itemShippingInfoBox
+				.panel
+					.panel-heading
+						| 到貨時間說明
+					.panel-body
+						.inner
+							| 每年11月至隔年4月
+			section#itemDeliveryMethodBox
+				.panel
+					.panel-heading
+						| 運送方式
+					.panel-body
+						.inner
+							| 常溫配送
+			section#itemDiscountPortfolioBox
+				.panel
+					.panel-heading
+						| 超值組合
+					.panel-body
+						.inner
+							.items
+								.item
+									img(src='//placehold.it/300x300.png')
+									h4 組合名稱
+								.item
+									img(src='//placehold.it/300x300.png')
+									h4 組合名稱
+								.item
+									img(src='//placehold.it/300x300.png')
+									h4 組合名稱
+							.btnBox
+								button.btn.btn-primary
+									| 商品組合包   共 $750
+			section#itemRelatedBox
+				.panel
+					.panel-heading
+						| 經常一起購買的商品
+					.panel-body
+						.inner
+							.items
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999起
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+			section#itemOrderRelatedBox
+				.panel
+					.panel-heading
+						| 其他相關商品
+					.panel-body
+						.inner
+							.items
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999起
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+			section#itemQABox
+				.panel
+					.panel-heading
+						| 買家提問
+					.panel-body
+						.inner
+							.input-group
+								input.form-control(type='text', placeholder='搜尋問題')
+								span.input-group-btn
+									button.btn.btn-default(type='button')
+										i.fa.fa-search
+							ul.list-unstyled
+								li.media
+									.media-body
+										.question
+											| 這款咖啡可以每天吃嗎?
+										.answer
+											| 果子狸咖啡的咖啡因含量低，喝了不會造成心悸。
+										.author
+											.name 安娜
+											.date 六個月前
+										a(href="#")
+								li.media
+									.media-body
+										.question
+											| 這款咖啡可以每天吃嗎?
+										.answer
+											| 果子狸咖啡的咖啡因含量低，喝了不會造成心悸。
+										.author
+											.name 安娜
+											.date 六個月前
+										a(href="#")
+								li.media
+									.media-body
+										.question
+											| 這款咖啡可以每天吃嗎?
+										.answer
+											| 果子狸咖啡的咖啡因含量低，喝了不會造成心悸。
+										.author
+											.name 安娜
+											.date 六個月前
+										a(href="#")
+								li.media
+									.media-body
+										.question
+											| 這款咖啡可以每天吃嗎?
+										.answer
+											| 果子狸咖啡的咖啡因含量低，喝了不會造成心悸。
+										.author
+											.name 安娜
+											.date 六個月前
+										a(href="#")
+			section#itemFeedbackBox
+				.panel
+					.panel-heading
+						| 買家評論
+					.panel-body
+						.inner
+							ul.list-unstyled
+								li.media
+									.media-body
+										.title
+											| 商品品質很好!
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+										.comment
+											| 老闆人很好，產品本身品質很優，推薦!?
+											img(src='//placehold.it/300x300.png')
+											img(src='//placehold.it/300x300.png')
+										.author
+											.name 安娜
+											.date 六個月前
+								li.media
+									.media-body
+										.title
+											| 商品品質很好!?
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+										.comment
+											| 老闆人很好，產品本身品質很優，推薦!?
+										.author
+											.name 安娜
+											.date 六個月前
+								li.media
+									.media-body
+										.title
+											| 商品品質很好!?
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+										.comment
+											| 老闆人很好，產品本身品質很優，推薦!?
+										.author
+											.name 安娜
+											.date 六個月前
+								li.media
+									.media-body
+										.title
+											| 商品品質很好!?
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+										.comment
+											| 老闆人很好，產品本身品質很優，推薦!?
+										.author
+											.name 安娜
+											.date 六個月前
+							.btnBox
+								button.btn.btn-primary
+									| 查看全部5個評論
+			section#itemOrderUserBox
+				.panel
+					.panel-heading
+						| 其他的人也看了
+					.panel-body
+						.inner
+							.items
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999起
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999
+								.item
+									a(href='#', title='商品名稱')
+										img(src='//placehold.it/300x300.png')
+										h4 商品名稱
+										.star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											| (9999)
+										.price
+											del $350
+											strong $999

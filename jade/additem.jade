@@ -1,0 +1,27 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
+	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+
+block header
+	-var page ="seller"
+	include	./_header.jade
+
+block content
+	#six-container.item
+		.container-fluid
+			section#itemAboutBox
+				.panel
+					.panel-heading
+						| 關於本商品
+					.panel-body
+						.inner
+							| 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。

@@ -1,0 +1,289 @@
+@import "config";
+@import "mixin";
+
+header#six-header {
+  position: fixed;
+  width: 100%;
+  height: $headSize;
+  min-height: $headSize;
+  border: 0;
+  margin-bottom: 0;
+  z-index: 10;
+  background-color: #febe0e;
+  border-radius: 0;
+  &.seller {
+    background-color: $colorB4;
+  }
+  #six-head {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 190px;
+    padding-right: 220px;
+    line-height: 80px;
+
+    .navbar-brand {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      width: 150px;
+      height: 50px;
+      display: inline-block;
+      padding: 0;
+    }
+
+    form.navbar-form {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      .form-group {
+        width: 100%;
+        position: relative;
+        line-height: normal;
+        input {
+          width:100% !important;
+          height: 33px;
+          background: $colorCc;
+          @include filter-gradient($colorCe, $colorCf , top);
+          border: 1px solid $colorCe;
+          border-radius:15px;
+          padding-right: 208px;
+          &:focus {
+            border: 1px solid $colorE4;
+          }
+        }
+        button {
+          position: absolute;
+          right: 2px;
+          top: 2px;
+          width:70px;
+          height: 29px;
+          background-color: #efaf00;
+          border-radius:15px;
+          padding: 4px 20px !important;
+          &:hover {
+            background-color: #e4a700;
+          }
+        }
+      }
+    }
+
+    ul.six-topNvbar {
+      padding: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      >li {
+        padding: 0 5px;
+        > a {
+          display: inline-block;
+          padding:0;
+          transition:all .3s;
+          text-decoration: none;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          line-height: 40px;
+          text-align: center;
+          background-color: #efaf00;
+          color: $colorZ9;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        &:nth-child(4){
+          a {
+            background-color:transparent;
+          }
+        }
+      }
+    }
+
+    button.navbar-toggle {
+      position: absolute;
+      // background-color: $colorE4;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      span {
+        background-color: $colorCf;
+      }
+      &:hover {
+        background-color: #efaf00;
+      }
+    }
+
+  }
+  @media(max-width: 768px){
+    height: 90px;
+    min-height: 90px;
+    #six-head {
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      line-height: normal;
+
+      .navbar-brand {
+        position: relative;
+        width: 90px;
+        height: 50px;
+        top: 0;
+        left: 50%;
+        margin-left: -45px;
+        display: block;
+        >a {
+          display: block;
+          height: 100%;
+          img {
+            height: 50px;
+          }
+        }
+      }
+      form.navbar-form {
+        position: relative;
+        top: 50px;
+        height: 40px;
+        display: block;
+        .form-group {
+          height: 100%;
+          padding: 0 10px;
+          input {
+            position: absolute;
+            top: 0;
+            width: 92% !important;
+            margin: 0;
+            padding-right: 15px;
+          }
+          button.btn {
+            display: none;
+          }
+        }
+      }
+      .six-topNvbar {
+        top: 0 !important;
+        >li {
+          display: none;
+        }
+        >li:last-child {
+          display: inline-block;
+          >a:before  {
+            background-color: transparent;
+          }
+        }
+      }
+      button.navbar-toggle {
+        margin-left: 13px;
+      }
+    }
+  }
+
+
+  #sidebar-wrapper {
+    position: fixed;
+    margin-right: -250px;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px;
+    background: rgba(255,255,255,.98);
+    overflow-y: auto;
+    z-index: 1000;
+    color: $colorZ2;
+    transition: all 0.5s ease-in 0s;
+    -webkit-transition: all 0.5s ease-in 0s;
+    -moz-transition: all 0.5s ease-in 0s;
+    -ms-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+    
+    
+    figure.six-avatar {
+      width: 100%;
+      display: block;
+      max-height: 228px;
+      padding: 10px;
+      position: relative;
+      text-align: center;
+      img {
+        width: 100%;
+        border-color: transparent;
+      }
+    }
+    .six-userName {
+      text-align: center;
+      width: 100%;
+      text-transform:none;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px dashed rgba($colorZ3, .5);
+      >a:first-child {
+        padding:0;
+        flex:1;
+        color: $colorZ2;
+        height: 40px;
+        line-height: 40px;
+        &:hover {
+          text-decoration: none;
+          color: $colorZ3;
+        }
+      }
+      a.btn {
+        border-radius: 4px;
+        height: 38px;
+        width: 40px;
+        line-height: 38px;
+        padding: 0;
+        background-color: $colorA5 !important;
+        border: 0;
+        &:hover {
+          background-color: $colorA5;
+        }
+      }
+    }
+
+    .six-userNvbar {
+      ul.navbar-nav {
+        margin: 0;
+        li {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 4px 0;
+          // border-top: 1px dashed rgba(255,255,255,.1);
+          a {
+            padding: 8px 0;
+            display: block;
+            color: $colorZ2;
+            border-radius: 4px;
+            text-decoration: none;
+            &:hover {
+              color: $colorZ9;
+              background-color: $colorZ6;
+            }
+          }
+          &:first-child {
+            border-top: 0;
+          }
+        }
+      }
+    }
+    &.active {
+      right: 250px;
+      width: 250px;
+      transition: all 0.5s ease-out 0s;
+      -webkit-transition: all 0.5s ease-out 0s;
+      -moz-transition: all 0.5s ease-out 0s;
+      -ms-transition: all 0.5s ease-out 0s;
+      -o-transition: all 0.5s ease-out 0s;
+    }
+
+    .toggle {
+      margin: 5px 5px 0 0;
+    }
+  }
+}
+
+
+
+
+

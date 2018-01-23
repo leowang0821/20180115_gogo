@@ -1,0 +1,22 @@
+@import "config";
+@import "compass";
+@import "susy";
+@import "bourbon/bourbon";
+@import "breakpoint";
+@import "mixin";
+
+footer#six-footer {
+  position:relative;
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+  height: 30px;
+  box-shadow: 0 0px 40px rgba($colorC0, 0.2);
+  background-color: $colorA5;
+  .six-copyright {
+    border-top: 1px solid rgba($colorCf, .2);
+    text-align: center;
+    padding: 5px;
+  }
+}
+

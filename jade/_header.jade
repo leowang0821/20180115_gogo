@@ -1,0 +1,133 @@
+
+mixin notsigned
+	header.navbar#six-header.notsigned(role='navigation')
+
+mixin buyer
+	header.navbar#six-header.buyer(role='navigation')
+		.navbar-header#six-head
+				.navbar-brand
+					a.page-scroll(href='http://google.com')
+						img(src="../images/logo.svg")
+
+				form.navbar-form
+					.form-group
+						input.form-control(value='Search')
+						button.btn.btn-success(type='submit')
+							span.glyphicon.glyphicon-search
+
+				ul.navbar-nav.six-topNvbar
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-bell-o
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-heart-o
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-shopping-cart
+					li
+						a#menu-toggle(href="#" class="btn btn-primary btn-lg toggle")
+							i.fa.fa-bars
+
+						#sidebar-wrapper
+							.inner
+								figure.six-avatar
+									img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
+								.six-userName
+									a(href='/user-home') 莫孟娜
+									a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
+								.six-userNvbar
+									ul.navbar-nav
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("訊息通知");', title='訊息通知')
+												span 訊息通知
+										li.dropdown
+											a(href='javascript: console.log("商品列表");', title='商品列表')
+												span 商品列表
+										li.dropdown
+											a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
+												span 農莊品牌館
+										li.dropdown
+											a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
+												span 訂單查詢
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("我的最愛");', title='我的最愛')
+												span 我的最愛
+										li.dropdown
+											a(href='javascript: console.log("個人設定");', title='個人設定')
+												span 個人設定
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("購物車");', title='購物車')
+												span 購物車
+										li.dropdown
+											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
+												span 切換成農莊
+
+mixin seller
+	header.navbar#six-header.seller(role='navigation')
+		.navbar-header#six-head
+				.navbar-brand
+					a.page-scroll(href='http://google.com')
+						img(src="../images/logo.svg")
+
+				form.navbar-form
+					.form-group
+						input.form-control(value='Search')
+						button.btn.btn-success(type='submit')
+							span.glyphicon.glyphicon-search
+
+				ul.navbar-nav.six-topNvbar
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-bell-o
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-heart-o
+					li
+						a(href='javascript: void(0);')
+							i.fa.fa-shopping-cart
+					li
+						a#menu-toggle(href="#" class="btn btn-primary btn-lg toggle")
+							i.fa.fa-bars
+
+						#sidebar-wrapper
+							.inner
+								figure.six-avatar
+									img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
+								.six-userName
+									a(href='/user-home') 莫孟娜
+									a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
+								.six-userNvbar
+									ul.navbar-nav
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("訊息通知");', title='訊息通知')
+												span 訊息通知
+										li.dropdown
+											a(href='javascript: console.log("商品列表");', title='商品列表')
+												span 我的商品
+										li.dropdown
+											a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
+												span 農莊品牌館
+										li.dropdown
+											a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
+												span 訂單查詢
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("我的最愛");', title='我的最愛')
+												span 我的最愛
+										li.dropdown
+											a(href='javascript: console.log("個人設定");', title='個人設定')
+												span 個人設定
+										li.dropdown.hidden-md.hidden-lg
+											a(href='javascript: console.log("購物車");', title='購物車')
+												span 購物車
+										li.dropdown
+											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
+												span 切換成農莊
+if page
+	header.header(class=page)
+		+buyer
+else
+	header.header
+		+seller
+
+// *-------------------//--header--------------------------*

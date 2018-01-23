@@ -1,0 +1,157 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
+	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	script.
+		$(document).ready(function() {
+		    var owl = $('.owl-carousel');
+		    owl.owlCarousel({
+		        loop: true,
+		        margin: 0,
+		        nav: false,
+		        dots: false,
+		        items: 1
+		    })
+		    owl.on('translate.owl.carousel', function(e) {
+		        $('.owl-item video').each(function() {
+		            $(this).get(0).pause();
+		        });
+		    });
+		    owl.on('translated.owl.carousel', function(e) {
+		        $('.owl-item.active video').get(0).play();
+		    })
+		    if (!isMobile()) {
+		        $('.owl-item .item').each(function() {
+		            var attr = $(this).attr('data-videosrc');
+		            if (typeof attr !== typeof undefined && attr !== false) {
+		                console.log('hit');
+		                var videosrc = $(this).attr('data-videosrc');
+		                $(this).prepend('<video muted><source src="' + videosrc + '" type="video/mp4"></video>');
+		            }
+		        });
+		        $('.owl-item.active video').attr('autoplay', true).attr('loop', true);
+		    }
+		});
+
+
+		function isMobile(width) {
+		    if (width == undefined) {
+		        width = 719;
+		    }
+		    if (window.innerWidth <= width) {
+		        return true;
+		    } else {
+		        return false;
+		    }
+		}
+
+block content
+	#six-container.item
+		.container-fluid
+			section#carouselBox
+				.owl-carousel
+					.item(data-videosrc='http://vpmdev.com/window.mp4')
+						img(src='//placehold.it/800x600.png')
+					.item
+						img(src='//placehold.it/800x600.png')
+					.item(data-videosrc='http://vpmdev.com/window.mp4')
+						img(src='//placehold.it/800x600.png')
+					.item(data-videosrc='http://vpmdev.com/window.mp4')
+						img(src='//placehold.it/800x600.png')
+					.item
+						img(src='//placehold.it/800x600.png')
+
+			section#topinfo
+				h2.title
+					| 山豬園果子狸咖啡
+				.tolove
+					button.btn.btn-info.btnLove
+					span (7500 人氣)
+				.subtitle
+					| 以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆
+				img(src="../images/goodscarousel.jpg")
+
+			section#priceinfo
+				.price
+					del 定價 NT.9999
+					span NT.9999
+				.toCart
+					button.btn.btn-info.btnCart
+						| 我要購買
+				.reserve
+					span 目前尚有庫存
+
+			section#aboutGoods
+				.panel
+					.panel-heading
+						| 關於本商品
+					.panel-body
+						.inner
+							| 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+
+			section#aboutOwner
+				.panel
+					.panel-heading
+						| 農莊主人
+					.panel-body
+						.inner
+							.pic
+								img(src="../images/owner.jpg")
+							.name 阮勇光
+							.info
+								| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
+							.clear
+			section#nutrient
+				.panel
+					.panel-heading
+						| 營養成分
+					.panel-body
+						.inner
+							ul
+								li
+									span 每一份量
+									| 200 公克(或毫升)
+								li
+									span 本包裝含
+									| 1 份
+							img(src="../images/nutrientcontent.png")
+			section#certificate
+				.panel
+					.panel-heading
+						| 認證標章
+					.panel-body
+						.inner
+							ul
+								li
+									img(src="../images/certificate1.jpg")
+								li
+									img(src="../images/certificate2.jpg")
+			section#season
+				.panel
+					.panel-heading
+						| 商品產季
+					.panel-body
+						.inner
+							| 每年11月至隔年4月
+			section#storage
+				.panel
+					.panel-heading
+						| 保存方式
+					.panel-body
+						.inner
+							| 常溫保存3個月
+			section#plantingArea
+				.panel
+					.panel-heading
+						| 栽種面積
+					.panel-body
+						.inner
+							| 3公頃

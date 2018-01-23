@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link href="../images/favicon.ico" rel="shortcut icon"/>
+    <title>GOGO</title>
+    <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../vendors/animate/animate.min.css" rel="stylesheet"/>
+    <link href="../vendors/sweetalert/dist/sweetalert.css" rel="stylesheet"/>
+    <link href="../vendors/owl-carousel/assets/owl.carousel.css" rel="stylesheet"/>
+    <link href="../vendors/owl-carousel/assets/owl.theme.default.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="header buyer">
+              <header class="navbar buyer" id="six-header" role="navigation">
+                <div class="navbar-header" id="six-head">
+                  <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
+                  <form class="navbar-form">
+                    <div class="form-group">
+                      <input class="form-control" value="Search"/>
+                      <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                  </form>
+                  <ul class="navbar-nav six-topNvbar">
+                    <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
+                    <li><a href="javascript: void(0);"><i class="fa fa-heart-o"></i></a></li>
+                    <li><a href="javascript: void(0);"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
+                      <div id="sidebar-wrapper">
+                        <div class="inner">
+                          <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+                          <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+                          <div class="six-userNvbar">
+                            <ul class="navbar-nav">
+                              <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                              <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>商品列表</span></a></li>
+                              <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>農莊品牌館</span></a></li>
+                              <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>訂單查詢</span></a></li>
+                              <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>我的最愛</span></a></li>
+                              <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>個人設定</span></a></li>
+                              <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;購物車&quot;);" title="購物車"><span>購物車</span></a></li>
+                              <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成農莊</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </header>
+      </header>
+      <!-- *-------------------//--header--------------------------*-->
+      <div class="main" id="six-container">
+        <div class="container-fluid">
+          <section id="carousel">
+            <div class="owl-carousel owl-theme" id="showCarousel" data-val="1">
+              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
+                  <div class="caption">廣告標題</div></a></div>
+              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
+                  <div class="caption">廣告標題</div></a></div>
+              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
+                  <div class="caption">廣告標題</div></a></div>
+              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
+                  <div class="caption">廣告標題</div></a></div>
+            </div>
+          </section>
+          <section id="recommendedfarm">
+            <div class="panel">
+              <div class="panel-heading">每日推薦農莊
+                <div class="pull-right">
+                  <div class="btn-group">
+                    <button class="btn btn-primary btn-xs" type="button">MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="inner">
+                  <div class="owl-carousel owl-theme" id="farmCarousel">
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                    <div class="owl-item"><a href="#" title="農莊名稱">
+                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
+                        <div class="caption">
+                          <div class="farmname">農莊名稱</div>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="goodslist">
+            <div class="panel">
+              <div class="panel-heading"></div>
+              <div class="panel-body">
+                <div class="inner">
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inside">
+                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
+                      <div class="body">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
+                        <div class="price">
+                          <del>NT.9999</del>NT.9999
+                        </div>
+                        <div class="medal">1</div>
+                        <button class="btn btn-info toLove"></button>
+                        <button class="btn btn-info toCart"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!--*----------//content----------*-->
+      <!-- *--------------FOOTER---------------*-->
+      <footer id="six-footer">
+        <div class="container-fluid">
+          <div class="six-copyright">
+            <div class="container">
+              <p>客戶服務專線 0800-080-123</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- *------------//--FOOTER---------------*-->
+    </div>
+  </body>
+  <script src="../vendors/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../vendors/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+    	var owlC = $('#showCarousel');
+    	owlC.owlCarousel({
+    		animateOut: 'slideOutDown',
+    		animateIn: 'flipInX',
+    		margin: 0,
+    		autoplay: true,
+    		autoplayTimeout: 6000,
+    		loop: true,
+    		items: 1,
+    		autoHeight: true,
+    		nav: true,
+    		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+    	})
+    	var owlF = $('#farmCarousel');
+    	owlF.owlCarousel({
+    		animateOut: 'slideOutDown',
+    		animateIn: 'flipInX',
+    		margin: 10,
+    		autoplay: true,
+    		autoplayTimeout: 6000,
+    		loop: true,
+    		responsive:{
+    			0:{
+    				items:4,
+    				nav:true
+    			},
+    			600:{
+    				items:8,
+    				nav:false
+    			},
+    			1400:{
+    				items:12,
+    				nav:true
+    			}
+    		},
+    		autoHeight: true,
+    		nav: true,
+    		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+    	})
+    });
+    
+  </script>
+  <script src="../js/config.js" type="text/javascript"></script>
+</html>
