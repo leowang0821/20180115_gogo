@@ -9,7 +9,7 @@ block append link
 block prepend scripts
 	//- script(src="../js/velocity.min.js")
 block append scripts
-	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
 
 block header
 	-var type ="seller"
@@ -88,9 +88,9 @@ block content
 										|  庫存不足時轉為預購
 										input#inlineCheckbox1(type='checkbox', value='1')
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
-								
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
 				.panel.panel-default
 					.panel-heading(role='tab')
 						h4.panel-title
@@ -99,50 +99,44 @@ block content
 					#step2.panel-collapse.collapse(role='tabpanel')
 						.panel-body
 							section#addItemstep2.formlist
-								.plan
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 商品數量
-										.col-xs-8.col-sm-8.form-group
-											input.form-control.inLine.words-6(type='text')
-											.form-control-static 組
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 原價
-										.col-xs-8.col-sm-8.form-group
-											.form-control-static NT$
-											input.form-control.inLine.words-6(type='text')
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 優惠價
-										.col-xs-8.col-sm-8.form-group
-											.form-control-static NT$
-											input.form-control.inLine.words-6(type='text')
-								.plan
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 商品數量
-										.col-xs-8.col-sm-8.form-group
-											input.form-control.inLine.words-6(type='text')
-											.form-control-static 組
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 原價
-										.col-xs-8.col-sm-8.form-group
-											.form-control-static NT$
-											input.form-control.inLine.words-6(type='text')
-									.row
-										label.col-xs-4.col-sm-4.control-label
-											| 優惠價
-										.col-xs-8.col-sm-8.form-group
-											.form-control-static NT$
-											input.form-control.inLine.words-6(type='text')
+								.plan.row
+									label.col-xs-12.col-sm-12.control-label
+										| 販售方案 1
+										button.btn.btn-close
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 商品數量
+										input.form-control.inLine.words-6(type='text')
+										.form-control-static 組
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 原價
+										.form-control-static NT$
+										input.form-control.inLine.words-6(type='text')
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 優惠價
+										.form-control-static NT$
+										input.form-control.inLine.words-6(type='text')
+								.plan.row
+									label.col-xs-12.col-sm-12.control-label
+										| 販售方案 1
+										button.btn.btn-close
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 商品數量
+										input.form-control.inLine.words-6(type='text')
+										.form-control-static 組
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 原價
+										.form-control-static NT$
+										input.form-control.inLine.words-6(type='text')
+									.col-xs-12.col-sm-12.form-group
+										h4.form-control-static 優惠價
+										.form-control-static NT$
+										input.form-control.inLine.words-6(type='text')
 								.row
 									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 新增販售方案 
+										button.btn.btn-newshoptype 新增販售方案
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 				.panel.panel-default
@@ -167,8 +161,8 @@ block content
 											span
 											input(type='file', name='img-file-input')
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 
@@ -179,78 +173,64 @@ block content
 								| 4.上/下架時間設定
 					#step4.panel-collapse.collapse(role='tabpanel')
 						.panel-body
-							section#addItemstep4.formlist 
-								.timer
-									.row
-										label.col-xs-12.col-sm-12.control-label 預計上架時間
-									.row
-										.col-xs-12.col-sm-12
-											label.radio-inline
-												input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
-												|  立即上架
-									.row
-										.col-xs-12.col-sm-12
-											label.radio-inline
-												input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
-												|  指定時間
-									.row
-										.col-xs-15.col-sm-15
-											select.form-control.inblock
-												option(selected='selected', value='') 年
-												option(value='1') 2018
-										.col-xs-15.col-sm-15
-											select.form-control.inblock
-												option(selected='selected', value='') 月
-												option(value='1') 12
-										.col-xs-15.col-sm-15
-											select.form-control.inblock
-												option(selected='selected', value='') 日
-												option(value='1') 31
-										.col-xs-15.col-sm-15
-											select.form-control.inblock
-												option(selected='selected', value='') 時
-												option(value='1') 23
-										.col-xs-15.col-sm-15
-											select.form-control.inblock
-												option(selected='selected', value='') 分
-												option(value='1') 59
-								.timer
-									.row
-										label.col-xs-12.col-sm-12.control-label 預計下架時間
-									.row
-										.col-xs-12.col-sm-12
-											label.radio-inline
-												input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
-												|  長期販售
-									.row
-										.col-xs-12.col-sm-12
-											label.radio-inline
-												input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
-												|  指定時間
-									.row
-										.col-xs-15.col-sm-15.form-group
-											select.form-control.inblock
-												option(selected='selected', value='') 年
-												option(value='1') 2018
-										.col-xs-15.col-sm-15.form-group
-											select.form-control.inblock
-												option(selected='selected', value='') 月
-												option(value='1') 12
-										.col-xs-15.col-sm-15.form-group
-											select.form-control.inblock
-												option(selected='selected', value='') 日
-												option(value='1') 31
-										.col-xs-15.col-sm-15.form-group
-											select.form-control.inblock
-												option(selected='selected', value='') 時
-												option(value='1') 23
-										.col-xs-15.col-sm-15.form-group
-											select.form-control.inblock
-												option(selected='selected', value='') 分
-												option(value='1') 59
+							section#addItemstep4.formlist
+								.timer.row
+									label.col-xs-12.col-sm-12.control-label
+										| 預計上架時間
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
+											|  立即上架
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
+											|  指定時間
+									.col-xs-12.col-sm-12.input-flex
+										select.form-control
+											option(selected='selected', value='') 年
+											option(value='1') 2018
+										select.form-control
+											option(selected='selected', value='') 月
+											option(value='1') 12
+										select.form-control
+											option(selected='selected', value='') 日
+											option(value='1') 31
+										select.form-control
+											option(selected='selected', value='') 時
+											option(value='1') 23
+										select.form-control
+											option(selected='selected', value='') 分
+											option(value='1') 59
+								.timer.row
+									label.col-xs-12.col-sm-12.control-label
+										| 預計下架時間
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
+											|  長期販售
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
+											|  指定時間
+									.col-xs-12.col-sm-12.input-flex
+										select.form-control
+											option(selected='selected', value='') 年
+											option(value='1') 2018
+										select.form-control
+											option(selected='selected', value='') 月
+											option(value='1') 12
+										select.form-control
+											option(selected='selected', value='') 日
+											option(value='1') 31
+										select.form-control
+											option(selected='selected', value='') 時
+											option(value='1') 23
+										select.form-control
+											option(selected='selected', value='') 分
+											option(value='1') 59
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 				.panel.panel-default
@@ -262,16 +242,16 @@ block content
 						.panel-body
 							section#addItemstep5.formlist
 								.row
-									label.col-xs-12.col-sm-12.control-label
-										| 集貨中心地點
 									.col-xs-12.col-sm-12
-										select.form-control.inLine.words-6
+										label.control-label
+											| 集貨中心地點
+										select.form-control
 											option(selected='selected', value='') 集貨中心地點
 											option(value='1') 集貨中心地點
 								.row
-									label.col-xs-12.col-sm-12.control-label
-										| 運送方式
 									.col-xs-12.col-sm-12
+										label.control-label
+											| 運送方式
 										label.radio-inline
 											input#inlineRadio2(type='radio', name='ship', value='1')
 											|  常溫
@@ -282,9 +262,9 @@ block content
 											input#inlineRadio2(type='radio', name='ship', value='3')
 											|  冷凍
 								.row
-									label.col-xs-12.col-sm-12.control-label
-										| 配送注意事項
 									.col-xs-12.col-sm-12
+										label.control-label
+											| 配送注意事項
 										label.radio-inline
 											input#inlineRadio2(type='radio', name='act', value='1')
 											|  易碎品
@@ -292,9 +272,9 @@ block content
 											input#inlineRadio2(type='radio', name='act', value='2')
 											|  正面朝上
 								.row
-									label.col-xs-12.col-sm-12.control-label
-										| 取貨方式
 									.col-xs-12.col-sm-12
+										label.control-label
+											| 取貨方式
 										label.radio-inline
 											input#inlineRadio2(type='radio', name='tak', value='1')
 											|  宅配到府
@@ -302,8 +282,8 @@ block content
 											input#inlineRadio2(type='radio', name='tak', value='2')
 											|  超商取貨
 								.row
-									label.col-xs-12.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 				.panel.panel-default
@@ -325,8 +305,8 @@ block content
 									.col-xs-12.col-sm-12
 										textarea.form-control(rows='3')
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 				.panel.panel-default
@@ -342,71 +322,62 @@ block content
 										| 營養標示
 									.col-xs-12.col-sm-12
 										.row
-											.col-xs-5.col-sm-5
-												| 標示格式
-											.col-xs-7.col-sm-7.form-group
+											.col-xs-12.col-sm-12.form-group
+												h4.form-control-static 標示格式
 												label.radio-inline
 													input#inlineRadio2(type='radio', name='format', value='1')
 													|  公克
 												label.radio-inline
 													input#inlineRadio2(type='radio', name='format', value='1')
 													|  百分比
-										.row
-											.col-xs-5.col-sm-5
-												| 每一份量
-											.col-xs-7.col-sm-7.form-group
+											.col-xs-12.col-sm-12.form-group
+												h4.form-control-static 每一份量
 												input.form-control.inLine.words-6(type='text')
 												.form-control-static 公克(或毫升)
-										.row
-											.col-xs-5.col-sm-5
-												| 本包裝含
-											.col-xs-7.col-sm-7.form-group
+											.col-xs-12.col-sm-12.form-group
+												h4.form-control-static 本包裝含
 												input.form-control.inLine.words-6(type='text')
 												.form-control-static 份
-
+									.col-xs-12.col-sm-12
 										.nutrientcntent
 											.row
 												.col-xs-4.col-sm-4
-													
-												.col-xs-1.col-sm-1
+
+												.col-xs-3.col-sm-3
 													strong 每份
-												.col-xs-2.col-sm-2
-													
+
 												.col-xs-5.col-sm-5
 													strong 每100公克
 													small (或每100毫升)
 											.row
 												.col-xs-4.col-sm-4
 													span 熱量
-												.col-xs-1.col-sm-1
-													span 0
-												.col-xs-2.col-sm-2
+												.col-xs-3.col-sm-3
+													strong 0
 													span 大卡
 												.col-xs-5.col-sm-5
 													.form-group
-														input.form-control.inLine.words-8(type='text')
+														input.form-control.inLine.words-4(type='text')
 														.form-control-static 大卡
 											.row
 												.col-xs-4.col-sm-4
 													span 熱量
-												.col-xs-1.col-sm-1
-													span 0
-												.col-xs-2.col-sm-2
+												.col-xs-3.col-sm-3
+													strong 0
 													span 大卡
 												.col-xs-5.col-sm-5
 													.form-group
-														input.form-control.inLine.words-8(type='text')
+														input.form-control.inLine.words-4(type='text')
 														.form-control-static 大卡
 											.row
 												.col-xs-4.col-sm-4
-													span 碳水化合物
-												.col-xs-1.col-sm-1
-													span 0
-												.col-xs-2.col-sm-2
+													span 熱量
+												.col-xs-3.col-sm-3
+													strong 0
 													span 大卡
 												.col-xs-5.col-sm-5
 													.form-group
-														input.form-control.inLine.words-8(type='text')
+														input.form-control.inLine.words-4(type='text')
 														.form-control-static 大卡
 								.row
 									label.col-sm-12.control-label
@@ -485,19 +456,19 @@ block content
 									label.col-sm-12.control-label
 										| 保存方式
 									.col-xs-12.col-sm-12.form-group
-										.form-control-static 常溫
+										h4.form-control-static 常溫
 										input.form-control.inLine.words-6(type='text')
 										select.form-control.inLine.words-6
 											option(selected='selected', value='') 公斤
 											option(value='1') 公斤
 									.col-xs-12.col-sm-12.form-group
-										.form-control-static 冷藏
+										h4.form-control-static 冷藏
 										input.form-control.inLine.words-6(type='text')
 										select.form-control.inLine.words-6
 											option(selected='selected', value='') 公斤
 											option(value='1') 公斤
 									.col-xs-12.col-sm-12.form-group
-										.form-control-static 冷凍
+										h4.form-control-static 冷凍
 										input.form-control.inLine.words-6(type='text')
 										select.form-control.inLine.words-6
 											option(selected='selected', value='') 公斤
@@ -549,11 +520,9 @@ block content
 											option(value='1') 烏日區
 									.col-xs-12.col-sm-12
 										input.form-control(type='text')
-
-
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
 
 
 				.panel.panel-default
@@ -568,19 +537,26 @@ block content
 									label.col-sm-12.control-label
 										| 我的標籤
 									.col-xs-12.col-sm-12
-										.tag 有錢不一定買得到
-										.tag 蔬果
-										.tag 蔬果
-										.tag 蔬果
-										.tag 蔬果
-										.tag 蔬果
+										.tag
+											a(href='#', title='有錢不一定買得到') 有錢不一定買得到
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
 								.row
-									label.col-sm-12.control-label
+									label.col-xs-12.col-sm-12.control-label
 										| 新增標籤
-									.col-xs-7.col-sm-7
-										input.form-control(type='text', placeholder="標籤")
-									.col-xs-5.col-sm-5
-										button.btn.btn-sm.btn-success 新增
+									.col-xs-12.col-sm-12.input-group
+										input.form-control(type='text', placeholder='標籤')
+										span.input-group-btn
+											button.btn.btn-default(type='button') 新增
+
 								.row
-									label.col-sm-12.form-group
-										button.btn.btn-sm.btn-success 下一步
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步

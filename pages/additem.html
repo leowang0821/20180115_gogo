@@ -1,773 +1,713 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link href="../images/favicon.ico" rel="shortcut icon" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link href="../images/favicon.ico" rel="shortcut icon"/>
     <title>GOGO</title>
-    <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="../vendors/animate/animate.min.css" rel="stylesheet" />
-    <link href="../vendors/sweetalert/dist/sweetalert.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
-</head>
-
-<body>
+    <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../vendors/animate/animate.min.css" rel="stylesheet"/>
+    <link href="../vendors/sweetalert/dist/sweetalert.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
     <div id="wrapper">
-        <header class="navbar seller additem" id="six-header" role="navigation">
-            <div class="navbar-header" id="six-head">
-                <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
-                <div class="headTitle">
-                    <h2>新增商品</h2>
+      <header class="navbar seller additem" id="six-header" role="navigation">
+        <div class="navbar-header" id="six-head">
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo_seller.svg"/></a></div>
+          <div class="headTitle">
+            <h2>新增商品</h2>
+          </div>
+          <ul class="navbar-nav six-topNvbar">
+            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
+            <li><a href="javascript: void(0);"><i class="fa fa-plus-square-o"></i></a></li>
+            <li><a href="javascript: void(0);"><i class="fa fa-trash-o"> </i></a></li>
+            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
+              <div id="sidebar-wrapper">
+                <div class="inner">
+                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+                  <div class="six-userNvbar">
+                    <ul class="navbar-nav">
+                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
+                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="navbar-nav six-topNvbar">
-                    <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
-                    <li><a href="javascript: void(0);"><i class="fa fa-plus-square-o"></i></a></li>
-                    <li><a href="javascript: void(0);"><i class="fa fa-trash-o"> </i></a></li>
-                    <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
-                        <div id="sidebar-wrapper">
-                            <div class="inner">
-                                <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜" /></figure>
-                                <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
-                                <div class="six-userNvbar">
-                                    <ul class="navbar-nav">
-                                        <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
-                                        <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
-                                        <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
-                                        <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
-                                        <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
-                                        <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
-                                        <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <!-- *-------------------//--header--------------------------*-->
-        <div class="seller additem" id="six-container">
-            <div class="container-fluid">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#step1" aria-expanded="true" aria-controls="step1">1. 重要資訊</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse in" id="step1" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep1">
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">商品名稱</label>
-                                        <div class="col-sm-12">
-                                            <input class="form-control" type="text" aria-label="Amount (to the nearest dollar)" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">商品規格</label>
-                                        <div class="col-sm-12 form-group">
-                                            <div class="form-control-static">1</div>
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">組</option>
-                                                <option value="1">個</option>
-                                            </select>
-                                            <div class="form-control-static">內有</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">組</option>
-                                                <option value="1">個</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">商品庫存量</label>
-                                        <div class="col-sm-12 form-group">
-                                            <input class="form-control inLine words-8" type="text" />
-                                            <div class="form-control-static">組</div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">包裝尺寸<small>40*40*20公分</small></label>
-                                        <div class="col-sm-12 form-group input-flex">
-                                            <select class="form-control">
-                                                <option selected="selected" value="">長度</option>
-                                                <option value="1">40</option>
-                                            </select>
-                                            <select class="form-control">
-                                                <option selected="selected" value="">寬度</option>
-                                                <option value="1">40</option>
-                                            </select>
-                                            <select class="form-control">
-                                                <option selected="selected" value="">高度</option>
-                                                <option value="1">40</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">商品重量</label>
-                                        <div class="col-sm-12 form-group">
-                                            <div class="form-control-static">1</div>
-                                            <div class="form-control-static">組</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">公斤</option>
-                                                <option value="1">公斤</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">課稅別</label>
-                                        <div class="col-sm-12 form-group">
-                                            <select class="form-control">
-                                                <option selected="selected" value="">應稅</option>
-                                                <option value="1">未稅</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label"> 庫存不足時轉為預購
-                                            <input id="inlineCheckbox1" type="checkbox" value="1" />
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step2" aria-expanded="false" aria-controls="step2">2. 設定販售方案</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step2" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep2">
-                                    <div class="plan">
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">商品數量</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <input class="form-control inLine words-6" type="text" />
-                                                <div class="form-control-static">組</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">原價</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <div class="form-control-static">NT$</div>
-                                                <input class="form-control inLine words-6" type="text" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">優惠價</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <div class="form-control-static">NT$</div>
-                                                <input class="form-control inLine words-6" type="text" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="plan">
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">商品數量</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <input class="form-control inLine words-6" type="text" />
-                                                <div class="form-control-static">組</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">原價</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <div class="form-control-static">NT$</div>
-                                                <input class="form-control inLine words-6" type="text" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-xs-4 col-sm-4 control-label">優惠價</label>
-                                            <div class="col-xs-8 col-sm-8 form-group">
-                                                <div class="form-control-static">NT$</div>
-                                                <input class="form-control inLine words-6" type="text" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">新增販售方案 </button>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step3" aria-expanded="false" aria-controls="step3">3.上傳圖片或影片</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step3" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep3">
-                                    <div class="row">
-                                        <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
-                                            <input type="file" name="img-file-input" />
-                                            </span>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
-                                            <input type="file" name="img-file-input" />
-                                            </span>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
-                                            <input type="file" name="img-file-input" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step4" aria-expanded="false" aria-controls="step4">4.上/下架時間設定</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step4" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep4">
-                                    <div class="timer">
-                                        <div class="row">
-                                            <label class="col-xs-12 col-sm-12 control-label">預計上架時間</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12">
-                                                <label class="radio-inline">
-                                                    <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="1" /> 立即上架
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12">
-                                                <label class="radio-inline">
-                                                    <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="2" /> 指定時間
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-15 col-sm-15">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">年</option>
-                                                    <option value="1">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">月</option>
-                                                    <option value="1">12</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">日</option>
-                                                    <option value="1">31</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">時</option>
-                                                    <option value="1">23</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">分</option>
-                                                    <option value="1">59</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timer">
-                                        <div class="row">
-                                            <label class="col-xs-12 col-sm-12 control-label">預計下架時間</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12">
-                                                <label class="radio-inline">
-                                                    <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="1" /> 長期販售
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12">
-                                                <label class="radio-inline">
-                                                    <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="2" /> 指定時間
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-15 col-sm-15 form-group">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">年</option>
-                                                    <option value="1">2018</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15 form-group">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">月</option>
-                                                    <option value="1">12</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15 form-group">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">日</option>
-                                                    <option value="1">31</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15 form-group">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">時</option>
-                                                    <option value="1">23</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-15 col-sm-15 form-group">
-                                                <select class="form-control inblock">
-                                                    <option selected="selected" value="">分</option>
-                                                    <option value="1">59</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step5" aria-expanded="false" aria-controls="step5">5.出貨設定</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step5" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep5">
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">集貨中心地點</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">集貨中心地點</option>
-                                                <option value="1">集貨中心地點</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">運送方式</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="ship" value="1" /> 常溫
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="ship" value="2" /> 冷藏
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="ship" value="3" /> 冷凍
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">配送注意事項</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="act" value="1" /> 易碎品
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="act" value="2" /> 正面朝上
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">取貨方式</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="tak" value="1" /> 宅配到府
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input id="inlineRadio2" type="radio" name="tak" value="2" /> 超商取貨
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step6" aria-expanded="false" aria-controls="step6">6.更多說明</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step6" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep6">
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">商品簡述</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">商品說明</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step7" aria-expanded="false" aria-controls="step7">7.更多資訊</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step7" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep7">
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">營養標示</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <div class="row">
-                                                <div class="col-xs-5 col-sm-5">標示格式</div>
-                                                <div class="col-xs-7 col-sm-7 form-group">
-                                                    <label class="radio-inline">
-                                                        <input id="inlineRadio2" type="radio" name="format" value="1" /> 公克
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input id="inlineRadio2" type="radio" name="format" value="1" /> 百分比
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-5 col-sm-5">每一份量</div>
-                                                <div class="col-xs-7 col-sm-7 form-group">
-                                                    <input class="form-control inLine words-6" type="text" />
-                                                    <div class="form-control-static">公克(或毫升)</div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-5 col-sm-5">本包裝含</div>
-                                                <div class="col-xs-7 col-sm-7 form-group">
-                                                    <input class="form-control inLine words-6" type="text" />
-                                                    <div class="form-control-static">份</div>
-                                                </div>
-                                            </div>
-                                            <div class="nutrientcntent">
-                                                <div class="row">
-                                                    <div class="col-xs-4 col-sm-4"></div>
-                                                    <div class="col-xs-1 col-sm-1"><strong>每份</strong></div>
-                                                    <div class="col-xs-2 col-sm-2"></div>
-                                                    <div class="col-xs-5 col-sm-5"><strong>每100公克</strong><small>(或每100毫升)</small></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
-                                                    <div class="col-xs-1 col-sm-1"><span>0</span></div>
-                                                    <div class="col-xs-2 col-sm-2"><span>大卡</span></div>
-                                                    <div class="col-xs-5 col-sm-5">
-                                                        <div class="form-group">
-                                                            <input class="form-control inLine words-8" type="text" />
-                                                            <div class="form-control-static">大卡</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
-                                                    <div class="col-xs-1 col-sm-1"><span>0</span></div>
-                                                    <div class="col-xs-2 col-sm-2"><span>大卡</span></div>
-                                                    <div class="col-xs-5 col-sm-5">
-                                                        <div class="form-group">
-                                                            <input class="form-control inLine words-8" type="text" />
-                                                            <div class="form-control-static">大卡</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-4 col-sm-4"><span>碳水化合物</span></div>
-                                                    <div class="col-xs-1 col-sm-1"><span>0</span></div>
-                                                    <div class="col-xs-2 col-sm-2"><span>大卡</span></div>
-                                                    <div class="col-xs-5 col-sm-5">
-                                                        <div class="form-group">
-                                                            <input class="form-control inLine words-8" type="text" />
-                                                            <div class="form-control-static">大卡</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">認證標章</label>
-                                        <div class="col-xs-12 col-sm-12 form-group">
-                                            <label class="radio-inline">
-                                                <input type="radio" name="certificate" value="1" /><img src="../images/certificate1.jpg" />
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="certificate" value="2" /><img src="../images/certificate2.jpg" />
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="certificate" value="3" /><img src="../images/certificate1.jpg" />
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="certificate" value="4" /><img src="../images/certificate2.jpg" />
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="certificate" value="5" />食用前建議以清水洗淨產品，以防農藥殘留
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">商品產季</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <div class="row">
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="1" />1
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="2" />2
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="3" />3
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="4" />4
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="5" />5
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="6" />6
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="7" />7
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="8" />8
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="9" />9
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="10" />10
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="11" />11
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-2 col-sm-2 form-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="season" value="12" />12
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">保存方式</label>
-                                        <div class="col-xs-12 col-sm-12 form-group">
-                                            <div class="form-control-static">常溫</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">公斤</option>
-                                                <option value="1">公斤</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 form-group">
-                                            <div class="form-control-static">冷藏</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">公斤</option>
-                                                <option value="1">公斤</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 form-group">
-                                            <div class="form-control-static">冷凍</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">公斤</option>
-                                                <option value="1">公斤</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">栽種面積</label>
-                                        <div class="col-xs-12 col-sm-12 form-group">
-                                            <div class="form-control-static">常溫</div>
-                                            <input class="form-control inLine words-6" type="text" />
-                                            <select class="form-control inLine words-6">
-                                                <option selected="selected" value="">公斤</option>
-                                                <option value="1">公斤</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">烹飪食譜</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <div class="row recipe">
-                                                <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
-                                                    <input type="file" name="img-file-input" />
-                                                    </span>
-                                                </div>
-                                                <div class="col-xs-8 col-sm-8">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-sm-12 form-group">
-                                                            <input class="form-control" type="text" placeholder="食譜名稱" />
-                                                        </div>
-                                                        <div class="col-xs-12 col-sm-12 form-group">
-                                                            <input class="form-control" type="text" placeholder="食譜連結" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row recipe">
-                                                <div class="col-xs-4 col-sm-4"><span class="btn btn-default btn-file img-select-btn"><span></span>
-                                                    <input type="file" name="img-file-input" />
-                                                    </span>
-                                                </div>
-                                                <div class="col-xs-8 col-sm-8">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-sm-12 form-group">
-                                                            <input class="form-control" type="text" placeholder="食譜名稱" />
-                                                        </div>
-                                                        <div class="col-xs-12 col-sm-12 form-group">
-                                                            <input class="form-control" type="text" placeholder="食譜連結" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-xs-12 col-sm-12 control-label">產地位置</label>
-                                        <div class="col-xs-12 col-sm-12 input-group input-flex">
-                                            <select class="form-control">
-                                                <option selected="selected" value="">縣、市</option>
-                                                <option value="1">台中市</option>
-                                            </select>
-                                            <select class="form-control">
-                                                <option selected="selected" value="">區、里</option>
-                                                <option value="1">烏日區</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <input class="form-control" type="text" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step8" aria-expanded="false" aria-controls="step8">8.增加標籤</a></h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="step8" role="tabpanel">
-                            <div class="panel-body">
-                                <section class="formlist" id="addItemstep8">
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">我的標籤</label>
-                                        <div class="col-xs-12 col-sm-12">
-                                            <div class="tag">有錢不一定買得到</div>
-                                            <div class="tag">蔬果</div>
-                                            <div class="tag">蔬果</div>
-                                            <div class="tag">蔬果</div>
-                                            <div class="tag">蔬果</div>
-                                            <div class="tag">蔬果</div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 control-label">新增標籤</label>
-                                        <div class="col-xs-7 col-sm-7">
-                                            <input class="form-control" type="text" placeholder="標籤" />
-                                        </div>
-                                        <div class="col-xs-5 col-sm-5">
-                                            <button class="btn btn-sm btn-success">新增</button>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 form-group">
-                                            <button class="btn btn-sm btn-success">下一步</button>
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <!--*----------//content----------*-->
-        <!-- *--------------FOOTER---------------*-->
-        <footer class="seller" id="six-footer">
-            <div class="container-fluid">
-                <div class="six-copyright">
-                    <div class="container">
-                        <p>客戶服務專線 0800-080-123</p>
+      </header>
+      <!-- *-------------------//--header--------------------------*-->
+      <div class="seller additem" id="six-container">
+        <div class="container-fluid">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#step1" aria-expanded="true" aria-controls="step1">1. 重要資訊</a></h4>
+              </div>
+              <div class="panel-collapse collapse in" id="step1" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep1">
+                    <div class="row">
+                      <label class="col-sm-12 control-label">商品名稱</label>
+                      <div class="col-sm-12">
+                        <input class="form-control" type="text" aria-label="Amount (to the nearest dollar)"/>
+                      </div>
                     </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">商品規格</label>
+                      <div class="col-sm-12 form-group">
+                        <div class="form-control-static">1</div>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">組</option>
+                          <option value="1">個</option>
+                        </select>
+                        <div class="form-control-static">內有</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">組</option>
+                          <option value="1">個</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">商品庫存量</label>
+                      <div class="col-sm-12 form-group">
+                        <input class="form-control inLine words-8" type="text"/>
+                        <div class="form-control-static">組</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">包裝尺寸<small>40*40*20公分</small></label>
+                      <div class="col-sm-12 form-group input-flex">
+                        <select class="form-control">
+                          <option selected="selected" value="">長度</option>
+                          <option value="1">40</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">寬度</option>
+                          <option value="1">40</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">高度</option>
+                          <option value="1">40</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">商品重量</label>
+                      <div class="col-sm-12 form-group">
+                        <div class="form-control-static">1</div>
+                        <div class="form-control-static">組</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">公斤</option>
+                          <option value="1">公斤</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">課稅別</label>
+                      <div class="col-sm-12 form-group">
+                        <select class="form-control">
+                          <option selected="selected" value="">應稅</option>
+                          <option value="1">未稅</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label"> 庫存不足時轉為預購
+                        <input id="inlineCheckbox1" type="checkbox" value="1"/>
+                      </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
                 </div>
+              </div>
             </div>
-        </footer>
-        <!-- *------------//--FOOTER---------------*-->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step2" aria-expanded="false" aria-controls="step2">2. 設定販售方案</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step2" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep2">
+                    <div class="plan row">
+                      <label class="col-xs-12 col-sm-12 control-label">販售方案 1
+                        <button class="btn btn-close"></button>
+                      </label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">商品數量</h4>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <div class="form-control-static">組</div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">原價</h4>
+                        <div class="form-control-static">NT$</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">優惠價</h4>
+                        <div class="form-control-static">NT$</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                      </div>
+                    </div>
+                    <div class="plan row">
+                      <label class="col-xs-12 col-sm-12 control-label">販售方案 1
+                        <button class="btn btn-close"></button>
+                      </label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">商品數量</h4>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <div class="form-control-static">組</div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">原價</h4>
+                        <div class="form-control-static">NT$</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">優惠價</h4>
+                        <div class="form-control-static">NT$</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group">
+                        <button class="btn btn-newshoptype">新增販售方案</button>
+                      </label>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step3" aria-expanded="false" aria-controls="step3">3.上傳圖片或影片</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step3" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep3">
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
+                          <input type="file" name="img-file-input"/></span></div>
+                      <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
+                          <input type="file" name="img-file-input"/></span></div>
+                      <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
+                          <input type="file" name="img-file-input"/></span></div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step4" aria-expanded="false" aria-controls="step4">4.上/下架時間設定</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step4" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep4">
+                    <div class="timer row">
+                      <label class="col-xs-12 col-sm-12 control-label">預計上架時間</label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="1"/> 立即上架
+                        </label>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="2"/> 指定時間
+                        </label>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 input-flex">
+                        <select class="form-control">
+                          <option selected="selected" value="">年</option>
+                          <option value="1">2018</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">月</option>
+                          <option value="1">12</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">日</option>
+                          <option value="1">31</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">時</option>
+                          <option value="1">23</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">分</option>
+                          <option value="1">59</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="timer row">
+                      <label class="col-xs-12 col-sm-12 control-label">預計下架時間</label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="1"/> 長期販售
+                        </label>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="inlineRadioOptions" value="2"/> 指定時間
+                        </label>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 input-flex">
+                        <select class="form-control">
+                          <option selected="selected" value="">年</option>
+                          <option value="1">2018</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">月</option>
+                          <option value="1">12</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">日</option>
+                          <option value="1">31</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">時</option>
+                          <option value="1">23</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">分</option>
+                          <option value="1">59</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step5" aria-expanded="false" aria-controls="step5">5.出貨設定</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step5" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep5">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12">
+                        <label class="control-label">集貨中心地點</label>
+                        <select class="form-control">
+                          <option selected="selected" value="">集貨中心地點</option>
+                          <option value="1">集貨中心地點</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12">
+                        <label class="control-label">運送方式</label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="ship" value="1"/> 常溫
+                        </label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="ship" value="2"/> 冷藏
+                        </label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="ship" value="3"/> 冷凍
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12">
+                        <label class="control-label">配送注意事項</label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="act" value="1"/> 易碎品
+                        </label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="act" value="2"/> 正面朝上
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12">
+                        <label class="control-label">取貨方式</label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="tak" value="1"/> 宅配到府
+                        </label>
+                        <label class="radio-inline">
+                          <input id="inlineRadio2" type="radio" name="tak" value="2"/> 超商取貨
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step6" aria-expanded="false" aria-controls="step6">6.更多說明</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step6" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep6">
+                    <div class="row">
+                      <label class="col-xs-12 col-sm-12 control-label">商品簡述</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-12 col-sm-12 control-label">商品說明</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step7" aria-expanded="false" aria-controls="step7">7.更多資訊</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step7" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep7">
+                    <div class="row">
+                      <label class="col-sm-12 control-label">營養標示</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 form-group">
+                            <h4 class="form-control-static">標示格式</h4>
+                            <label class="radio-inline">
+                              <input id="inlineRadio2" type="radio" name="format" value="1"/> 公克
+                            </label>
+                            <label class="radio-inline">
+                              <input id="inlineRadio2" type="radio" name="format" value="1"/> 百分比
+                            </label>
+                          </div>
+                          <div class="col-xs-12 col-sm-12 form-group">
+                            <h4 class="form-control-static">每一份量</h4>
+                            <input class="form-control inLine words-6" type="text"/>
+                            <div class="form-control-static">公克(或毫升)</div>
+                          </div>
+                          <div class="col-xs-12 col-sm-12 form-group">
+                            <h4 class="form-control-static">本包裝含</h4>
+                            <input class="form-control inLine words-6" type="text"/>
+                            <div class="form-control-static">份</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12">
+                        <div class="nutrientcntent">
+                          <div class="row">
+                            <div class="col-xs-4 col-sm-4"></div>
+                            <div class="col-xs-3 col-sm-3"><strong>每份</strong></div>
+                            <div class="col-xs-5 col-sm-5"><strong>每100公克</strong><small>(或每100毫升)</small></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                            <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                            <div class="col-xs-5 col-sm-5">
+                              <div class="form-group">
+                                <input class="form-control inLine words-4" type="text"/>
+                                <div class="form-control-static">大卡</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                            <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                            <div class="col-xs-5 col-sm-5">
+                              <div class="form-group">
+                                <input class="form-control inLine words-4" type="text"/>
+                                <div class="form-control-static">大卡</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                            <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                            <div class="col-xs-5 col-sm-5">
+                              <div class="form-group">
+                                <input class="form-control inLine words-4" type="text"/>
+                                <div class="form-control-static">大卡</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">認證標章</label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <label class="radio-inline">
+                          <input type="radio" name="certificate" value="1"/><img src="../images/certificate1.jpg"/>
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="certificate" value="2"/><img src="../images/certificate2.jpg"/>
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="certificate" value="3"/><img src="../images/certificate1.jpg"/>
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="certificate" value="4"/><img src="../images/certificate2.jpg"/>
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="certificate" value="5"/>食用前建議以清水洗淨產品，以防農藥殘留
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">商品產季</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <div class="row">
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="1"/>1
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="2"/>2
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="3"/>3
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="4"/>4
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="5"/>5
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="6"/>6
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="7"/>7
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="8"/>8
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="9"/>9
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="10"/>10
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="11"/>11
+                            </label>
+                          </div>
+                          <div class="col-xs-2 col-sm-2 form-group">
+                            <label class="radio-inline">
+                              <input type="radio" name="season" value="12"/>12
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">保存方式</label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">常溫</h4>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">公斤</option>
+                          <option value="1">公斤</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">冷藏</h4>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">公斤</option>
+                          <option value="1">公斤</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <h4 class="form-control-static">冷凍</h4>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">公斤</option>
+                          <option value="1">公斤</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">栽種面積</label>
+                      <div class="col-xs-12 col-sm-12 form-group">
+                        <div class="form-control-static">常溫</div>
+                        <input class="form-control inLine words-6" type="text"/>
+                        <select class="form-control inLine words-6">
+                          <option selected="selected" value="">公斤</option>
+                          <option value="1">公斤</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 control-label">烹飪食譜</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <div class="row recipe">
+                          <div class="col-xs-4 col-sm-4 form-group"><span class="btn btn-default btn-file img-select-btn"><span></span>
+                              <input type="file" name="img-file-input"/></span></div>
+                          <div class="col-xs-8 col-sm-8">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-12 form-group">
+                                <input class="form-control" type="text" placeholder="食譜名稱"/>
+                              </div>
+                              <div class="col-xs-12 col-sm-12 form-group">
+                                <input class="form-control" type="text" placeholder="食譜連結"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row recipe">
+                          <div class="col-xs-4 col-sm-4"><span class="btn btn-default btn-file img-select-btn"><span></span>
+                              <input type="file" name="img-file-input"/></span></div>
+                          <div class="col-xs-8 col-sm-8">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-12 form-group">
+                                <input class="form-control" type="text" placeholder="食譜名稱"/>
+                              </div>
+                              <div class="col-xs-12 col-sm-12 form-group">
+                                <input class="form-control" type="text" placeholder="食譜連結"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-12 col-sm-12 control-label">產地位置</label>
+                      <div class="col-xs-12 col-sm-12 input-group input-flex">
+                        <select class="form-control">
+                          <option selected="selected" value="">縣、市</option>
+                          <option value="1">台中市</option>
+                        </select>
+                        <select class="form-control">
+                          <option selected="selected" value="">區、里</option>
+                          <option value="1">烏日區</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-12 col-sm-12">
+                        <input class="form-control" type="text"/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#step8" aria-expanded="false" aria-controls="step8">8.增加標籤</a></h4>
+              </div>
+              <div class="panel-collapse collapse" id="step8" role="tabpanel">
+                <div class="panel-body">
+                  <section class="formlist" id="addItemstep8">
+                    <div class="row">
+                      <label class="col-sm-12 control-label">我的標籤</label>
+                      <div class="col-xs-12 col-sm-12">
+                        <div class="tag"><a href="#" title="有錢不一定買得到">有錢不一定買得到</a></div>
+                        <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+                        <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+                        <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+                        <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+                        <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-xs-12 col-sm-12 control-label">新增標籤</label>
+                      <div class="col-xs-12 col-sm-12 input-group">
+                        <input class="form-control" type="text" placeholder="標籤"/><span class="input-group-btn">
+                          <button class="btn btn-default" type="button">新增</button></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-12 form-group next">
+                        <button class="btn btn-next">下一步</button>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--*----------//content----------*-->
+      <!-- *--------------FOOTER---------------*-->
+      <footer class="seller" id="six-footer">
+              <div class="container-fluid">
+                <div class="six-copyright">
+                  <div class="container">
+                    <p>客戶服務專線 0800-080-123</p>
+                  </div>
+                </div>
+              </div>
+      </footer>
+      <!-- *------------//--FOOTER---------------*-->
     </div>
-</body>
-<script src="../vendors/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="../vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../vendors/sweetalert/dist/sweetalert.min.js"></script>
-<script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="../js/config.js" type="text/javascript"></script>
-
+  </body>
+  <script src="../vendors/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../vendors/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../js/config.js" type="text/javascript"></script>
 </html>
