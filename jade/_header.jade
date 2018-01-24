@@ -1,8 +1,8 @@
 
-mixin notsigned
+if page==="notsigned"
 	header.navbar#six-header.notsigned(role='navigation')
 
-mixin buyer
+if page==="buyer"
 	header.navbar#six-header.buyer(role='navigation')
 		.navbar-header#six-head
 				.navbar-brand
@@ -63,18 +63,15 @@ mixin buyer
 											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
 												span 切換成農莊
 
-mixin seller
+if page==="seller"
 	header.navbar#six-header.seller(role='navigation')
 		.navbar-header#six-head
 				.navbar-brand
 					a.page-scroll(href='http://google.com')
 						img(src="../images/logo.svg")
 
-				form.navbar-form
-					.form-group
-						input.form-control(value='Search')
-						button.btn.btn-success(type='submit')
-							span.glyphicon.glyphicon-search
+				.headTitle
+					h2 新增商品
 
 				ul.navbar-nav.six-topNvbar
 					li
@@ -82,10 +79,10 @@ mixin seller
 							i.fa.fa-bell-o
 					li
 						a(href='javascript: void(0);')
-							i.fa.fa-heart-o
+							i.fa.fa-plus-square-o
 					li
 						a(href='javascript: void(0);')
-							i.fa.fa-shopping-cart
+							i.fa.fa-trash-o 
 					li
 						a#menu-toggle(href="#" class="btn btn-primary btn-lg toggle")
 							i.fa.fa-bars
@@ -107,27 +104,24 @@ mixin seller
 												span 我的商品
 										li.dropdown
 											a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
-												span 農莊品牌館
+												span 我的商品組合
 										li.dropdown
 											a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
-												span 訂單查詢
+												span 已下架商品
 										li.dropdown.hidden-md.hidden-lg
 											a(href='javascript: console.log("我的最愛");', title='我的最愛')
-												span 我的最愛
+												span 出貨紀錄
 										li.dropdown
 											a(href='javascript: console.log("個人設定");', title='個人設定')
-												span 個人設定
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("購物車");', title='購物車')
-												span 購物車
+												span 農莊介紹
 										li.dropdown
 											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
-												span 切換成農莊
-if page
-	header.header(class=page)
-		+buyer
-else
-	header.header
-		+seller
+												span 切換成買家
+//- if page
+//- 	header.header(class=page)
+//- 		+buyer
+//- else
+//- 	header.header
+//- 		+seller
 
 // *-------------------//--header--------------------------*

@@ -18,5 +18,10 @@ footer#six-footer {
     text-align: center;
     padding: 5px;
   }
+  &.buyer {
+    background-color: $colorA5;
+  }
+  &.seller {
+    background-color: $colorB5;
+  }
 }
-

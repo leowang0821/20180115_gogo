@@ -1,9 +1,17 @@
 
 // *--------------FOOTER---------------*
-footer#six-footer
-  .container-fluid
-    .six-copyright
-      .container
-        p 客戶服務專線 0800-080-123
+mixin footer
+	.container-fluid
+		.six-copyright
+			.container
+				p 客戶服務專線 0800-080-123
+
+
+if page==="seller"
+	footer#six-footer(class=page)
+		+footer
+if page==="buyer"
+	footer#six-footer(class=page)
+		+footer
 
 // *------------//--FOOTER---------------*
