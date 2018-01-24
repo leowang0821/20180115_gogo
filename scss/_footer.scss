@@ -23,5 +23,8 @@ footer#six-footer {
   }
   &.seller {
     background-color: $colorB5;
+    .six-copyright {
+      color: $colorZ9;
+    }
   }
 }

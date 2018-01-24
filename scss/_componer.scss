@@ -1,9 +1,8 @@
 @import "config";
-// @import "compass";
-// @import "susy";
 @import "bourbon/bourbon";
 @import "breakpoint";
 @import "mixin";
+
 section.formlist {
 	.row > label.control-label {
 		padding-left: 8px;
@@ -1413,6 +1412,14 @@ section#itemBeforeLookBox {
 					}
 				}
 			}
+		}
+	}
+}
+
+section#addItemstep7 {
+	label.radio-inline {
+		img {
+			max-width: 26px;
 		}
 	}
 }

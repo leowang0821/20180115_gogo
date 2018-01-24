@@ -16,7 +16,40 @@
   </head>
   <body>
     <div id="wrapper">
-      <div class="item" id="six-container">
+      <header class="navbar seller item" id="six-header" role="navigation">
+        <div class="navbar-header" id="six-head">
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
+          <div class="headTitle">
+            <h2>新增商品</h2>
+          </div>
+          <ul class="navbar-nav six-topNvbar">
+            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
+            <li><a href="javascript: void(0);"><i class="fa fa-plus-square-o"></i></a></li>
+            <li><a href="javascript: void(0);"><i class="fa fa-trash-o"> </i></a></li>
+            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
+              <div id="sidebar-wrapper">
+                <div class="inner">
+                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+                  <div class="six-userNvbar">
+                    <ul class="navbar-nav">
+                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
+                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
+                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- *-------------------//--header--------------------------*-->
+      <div class="seller item" id="six-container">
         <div class="container-fluid">
           <section id="itemTitleBox">
             <h2 class="title">山豬園果子狸咖啡</h2>
@@ -484,14 +517,14 @@
       </div>
       <!--*----------//content----------*-->
       <!-- *--------------FOOTER---------------*-->
-      <footer id="six-footer">
-        <div class="container-fluid">
-          <div class="six-copyright">
-            <div class="container">
-              <p>客戶服務專線 0800-080-123</p>
-            </div>
-          </div>
-        </div>
+      <footer class="seller" id="six-footer">
+              <div class="container-fluid">
+                <div class="six-copyright">
+                  <div class="container">
+                    <p>客戶服務專線 0800-080-123</p>
+                  </div>
+                </div>
+              </div>
       </footer>
       <!-- *------------//--FOOTER---------------*-->
     </div>

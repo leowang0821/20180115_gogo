@@ -1,9 +1,9 @@
 
-if page==="notsigned"
-	header.navbar#six-header.notsigned(role='navigation')
+if type==="notsigned"
+	header.navbar#six-header(class=type)(class=page)(role='navigation')
 
-if page==="buyer"
-	header.navbar#six-header.buyer(role='navigation')
+if type==="buyer"
+	header.navbar#six-header(class=type)(class=page)(role='navigation')
 		.navbar-header#six-head
 				.navbar-brand
 					a.page-scroll(href='http://google.com')
@@ -63,8 +63,8 @@ if page==="buyer"
 											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
 												span 切換成農莊
 
-if page==="seller"
-	header.navbar#six-header.seller(role='navigation')
+if type==="seller"
+	header.navbar#six-header(class=type)(class=page)(role='navigation')
 		.navbar-header#six-head
 				.navbar-brand
 					a.page-scroll(href='http://google.com')

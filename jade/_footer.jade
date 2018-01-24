@@ -7,11 +7,11 @@ mixin footer
 				p 客戶服務專線 0800-080-123
 
 
-if page==="seller"
-	footer#six-footer(class=page)
+if type==="seller"
+	footer#six-footer(class=type)
 		+footer
-if page==="buyer"
-	footer#six-footer(class=page)
+if type==="buyer"
+	footer#six-footer(class=type)
 		+footer
 
 // *------------//--FOOTER---------------*

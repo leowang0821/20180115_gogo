@@ -12,11 +12,12 @@ block append scripts
 	script(src="../vendors/owl-carousel/owl.carousel.min.js")
 
 block header
-	-var page ="seller"
+	-var type ="seller"
+	-var page ="additem"
 	include ./_header.jade
 
 block content
-	#six-container.additem
+	#six-container(class=type)(class=page)
 		.container-fluid
 			#accordion.panel-group(role='tablist', aria-multiselectable='true')
 				.panel.panel-default
@@ -35,7 +36,7 @@ block content
 								.row
 									label.col-sm-12.control-label
 										| 商品規格
-									.col-sm-12
+									.col-sm-12.form-group
 										.form-control-static 1
 										select.form-control.inLine.words-6
 											option(selected='selected', value='') 組
@@ -48,14 +49,14 @@ block content
 								.row
 									label.col-sm-12.control-label
 										| 商品庫存量
-									.col-sm-12
+									.col-sm-12.form-group
 										input.form-control.inLine.words-8(type='text')
 										.form-control-static 組
 								.row
 									label.col-sm-12.control-label
 										| 包裝尺寸
 										small 40*40*20公分
-									.col-sm-12.input-flex
+									.col-sm-12.form-group.input-flex
 										select.form-control
 											option(selected='selected', value='') 長度
 											option(value='1') 40
@@ -68,7 +69,7 @@ block content
 								.row
 									label.col-sm-12.control-label
 										| 商品重量
-									.col-sm-12
+									.col-sm-12.form-group
 										.form-control-static 1
 										.form-control-static 組
 										input.form-control.inLine.words-6(type='text')
@@ -78,8 +79,8 @@ block content
 								.row
 									label.col-sm-12.control-label
 										| 課稅別
-									.col-sm-12
-										select.form-control.inblock
+									.col-sm-12.form-group
+										select.form-control
 											option(selected='selected', value='') 應稅
 											option(value='1') 未稅
 								.row
@@ -102,38 +103,38 @@ block content
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 商品數量
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											input.form-control.inLine.words-6(type='text')
 											.form-control-static 組
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 原價
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											.form-control-static NT$
 											input.form-control.inLine.words-6(type='text')
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 優惠價
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											.form-control-static NT$
 											input.form-control.inLine.words-6(type='text')
 								.plan
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 商品數量
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											input.form-control.inLine.words-6(type='text')
 											.form-control-static 組
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 原價
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											.form-control-static NT$
 											input.form-control.inLine.words-6(type='text')
 									.row
 										label.col-xs-4.col-sm-4.control-label
 											| 優惠價
-										.col-xs-8.col-sm-8
+										.col-xs-8.col-sm-8.form-group
 											.form-control-static NT$
 											input.form-control.inLine.words-6(type='text')
 								.row
@@ -153,15 +154,15 @@ block content
 						.panel-body
 							section#addItemstep3.formlist
 								.row
-									.col-xs-4.col-sm-4
+									.col-xs-4.col-sm-4.form-group
 										span.btn.btn-default.btn-file.img-select-btn
 											span
 											input(type='file', name='img-file-input')
-									.col-xs-4.col-sm-4
+									.col-xs-4.col-sm-4.form-group
 										span.btn.btn-default.btn-file.img-select-btn
 											span
 											input(type='file', name='img-file-input')
-									.col-xs-4.col-sm-4
+									.col-xs-4.col-sm-4.form-group
 										span.btn.btn-default.btn-file.img-select-btn
 											span
 											input(type='file', name='img-file-input')
@@ -227,23 +228,23 @@ block content
 												input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
 												|  指定時間
 									.row
-										.col-xs-15.col-sm-15
+										.col-xs-15.col-sm-15.form-group
 											select.form-control.inblock
 												option(selected='selected', value='') 年
 												option(value='1') 2018
-										.col-xs-15.col-sm-15
+										.col-xs-15.col-sm-15.form-group
 											select.form-control.inblock
 												option(selected='selected', value='') 月
 												option(value='1') 12
-										.col-xs-15.col-sm-15
+										.col-xs-15.col-sm-15.form-group
 											select.form-control.inblock
 												option(selected='selected', value='') 日
 												option(value='1') 31
-										.col-xs-15.col-sm-15
+										.col-xs-15.col-sm-15.form-group
 											select.form-control.inblock
 												option(selected='selected', value='') 時
 												option(value='1') 23
-										.col-xs-15.col-sm-15
+										.col-xs-15.col-sm-15.form-group
 											select.form-control.inblock
 												option(selected='selected', value='') 分
 												option(value='1') 59
@@ -339,11 +340,11 @@ block content
 								.row
 									label.col-sm-12.control-label
 										| 營養標示
-									.col-sm-12
+									.col-xs-12.col-sm-12
 										.row
 											.col-xs-5.col-sm-5
 												| 標示格式
-											.col-xs-7.col-sm-7
+											.col-xs-7.col-sm-7.form-group
 												label.radio-inline
 													input#inlineRadio2(type='radio', name='format', value='1')
 													|  公克
@@ -353,15 +354,202 @@ block content
 										.row
 											.col-xs-5.col-sm-5
 												| 每一份量
-											.col-xs-7.col-sm-7
+											.col-xs-7.col-sm-7.form-group
 												input.form-control.inLine.words-6(type='text')
 												.form-control-static 公克(或毫升)
 										.row
 											.col-xs-5.col-sm-5
 												| 本包裝含
-											.col-xs-7.col-sm-7
+											.col-xs-7.col-sm-7.form-group
 												input.form-control.inLine.words-6(type='text')
 												.form-control-static 份
+
+										.nutrientcntent
+											.row
+												.col-xs-4.col-sm-4
+													
+												.col-xs-1.col-sm-1
+													strong 每份
+												.col-xs-2.col-sm-2
+													
+												.col-xs-5.col-sm-5
+													strong 每100公克
+													small (或每100毫升)
+											.row
+												.col-xs-4.col-sm-4
+													span 熱量
+												.col-xs-1.col-sm-1
+													span 0
+												.col-xs-2.col-sm-2
+													span 大卡
+												.col-xs-5.col-sm-5
+													.form-group
+														input.form-control.inLine.words-8(type='text')
+														.form-control-static 大卡
+											.row
+												.col-xs-4.col-sm-4
+													span 熱量
+												.col-xs-1.col-sm-1
+													span 0
+												.col-xs-2.col-sm-2
+													span 大卡
+												.col-xs-5.col-sm-5
+													.form-group
+														input.form-control.inLine.words-8(type='text')
+														.form-control-static 大卡
+											.row
+												.col-xs-4.col-sm-4
+													span 碳水化合物
+												.col-xs-1.col-sm-1
+													span 0
+												.col-xs-2.col-sm-2
+													span 大卡
+												.col-xs-5.col-sm-5
+													.form-group
+														input.form-control.inLine.words-8(type='text')
+														.form-control-static 大卡
+								.row
+									label.col-sm-12.control-label
+										| 認證標章
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input(type='radio', name='certificate', value='1')
+											img(src='../images/certificate1.jpg')
+										label.radio-inline
+											input(type='radio', name='certificate', value='2')
+											img(src='../images/certificate2.jpg')
+										label.radio-inline
+											input(type='radio', name='certificate', value='3')
+											img(src='../images/certificate1.jpg')
+										label.radio-inline
+											input(type='radio', name='certificate', value='4')
+											img(src='../images/certificate2.jpg')
+										label.radio-inline
+											input(type='radio', name='certificate', value='5')
+											| 食用前建議以清水洗淨產品，以防農藥殘留
+								.row
+									label.col-sm-12.control-label
+										| 商品產季
+									.col-xs-12.col-sm-12
+										.row
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='1')
+													| 1
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='2')
+													| 2
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='3')
+													| 3
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='4')
+													| 4
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='5')
+													| 5
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='6')
+													| 6
+										.row
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='7')
+													| 7
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='8')
+													| 8
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='9')
+													| 9
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='10')
+													| 10
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='11')
+													| 11
+											.col-xs-2.col-sm-2.form-group
+												label.radio-inline
+													input(type='radio', name='season', value='12')
+													| 12
+								.row
+									label.col-sm-12.control-label
+										| 保存方式
+									.col-xs-12.col-sm-12.form-group
+										.form-control-static 常溫
+										input.form-control.inLine.words-6(type='text')
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 公斤
+											option(value='1') 公斤
+									.col-xs-12.col-sm-12.form-group
+										.form-control-static 冷藏
+										input.form-control.inLine.words-6(type='text')
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 公斤
+											option(value='1') 公斤
+									.col-xs-12.col-sm-12.form-group
+										.form-control-static 冷凍
+										input.form-control.inLine.words-6(type='text')
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 公斤
+											option(value='1') 公斤
+								.row
+									label.col-sm-12.control-label
+										| 栽種面積
+									.col-xs-12.col-sm-12.form-group
+										.form-control-static 常溫
+										input.form-control.inLine.words-6(type='text')
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 公斤
+											option(value='1') 公斤
+								.row
+									label.col-sm-12.control-label
+										| 烹飪食譜
+									.col-xs-12.col-sm-12
+										.row.recipe
+											.col-xs-4.col-sm-4.form-group
+												span.btn.btn-default.btn-file.img-select-btn
+													span
+													input(type='file', name='img-file-input')
+											.col-xs-8.col-sm-8
+												.row
+													.col-xs-12.col-sm-12.form-group
+														input.form-control(type='text', placeholder="食譜名稱")
+													.col-xs-12.col-sm-12.form-group
+														input.form-control(type='text', placeholder="食譜連結")
+										.row.recipe
+											.col-xs-4.col-sm-4
+												span.btn.btn-default.btn-file.img-select-btn
+													span
+													input(type='file', name='img-file-input')
+											.col-xs-8.col-sm-8
+												.row
+													.col-xs-12.col-sm-12.form-group
+														input.form-control(type='text', placeholder="食譜名稱")
+													.col-xs-12.col-sm-12.form-group
+														input.form-control(type='text', placeholder="食譜連結")
+								.row
+									label.col-xs-12.col-sm-12.control-label
+										| 產地位置
+									.col-xs-12.col-sm-12.input-group.input-flex
+										select.form-control
+											option(selected='selected', value='') 縣、市
+											option(value='1') 台中市
+										select.form-control
+											option(selected='selected', value='') 區、里
+											option(value='1') 烏日區
+									.col-xs-12.col-sm-12
+										input.form-control(type='text')
+
 
 								.row
 									label.col-sm-12.form-group
@@ -377,7 +565,22 @@ block content
 						.panel-body
 							section#addItemstep8.formlist
 								.row
-									.col-xs-4.col-sm-4
+									label.col-sm-12.control-label
+										| 我的標籤
+									.col-xs-12.col-sm-12
+										.tag 有錢不一定買得到
+										.tag 蔬果
+										.tag 蔬果
+										.tag 蔬果
+										.tag 蔬果
+										.tag 蔬果
+								.row
+									label.col-sm-12.control-label
+										| 新增標籤
+									.col-xs-7.col-sm-7
+										input.form-control(type='text', placeholder="標籤")
+									.col-xs-5.col-sm-5
+										button.btn.btn-sm.btn-success 新增
 								.row
 									label.col-sm-12.form-group
 										button.btn.btn-sm.btn-success 下一步

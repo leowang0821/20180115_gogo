@@ -26,10 +26,12 @@ block append scripts
 		});
 
 block header
-	-var page ="seller"
-	include	./_header.jade
+	-var type ="seller"
+	-var page ="item"
+	include ./_header.jade
+	
 block content
-	#six-container.item
+	#six-container(class=type)(class=page)
 		.container-fluid
 			section#itemTitleBox
 				h2.title
