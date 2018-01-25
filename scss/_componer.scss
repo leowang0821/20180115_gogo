@@ -1698,3 +1698,424 @@ section#addItemstep8 {
 		border-radius: 4px;
 	}
 }
+
+
+
+section#wellcome {
+	.panel {
+		box-shadow: none;
+		border-radius: 0;
+		.panel-heading {
+			border-radius: 0;
+			text-align: center;
+		}
+		.panel-body {
+			border-radius: 0;
+			text-align: center;
+		}
+
+	}
+	.wellcome {
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		border-radius: 125px;
+		// border: 2px solid $colorB6;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 2.6em;
+		font-weight: 100;
+		color: #108fad;
+		padding: 3px;
+		background: #51c5c5; /* Old browsers */
+		background: -moz-linear-gradient(top, #51c5c5 1%, #2b889a 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #51c5c5 1%,#2b889a 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #51c5c5 1%,#2b889a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51c5c5', endColorstr='#2b889a',GradientType=0 ); /* IE6-9 */
+		span {
+			border-radius: 100%;
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 190px;
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top, #ffffff 1%, #e5e5e5 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #ffffff 1%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #ffffff 1%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+		}
+	}
+	ul.nav.nav-tabs {
+		display: inline-block;
+		margin-bottom: 15px;
+		border-bottom: 0;
+		>li {
+			a {
+				width: 140px;
+				border-radius: 0;
+				color: $colorZ5;
+				letter-spacing: .2em;
+				border: 0;
+			}
+			&.active {
+				a {
+					color: $colorZ2;
+					border-bottom: 3px solid $colorB5;
+				}
+			}
+		}
+	}
+	.tab-content {
+		.tab-pane {
+			width: 100%;
+			max-width: 280px;
+			&.active {
+				display: inline-block;
+			}
+			.form-group {
+				input[type='text'] {
+					border-color: $colorZ7;
+					margin-bottom: 8px;
+				}
+				label.control-label {
+					display: block;
+				}
+				button.btn-join ,
+				button.btn-signin {
+					color: $colorZ9;
+					border-radius: 17px;
+					padding: 8px 25px;
+					border: 0;
+					background: #51c5c5; /* Old browsers */
+					background: -moz-linear-gradient(top, #51c5c5 1%, #2b889a 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top, #51c5c5 1%,#2b889a 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom, #51c5c5 1%,#2b889a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51c5c5', endColorstr='#2b889a',GradientType=0 ); /* IE6-9 */
+				}
+				&:nth-child(2) {
+					text-align: left;
+					button.btn {
+						padding: 3px 4px;
+						font-size: .85em;
+					}
+				}
+				&:nth-child(3) {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+section#sellerSearchBox {
+	.input-group {
+		input.form-control {
+			border-color: $colorZ6;
+			span {
+				button.btn {
+					border-color: $colorZ6;
+				}
+			}
+		}
+	}
+}
+section#myitemlist {
+	.panel {
+		box-shadow: none;
+		.panel-heading {
+			padding: 5px 0;
+		}
+		.panel-body {
+			padding: 10px 0;
+			.item {
+				display: inline-block;
+				float: left;
+				padding: 8px 4px;
+				>.inside {
+					border: 1px solid $colorZ7;
+					padding: 4px;
+					&:hover {
+						border: 1px solid $colorA5;
+					}
+					&:after {
+						content:"";
+						display: block;
+						width: 100%;
+						height: 0;
+						clear: both;
+					}
+				}
+				figure {
+					width: 100%;
+					display: inline-block;
+					img {
+						width: 100%;
+						min-height: 150px;
+					}
+				}
+				.body {
+					position: relative;
+					width: 100%;
+					// min-height: 113px;
+					display: inline-block;
+					overflow: visible;
+					.id {
+						font-size: .85em;
+						margin-bottom:7px;
+						span {
+							font-weight: 400;
+						}
+					}
+					.name {
+						margin-bottom: 7px;
+						line-height: 1.4em;
+						// text-align: center;
+					}
+					.price {
+						color: #d53200;
+						font-weight: 600;
+						// text-align: center;
+						margin-bottom: 7px;
+						del {
+							font-size: .9em;
+							color: #aaa;
+							display: inline-block;
+							margin-right: 4px;
+						}
+						span {
+							display: inline-block;
+						}
+					}
+					.farm {
+						font-size: .85em;
+						margin-bottom: 7px;
+						// text-align: center;
+						display: inline-block;
+						span {
+							font-weight: 400;
+						}
+					}
+					.state {
+						font-size: .9em;
+						display: inline-block;
+						margin-bottom:7px;
+					}
+				}
+				button.btn {
+					float: right;
+					height: auto;
+					width: 100%;
+					border: 1px solid $colorZ6;
+					background-color: transparent;
+					&:hover {
+						background-color: $colorZ8;
+						&:before {
+							color: $colorB3;
+						}
+					}
+					span {
+						display: none;
+					}
+					&:before {
+						content: '\f054';
+						display: inline-block;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-decoration: inherit;
+						line-height: 22px;
+						text-align: center;
+						color: $colorB4;
+						font-size: 1.1em;
+					}
+				}
+				@media(max-width: 768px) {
+					display: block;
+					padding: 0;
+					margin-bottom: 7px;
+					.inside {
+						border: 0;
+						border-bottom: 1px solid $colorZ7;
+					}
+					figure {
+						width: 40%;
+						float: left;
+						img {
+							min-height: 50px;
+						}
+					}
+					.body {
+						padding-left: 4px;
+						width: 57%;
+					}
+					button.btn {
+						float: none;
+						position: absolute;
+						top: 0;
+						right: 0;
+						height: 100%;
+						width: auto;
+						border-color: transparent;
+						&:hover {
+							background-color: rgba($colorZ5, .1);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section#itemDiscountPortfolioSet {
+	.panel {
+		box-shadow: none;
+		.panel-heading {
+			padding: 0;
+		}
+		.panel-body {
+			padding: 10px 0;
+			.items {
+				position: relative;
+				padding: 15px 0;
+				border-bottom: 1px solid $colorZ7;
+				&:first-child {
+					border-top: 1px solid $colorZ7;
+				}
+				.id {
+					font-size: .85em;
+					margin-bottom:7px;
+					span {
+						font-weight: 400;
+					}
+				}
+				.farm {
+					font-size: .85em;
+					margin-bottom:7px;
+					display: inline-block;
+					span {
+						font-weight: 400;
+					}
+				}
+				.state {
+					font-size: .9em;
+					display: inline-block;
+					margin-bottom:7px;
+				}
+				h4.name {
+					margin-bottom:7px;
+					line-height: 1.4em;
+				}
+				.price {
+					font-size: .85em;
+					margin-bottom:7px;
+					span {
+						font-size: 1.1em;
+						font-weight: 400;
+						margin-left: 5px;
+					}
+				}
+				.itemBox {
+					display: block;
+					overflow-y: hidden;
+					height: 120px;
+					.inset {
+						width: 1000px;
+					}
+					&:after {
+						content:"";
+						display: block;
+						width: 100%;
+						height: 0;
+						clear: both;
+					}
+					.item {
+						position: relative;
+						display: inline-block;
+						float: left;
+						width: 100px;
+						height: 100px;
+						padding-right: 20px;
+						img {
+							width: 100%;
+						}
+						h4 {
+							line-height: 1.4em;
+							font-size: .9em;
+							text-align: center;
+						}
+						&:after {
+							position: absolute;
+							right: 3px;
+							top: 30px;
+							content: "+";
+							font-size: 1.6em;
+							color: $colorZ5;
+						}
+						&:last-child:after {
+							content: none;
+						}
+						&.more {
+							line-height: 80px;
+							a {
+								text-align: center;
+								width: 80px;
+								height: 80px;
+								font-size: 1.4em;
+								font-weight: 100;
+								display: block;
+								background-color: $colorB8;
+								color: $colorZ9;
+								text-decoration: none;
+								&:hover {
+									background-color: $colorB7;
+								}
+							}
+						}
+					}
+				}
+				button.btn {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					height: 90%;
+					@media(max-width: 768px) {
+						height: auto;
+						border: 1px solid $colorB6;
+					}
+					background-color: transparent;
+					&:hover {
+						background-color: $colorZ8;
+						&:before {
+							color: $colorB3;
+						}
+					}
+					span {
+						display: none;
+					}
+					&:before {
+						content: '\f054';
+						display: inline-block;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-decoration: inherit;
+						line-height: 25px;
+						text-align: center;
+						color: $colorB4;
+						font-size: 1.1em;
+					}
+				}
+				&:after {
+					content:"";
+					display: block;
+					width: 100%;
+					height: 0;
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

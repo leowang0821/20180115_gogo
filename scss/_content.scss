@@ -26,6 +26,25 @@
 
 // --------------------------------------賣家頁面
 	&.seller {
+		input[type='text'] ,
+		select.form-control ,
+		textarea.form-control {
+			border-color: $colorB6;
+		}
+		// -------------------小農登入
+		&.login {
+			>.container-fluid {
+				max-width: 760px;
+				padding-top: 15px;
+			}
+		}
+		// -------------------我的商品
+		&.myitems {
+			>.container-fluid {
+				max-width: 1170px;
+				padding-top: 15px;
+			}
+		}
 		// -------------------新增商品
 		&.additem {
 			>.container-fluid {
@@ -59,8 +78,6 @@
 			}
 		}
 	}
-
-
 }
 
 

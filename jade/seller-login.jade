@@ -1,0 +1,58 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	//- link(href='../css/owl.carousel.css', rel='stylesheet')
+
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
+
+block header
+	-var type ="seller"
+	-var page ="login"
+	//- -var pagetitle ="農莊主人"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		.container-fluid
+			section#wellcome
+				.panel
+					.panel-heading
+						.wellcome
+							span 歡迎
+					.panel-body
+						ul.nav.nav-tabs(role='tablist')
+							li.active(role='presentation')
+								a(href='#join', aria-controls='join', role='tab', data-toggle='tab') 註冊
+							li(role='presentation')
+								a(href='#signin', aria-controls='signin', role='tab', data-toggle='tab') 會員登錄
+						.tab-content
+							#join.tab-pane.active(role='tabpanel')
+								.form-group
+									input.form-control(type='text', placeholder="輸入姓名")
+									input.form-control(type='text', placeholder="輸入手機號碼")
+									input.form-control(type='text', placeholder="設定您的密碼")
+									input.form-control(type='text', placeholder="再次輸入密碼")
+								.form-group
+									label.control-label
+										input#inlineCheckbox1(type='checkbox', value='1')
+										|  我不是機器人
+									label.control-label
+										input#inlineCheckbox1(type='checkbox', value='1')
+										|  我同意使用聲明暨同意條款
+								.form-group
+									button.btn.btn-join 提交申請
+
+							#signin.tab-pane(role='tabpanel')
+								.form-group
+									input.form-control(type='text', placeholder="帳號")
+									input.form-control(type='text', placeholder="密碼")
+								.form-group
+									button.btn 忘記密碼
+								.form-group
+									button.btn.btn-signin 登入

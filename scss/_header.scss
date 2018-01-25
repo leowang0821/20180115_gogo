@@ -9,7 +9,7 @@ header#six-header {
   border: 0;
   margin-bottom: 0;
   z-index: 10;
-  background-color: #febe0e;
+  background-color: $colorA5;
   border-radius: 0;
   #six-head {
     display: block;
@@ -31,7 +31,7 @@ header#six-header {
       color: $colorZ9;
       text-align: center;
       font-size: 1.5em;
-      letter-spacing: .5em;
+      letter-spacing: .2em;
       >* {
         font-weight: 100;
       }
@@ -336,6 +336,16 @@ header#six-header {
         }
       }
     }
+    &.login {
+      ul.six-topNvbar {
+        >li {
+          display: none;
+          &:last-child {
+            display: inline-block;
+          }
+        }
+      }
+    }
     &.additem {
       .navbar-brand {
         @media(max-width: 768px) {
@@ -347,6 +357,36 @@ header#six-header {
           display: none;
           &:last-child {
             display: inline-block;
+          }
+        }
+      }
+    }
+    &.myitems {
+      .navbar-brand {
+        @media(max-width: 768px) {
+          display: none !important;
+        }
+      }
+      @media(max-width: 768px) {
+        .six-topNvbar {
+          width: 100%;
+          >li {
+            display: inline-block !important;
+            &:first-child {
+              display: none !important;
+            }
+            &:nth-child(2) {
+              position: absolute;
+              right: 50px;
+            }
+            &:nth-child(3) {
+              position: absolute;
+              right: 0px;
+            }
+            &:last-child {
+              position: absolute;
+              left: 0px;
+            }
           }
         }
       }

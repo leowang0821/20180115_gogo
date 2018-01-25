@@ -70,8 +70,9 @@ if type==="seller"
 					a.page-scroll(href='http://google.com')
 						img(src="../images/logo_seller.svg")
 
-				.headTitle
-					h2 新增商品
+				if pagetitle
+					.headTitle
+						h2=pagetitle
 
 				ul.navbar-nav.six-topNvbar
 					li

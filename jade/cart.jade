@@ -4,31 +4,21 @@ block append meta
 block title
 	title GOGO
 block append link
-	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
-	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+
 block prepend scripts
 	//- script(src="../js/velocity.min.js")
 block append scripts
-	script(src="../vendors/owl-carousel/owl.carousel.min.js")
-	script.
-		$(document).ready(function () {
-			var owl = $('.owl-carousel');
-			owl.owlCarousel({
-				margin: 0,
-				autoplay: true,
-				autoplayTimeout: 6000,
-				loop: true,
-				items: 1,
-				autoHeight: true,
-				nav: true,
-				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
-			})
-		});
+	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
+
+block header
+	-var type ="buyer"
+	-var page ="cart"
+	-var pagetitle ="購物車"
+	include ./_header.jade
 
 block content
-	#six-container.cart
+	#six-container(class=type)(class=page)
 		.container-fluid
-					
 			section#itemCartListBox
 				.panel
 					.panel-heading
@@ -43,11 +33,11 @@ block content
 									.info
 										.owner
 											a(href='#', title='李氏有機農莊')
-												img(src='//placehold.it/40x40.png')
+												img(src='http://placehold.it/40x40.png')
 												| 李氏有機農莊
 										.pic
 											a(href='#', title='有機紅藜(台灣藜')
-												img(src='//placehold.it/100x100.png')
+												img(src='http://placehold.it/100x100.png')
 										.name
 											a(href='#', title='有機紅藜(台灣藜')
 												| 有機紅藜(台灣藜
@@ -67,11 +57,11 @@ block content
 									.info
 										.owner
 											a(href='#', title='李氏有機農莊')
-												img(src='//placehold.it/40x40.png')
+												img(src='http://placehold.it/40x40.png')
 												| 李氏有機農莊
 										.pic
 											a(href='#', title='有機紅藜(台灣藜')
-												img(src='//placehold.it/100x100.png')
+												img(src='http://placehold.it/100x100.png')
 										.name
 											a(href='#', title='有機紅藜(台灣藜')
 												| 有機紅藜(台灣藜
@@ -104,11 +94,11 @@ block content
 									.info
 										.owner
 											a(href='#', title='李氏有機農莊')
-												img(src='//placehold.it/40x40.png')
+												img(src='http://placehold.it/40x40.png')
 												| 李氏有機農莊
 										.pic
 											a(href='#', title='有機紅藜(台灣藜')
-												img(src='//placehold.it/100x100.png')
+												img(src='http://placehold.it/100x100.png')
 										.name
 											a(href='#', title='有機紅藜(台灣藜')
 												| 有機紅藜(台灣藜
@@ -128,11 +118,11 @@ block content
 									.info
 										.owner
 											a(href='#', title='李氏有機農莊')
-												img(src='//placehold.it/40x40.png')
+												img(src='http://placehold.it/40x40.png')
 												| 李氏有機農莊
 										.pic
 											a(href='#', title='有機紅藜(台灣藜')
-												img(src='//placehold.it/100x100.png')
+												img(src='http://placehold.it/100x100.png')
 										.name
 											a(href='#', title='有機紅藜(台灣藜')
 												| 有機紅藜(台灣藜
@@ -173,7 +163,7 @@ block content
 							.items
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -186,7 +176,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -199,7 +189,7 @@ block content
 											strong $999起
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -212,7 +202,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -225,7 +215,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -238,7 +228,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -251,7 +241,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
@@ -264,7 +254,7 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
+										img(src='http://placehold.it/300x300.png')
 										h4 商品名稱
 										.star
 											i.fa.fa-star
