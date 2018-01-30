@@ -27,9 +27,13 @@ block append scripts
 			})
 		});
 
+block header
+	-var type ="buyer"
+	-var page ="list"
+	include ./_header.jade
 
 block content
-	#six-container.list
+	#six-container(class=type)(class=page)
 		.container-fluid
 			section#carousel
 				#showCarousel.owl-carousel.owl-theme(data-val="1")
@@ -52,8 +56,8 @@ block content
 					.panel-body
 						.inner
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -65,8 +69,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -78,8 +82,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -91,8 +95,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -104,8 +108,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -117,8 +121,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body
@@ -130,8 +134,8 @@ block content
 										button.btn.btn-info.toLove
 										button.btn.btn-info.toCart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
+								.inner
+									.itemPic
 										a(href='#', title='')
 											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
 									.body

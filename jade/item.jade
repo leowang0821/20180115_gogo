@@ -28,17 +28,24 @@ block append scripts
 block header
 	-var type ="buyer"
 	-var page ="item"
+	-var pagetitle ="商品資訊"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
 	include ./_header.jade
-	
+
 block content
 	#six-container(class=type)(class=page)
 		.container-fluid
 			section#itemTitleBox
 				h2.title
-					| 山豬園果子狸咖啡
-				.tolove
-					button.btn.btn-info
-					span (7500 人氣)
+					| 山豬園果子狸咖啡 山豬園果子狸咖啡 山豬園果子狸咖啡 山豬園果子狸咖啡
+				.toshare
+					button.btn
+						span 分享
+				.tolove.on
+					//- on＝實心愛心 off=空心愛心
+					button.btn
+						span (7500 人氣)
 				.subtitle
 					| 以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆
 
@@ -62,10 +69,23 @@ block content
 					del 定價 NT.9999
 					span NT.9999
 				.toCart
-					button.btn.btn-primary
+					button.btn
 						| 我要購買
 				.reserve
 					span 目前尚有庫存
+				.tags
+					.tag
+						a(href='#', title='有錢不一定買得到') 有錢不一定買得到
+					.tag
+						a(href='#', title='蔬果') 蔬果
+					.tag
+						a(href='#', title='蔬果') 蔬果
+					.tag
+						a(href='#', title='蔬果') 蔬果
+					.tag
+						a(href='#', title='蔬果') 蔬果
+					.tag
+						a(href='#', title='蔬果') 蔬果
 
 			section#itemAboutBox
 				.panel
@@ -100,7 +120,43 @@ block content
 								li
 									span 本包裝含
 									| 1 份
-							img(src="../images/nutrientcontent.png")
+							.nutrientcntent
+								.row
+									.col-xs-4.col-sm-4
+
+									.col-xs-3.col-sm-3
+										strong 每份
+
+									.col-xs-5.col-sm-5
+										strong 每100公克
+										small (或每100毫升)
+								.row
+									.col-xs-4.col-sm-4
+										span 熱量
+									.col-xs-3.col-sm-3
+										strong 0
+										span 大卡
+									.col-xs-5.col-sm-5
+										strong 0
+										span 大卡
+								.row
+									.col-xs-4.col-sm-4
+										span 熱量
+									.col-xs-3.col-sm-3
+										strong 0
+										span 大卡
+									.col-xs-5.col-sm-5
+										strong 0
+										span 大卡
+								.row
+									.col-xs-4.col-sm-4
+										span 熱量
+									.col-xs-3.col-sm-3
+										strong 0
+										span 大卡
+									.col-xs-5.col-sm-5
+										strong 0
+										span 大卡
 			section#itemCertificateBox
 				.panel
 					.panel-heading
@@ -480,6 +536,11 @@ block content
 											.name 安娜
 											.date 六個月前
 										a(href="#")
+							.input-group.questionBox
+								textarea.form-control(rows='3', placeholder='提出問題')
+								span.input-group-btn
+									button.btn(type='button')
+										| 送出提問
 			section#itemFeedbackBox
 				.panel
 					.panel-heading

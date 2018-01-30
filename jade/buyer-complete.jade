@@ -1,0 +1,197 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+
+block prepend scripts
+
+block append scripts
+
+block header
+	-var type ="buyer"
+	-var page ="order-complete"
+	-var pagetitle ="完成購買"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		.container-fluid
+
+			section#orderInfoBox
+				.panel
+					.panel-body
+						.inner
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 訂單編號
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.id 1234567890123
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 訂單金額
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.price NT$.999999
+							.heading
+								| 訂貨人資料
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 訂貨人
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.name 名稱名稱
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 聯絡方式
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.phone 0977888999
+									.email leowwww@gmail.com
+							.heading
+								| 取貨人資料
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 訂貨人
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.name 名稱名稱
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 聯絡資料
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.phone 0977888999
+									.email leowwww@gmail.com
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 取貨方式
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.pickup 7-11超商取貨
+										span 中正門市(台北市大同區中正路123號)
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 付款狀態
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.status 信用卡付款成功
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 發票資訊
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.invoice 三連發票
+									.company 公司名稱公司名稱公司名稱
+										span 8814578963
+							.row
+								.col-xs-4.col-sm-3.col-md-2.col-lg-2
+									span 發票送達日
+								.col-xs-8.col-sm-9.col-md-10.col-lg-10
+									.date 2018/12/12
+
+			section#itemCartListBox
+				.panel
+					.panel-body
+						.inner
+							.items
+								.heading
+									h2 冷凍
+								.item
+									.inner
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.normal 常溫
+											.choose
+												span 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											span 999
+										.price
+											span NT$.9999
+								.item
+									.inner
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.cold 冷藏
+											.choose
+												span 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											span 999
+										.price
+											span NT$.9999
+								.total
+									.useCoin
+										span 使用台東金幣
+											small (目前有20000000)
+										input.form-control(type='text', placeholder='', aria-describedby='basic-addon1')
+									.fare
+										span 冷凍運費
+											small (再消費99999可以免運費)
+										.price
+											span 總計:
+											strong  9999
+							.items
+								h2 冷凍
+								.item
+									.inner
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.freezing 冷凍
+											.choose
+												span 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											span 999
+										.price
+											span NT$.9999
+								.item
+									.inner
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.normal 常溫
+											.choose
+												span 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											span 999
+										.price
+											span NT$.9999
+								.total
+									.useCoin
+										span 使用台東金幣
+											small (目前有20000000)
+										.price
+											span NT$:
+											strong  9999
+									.fare
+										span 冷凍運費
+											small (再消費99999可以免運費)
+										.price
+											span 總計 NT$:
+											strong  9999
+							.checkout
+								.total
+									span 總金額 NT$:
+									strong  9999
+								button.btn.btn-primary 結帳

@@ -16,9 +16,26 @@
 		&.main {
 
 		}
-		// -------------------商品詳細頁
+		// -------------------商品資訊
 		&.item {
 
+		}
+		// -------------------購物車
+		&.cart {
+			>.container-fluid {
+				background-color: $colorZ8;
+			}
+			section#itemBeforeLookBox {
+				max-width: 990px;
+			}
+		}
+		// -------------------完成購買
+		&.order-complete {
+			>.container-fluid {
+				background-color: $colorZ8;
+			}
+		}
+		&.order-search {
 		}
 	}
 
@@ -73,11 +90,14 @@
 								}
 							}
 						}
+						.panel-body {
+							@media (max-width:768px) {
+								padding:0;
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 }
-
-

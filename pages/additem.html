@@ -16,34 +16,41 @@
     <div id="wrapper">
       <header class="navbar seller additem" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo_seller.svg"/></a></div>
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
           <div class="headTitle">
             <h2>新增商品</h2>
           </div>
-          <ul class="navbar-nav six-topNvbar">
-            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-plus-square-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-trash-o"> </i></a></li>
-            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
-              <div id="sidebar-wrapper">
-                <div class="inner">
-                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
-                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
-                  <div class="six-userNvbar">
-                    <ul class="navbar-nav">
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <button class="btn bars" id="menu-toggle"></button>
+          <ul class="six-topNvbar">
+            <li>
+              <button class="btn bell">
+                <div class="badge">9</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn plus"></button>
+            </li>
+            <li>
+              <button class="btn trash"></button>
             </li>
           </ul>
+          <div id="sidebar-wrapper">
+            <div class="inner">
+              <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+              <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+              <div class="six-userNvbar">
+                <ul class="navbar-nav">
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
+                  <li class="dropdown conversion"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <!-- *-------------------//--header--------------------------*-->
@@ -470,90 +477,90 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row certificate">
                       <label class="col-sm-12 control-label">認證標章</label>
                       <div class="col-xs-12 col-sm-12 form-group">
-                        <label class="radio-inline">
-                          <input type="radio" name="certificate" value="1"/><img src="../images/certificate1.jpg"/>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" name="certificate" value="1"/><img src="../images/certificate1.jpg"/>
                         </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="certificate" value="2"/><img src="../images/certificate2.jpg"/>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" name="certificate" value="2"/><img src="../images/certificate2.jpg"/>
                         </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="certificate" value="3"/><img src="../images/certificate1.jpg"/>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" name="certificate" value="3"/><img src="../images/certificate1.jpg"/>
                         </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="certificate" value="4"/><img src="../images/certificate2.jpg"/>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" name="certificate" value="4"/><img src="../images/certificate2.jpg"/>
                         </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="certificate" value="5"/>食用前建議以清水洗淨產品，以防農藥殘留
+                        <label class="checkbox-inline">
+                          <input type="checkbox" name="certificate" value="5"/>食用前建議以清水洗淨產品，以防農藥殘留
                         </label>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row season">
                       <label class="col-sm-12 control-label">商品產季</label>
                       <div class="col-xs-12 col-sm-12">
                         <div class="row">
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="1"/>1
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="1"/>1
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="2"/>2
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="2"/>2
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="3"/>3
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="3"/>3
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="4"/>4
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="4"/>4
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="5"/>5
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="5"/>5
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="6"/>6
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="6"/>6
                             </label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="7"/>7
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="7"/>7
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="8"/>8
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="8"/>8
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="9"/>9
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="9"/>9
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="10"/>10
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="10"/>10
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="11"/>11
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="11"/>11
                             </label>
                           </div>
                           <div class="col-xs-2 col-sm-2 form-group">
-                            <label class="radio-inline">
-                              <input type="radio" name="season" value="12"/>12
+                            <label class="checkbox-inline">
+                              <input type="checkbox" name="season" value="12"/>12
                             </label>
                           </div>
                         </div>

@@ -18,38 +18,49 @@
     <div id="wrapper">
       <header class="navbar buyer main" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
-          <form class="navbar-form">
-            <div class="form-group">
-              <input class="form-control" value="Search"/>
-              <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
+          <section class="searchbar hidden-xs">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for..."/><span class="input-group-btn">
+                <button class="btn btn-default" type="button"></button></span>
             </div>
-          </form>
-          <ul class="navbar-nav six-topNvbar">
-            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-heart-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-shopping-cart"></i></a></li>
-            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
-              <div id="sidebar-wrapper">
-                <div class="inner">
-                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
-                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
-                  <div class="six-userNvbar">
-                    <ul class="navbar-nav">
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>商品列表</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>農莊品牌館</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>訂單查詢</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>我的最愛</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>個人設定</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;購物車&quot;);" title="購物車"><span>購物車</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成農莊</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          </section>
+          <button class="btn bars" id="menu-toggle"></button>
+          <ul class="six-topNvbar">
+            <li>
+              <button class="btn bell">
+                <div class="badge">9</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn heart">
+                <div class="badge">99</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn cart">
+                <div class="badge">99</div>
+              </button>
             </li>
           </ul>
+          <div id="sidebar-wrapper">
+            <div class="inner">
+              <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+              <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+              <div class="six-userNvbar">
+                <ul class="navbar-nav">
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>商品列表</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>農莊品牌館</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>訂單查詢</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>我的最愛</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>個人設定</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;購物車&quot;);" title="購物車"><span>購物車</span></a></li>
+                  <li class="dropdown conversion"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成農莊</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <!-- *-------------------//--header--------------------------*-->
@@ -57,7 +68,7 @@
         <div class="container-fluid">
           <section id="carousel">
             <div class="owl-carousel owl-theme" id="showCarousel" data-val="1">
-              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
+              <div class="owl-item" style="background-image:url('//placehold.it/1980x400.png');"><a href="#" title="農莊名稱">
                   <div class="caption">廣告標題</div></a></div>
               <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
                   <div class="caption">廣告標題</div></a></div>

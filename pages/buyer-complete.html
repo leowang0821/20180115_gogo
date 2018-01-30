@@ -14,11 +14,11 @@
   </head>
   <body>
     <div id="wrapper">
-      <header class="navbar buyer cart" id="six-header" role="navigation">
+      <header class="navbar buyer order-complete" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
           <div class="navbar-brand hidden-xs"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
           <div class="headTitle">
-            <h2>購物車</h2>
+            <h2>完成購買</h2>
           </div>
           <section class="searchbar hidden-xs hidden">
             <div class="input-group">
@@ -65,8 +65,81 @@
         </div>
       </header>
       <!-- *-------------------//--header--------------------------*-->
-      <div class="buyer cart" id="six-container">
+      <div class="buyer order-complete" id="six-container">
         <div class="container-fluid">
+          <section id="orderInfoBox">
+            <div class="panel">
+              <div class="panel-body">
+                <div class="inner">
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>訂單編號</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="id">1234567890123</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>訂單金額</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="price">NT$.999999</div>
+                    </div>
+                  </div>
+                  <div class="heading">訂貨人資料</div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>訂貨人</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="name">名稱名稱</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>聯絡方式</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="phone">0977888999</div>
+                      <div class="email">leowwww@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="heading">取貨人資料</div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>訂貨人</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="name">名稱名稱</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>聯絡資料</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="phone">0977888999</div>
+                      <div class="email">leowwww@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>取貨方式</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="pickup">7-11超商取貨<span>中正門市(台北市大同區中正路123號)</span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>付款狀態</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="status">信用卡付款成功</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>發票資訊</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="invoice">三連發票</div>
+                      <div class="company">公司名稱公司名稱公司名稱<span>8814578963</span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><span>發票送達日</span></div>
+                    <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                      <div class="date">2018/12/12</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           <section id="itemCartListBox">
             <div class="panel">
               <div class="panel-body">
@@ -77,58 +150,32 @@
                     </div>
                     <div class="item">
                       <div class="inner">
-                        <div class="choose">
-                          <input type="checkbox" aria-label="..."/>
-                        </div>
                         <div class="pic">
                           <div class="itemPic" style="background-image:url('../images/goodsPic.jpg');"><a href="#" title="南瓜米胚芽鳳梨酥"><i></i></a></div>
                         </div>
                         <div class="info">
-                          <div class="owner"><a href="#" title="李氏有機農莊"><img src="http://placehold.it/40x40.png"/>李氏有機農莊</a></div>
                           <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
                           <div class="temp normal">常溫</div>
-                          <div class="choose form-group">
-                            <select class="form-control">
-                              <option selected="selected" value="">選擇方案</option>
-                              <option value="1">優惠方案A 限時$999</option>
-                            </select>
-                          </div>
+                          <div class="choose"><span>優惠方案A 限時$999</span></div>
                         </div>
                         <div class="cont form-group">
-                          <div class="form-control-static">數量</div>
-                          <select class="form-control inLine words-6">
-                            <option selected="selected" value="">數量</option>
-                            <option value="1">9999</option>
-                          </select>
+                          <div class="form-control-static">數量</div><span>999</span>
                         </div>
                         <div class="price"><span>NT$.9999</span></div>
                       </div>
                     </div>
                     <div class="item">
                       <div class="inner">
-                        <div class="choose">
-                          <input type="checkbox" aria-label="..."/>
-                        </div>
                         <div class="pic">
                           <div class="itemPic" style="background-image:url('../images/goodsPic.jpg');"><a href="#" title="南瓜米胚芽鳳梨酥"><i></i></a></div>
                         </div>
                         <div class="info">
-                          <div class="owner"><a href="#" title="李氏有機農莊"><img src="http://placehold.it/40x40.png"/>李氏有機農莊</a></div>
                           <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
                           <div class="temp cold">冷藏</div>
-                          <div class="choose form-group">
-                            <select class="form-control">
-                              <option selected="selected" value="">選擇方案</option>
-                              <option value="1">優惠方案A 限時$999</option>
-                            </select>
-                          </div>
+                          <div class="choose"><span>優惠方案A 限時$999</span></div>
                         </div>
                         <div class="cont form-group">
-                          <div class="form-control-static">數量</div>
-                          <select class="form-control inLine words-6">
-                            <option selected="selected" value="">數量</option>
-                            <option value="1">9999</option>
-                          </select>
+                          <div class="form-control-static">數量</div><span>999</span>
                         </div>
                         <div class="price"><span>NT$.9999</span></div>
                       </div>
@@ -146,133 +193,48 @@
                     <h2>冷凍</h2>
                     <div class="item">
                       <div class="inner">
-                        <div class="choose">
-                          <input type="checkbox" aria-label="..."/>
-                        </div>
                         <div class="pic">
                           <div class="itemPic" style="background-image:url('../images/goodsPic.jpg');"><a href="#" title="南瓜米胚芽鳳梨酥"><i></i></a></div>
                         </div>
                         <div class="info">
-                          <div class="owner"><a href="#" title="李氏有機農莊"><img src="http://placehold.it/40x40.png"/>李氏有機農莊</a></div>
                           <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
                           <div class="temp freezing">冷凍</div>
-                          <div class="choose form-group">
-                            <select class="form-control">
-                              <option selected="selected" value="">選擇方案</option>
-                              <option value="1">優惠方案A 限時$999</option>
-                            </select>
-                          </div>
+                          <div class="choose"><span>優惠方案A 限時$999</span></div>
                         </div>
                         <div class="cont form-group">
-                          <div class="form-control-static">數量</div>
-                          <select class="form-control inLine words-6">
-                            <option selected="selected" value="">數量</option>
-                            <option value="1">9999</option>
-                          </select>
+                          <div class="form-control-static">數量</div><span>999</span>
                         </div>
                         <div class="price"><span>NT$.9999</span></div>
                       </div>
                     </div>
                     <div class="item">
                       <div class="inner">
-                        <div class="choose">
-                          <input type="checkbox" aria-label="..."/>
-                        </div>
                         <div class="pic">
                           <div class="itemPic" style="background-image:url('../images/goodsPic.jpg');"><a href="#" title="南瓜米胚芽鳳梨酥"><i></i></a></div>
                         </div>
                         <div class="info">
-                          <div class="owner"><a href="#" title="李氏有機農莊"><img src="http://placehold.it/40x40.png"/>李氏有機農莊</a></div>
                           <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
                           <div class="temp normal">常溫</div>
-                          <div class="choose form-group">
-                            <select class="form-control">
-                              <option selected="selected" value="">選擇方案</option>
-                              <option value="1">優惠方案A 限時$999</option>
-                            </select>
-                          </div>
+                          <div class="choose"><span>優惠方案A 限時$999</span></div>
                         </div>
                         <div class="cont form-group">
-                          <div class="form-control-static">數量</div>
-                          <select class="form-control inLine words-6">
-                            <option selected="selected" value="">數量</option>
-                            <option value="1">9999</option>
-                          </select>
+                          <div class="form-control-static">數量</div><span>999</span>
                         </div>
                         <div class="price"><span>NT$.9999</span></div>
                       </div>
                     </div>
                     <div class="total">
                       <div class="useCoin"><span>使用台東金幣<small>(目前有20000000)</small></span>
-                        <input class="form-control" type="text" placeholder="" aria-describedby="basic-addon1"/>
+                        <div class="price"><span>NT$:</span><strong> 9999</strong></div>
                       </div>
                       <div class="fare"><span>冷凍運費<small>(再消費99999可以免運費)</small></span>
-                        <div class="price"><span>總計:</span><strong> 9999</strong></div>
+                        <div class="price"><span>總計 NT$:</span><strong> 9999</strong></div>
                       </div>
                     </div>
                   </div>
                   <div class="checkout">
-                    <div class="total">總金額<span>$99999</span></div>
+                    <div class="total"><span>總金額 NT$:</span><strong> 9999</strong></div>
                     <button class="btn btn-primary">結帳</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section id="itemBeforeLookBox">
-            <div class="panel">
-              <div class="panel-heading">看過的商品</div>
-              <div class="panel-body">
-                <div class="inner">
-                  <div class="items">
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999起</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="http://placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
                   </div>
                 </div>
               </div>

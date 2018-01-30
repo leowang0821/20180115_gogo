@@ -18,47 +18,64 @@
     <div id="wrapper">
       <header class="navbar buyer item" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
-          <form class="navbar-form">
-            <div class="form-group">
-              <input class="form-control" value="Search"/>
-              <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          <div class="navbar-brand hidden-xs"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
+          <div class="headTitle">
+            <h2>商品資訊</h2>
+          </div>
+          <section class="searchbar hidden-xs hidden">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for..."/><span class="input-group-btn">
+                <button class="btn btn-default" type="button"></button></span>
             </div>
-          </form>
-          <ul class="navbar-nav six-topNvbar">
-            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-heart-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-shopping-cart"></i></a></li>
-            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
-              <div id="sidebar-wrapper">
-                <div class="inner">
-                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
-                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
-                  <div class="six-userNvbar">
-                    <ul class="navbar-nav">
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>商品列表</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>農莊品牌館</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>訂單查詢</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>我的最愛</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>個人設定</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;購物車&quot;);" title="購物車"><span>購物車</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成農莊</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          </section>
+          <button class="btn bars" id="menu-toggle"></button>
+          <ul class="six-topNvbar">
+            <li>
+              <button class="btn bell">
+                <div class="badge">9</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn heart">
+                <div class="badge">99</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn cart">
+                <div class="badge">99</div>
+              </button>
             </li>
           </ul>
+          <div id="sidebar-wrapper">
+            <div class="inner">
+              <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+              <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+              <div class="six-userNvbar">
+                <ul class="navbar-nav">
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>商品列表</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>農莊品牌館</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>訂單查詢</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>我的最愛</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>個人設定</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;購物車&quot;);" title="購物車"><span>購物車</span></a></li>
+                  <li class="dropdown conversion"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成農莊</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <!-- *-------------------//--header--------------------------*-->
       <div class="buyer item" id="six-container">
         <div class="container-fluid">
           <section id="itemTitleBox">
-            <h2 class="title">山豬園果子狸咖啡</h2>
-            <div class="tolove">
-              <button class="btn btn-info"></button><span>(7500 人氣)</span>
+            <h2 class="title">山豬園果子狸咖啡 山豬園果子狸咖啡 山豬園果子狸咖啡 山豬園果子狸咖啡</h2>
+            <div class="toshare">
+              <button class="btn"><span>分享</span></button>
+            </div>
+            <div class="tolove on">
+              <button class="btn"><span>(7500 人氣)</span></button>
             </div>
             <div class="subtitle">以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆</div>
           </section>
@@ -77,9 +94,17 @@
               <del>定價 NT.9999</del><span>NT.9999</span>
             </div>
             <div class="toCart">
-              <button class="btn btn-primary">我要購買</button>
+              <button class="btn">我要購買</button>
             </div>
             <div class="reserve"><span>目前尚有庫存</span></div>
+            <div class="tags">
+              <div class="tag"><a href="#" title="有錢不一定買得到">有錢不一定買得到</a></div>
+              <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+              <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+              <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+              <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+              <div class="tag"><a href="#" title="蔬果">蔬果</a></div>
+            </div>
           </section>
           <section id="itemAboutBox">
             <div class="panel">
@@ -110,7 +135,29 @@
                   <ul>
                     <li><span>每一份量</span>200 公克(或毫升)</li>
                     <li><span>本包裝含</span>1 份</li>
-                  </ul><img src="../images/nutrientcontent.png"/>
+                  </ul>
+                  <div class="nutrientcntent">
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4"></div>
+                      <div class="col-xs-3 col-sm-3"><strong>每份</strong></div>
+                      <div class="col-xs-5 col-sm-5"><strong>每100公克</strong><small>(或每100毫升)</small></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                      <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                      <div class="col-xs-5 col-sm-5"><strong>0</strong><span>大卡</span></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                      <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                      <div class="col-xs-5 col-sm-5"><strong>0</strong><span>大卡</span></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4"><span>熱量</span></div>
+                      <div class="col-xs-3 col-sm-3"><strong>0</strong><span>大卡</span></div>
+                      <div class="col-xs-5 col-sm-5"><strong>0</strong><span>大卡</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -396,6 +443,10 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="input-group questionBox">
+                    <textarea class="form-control" rows="3" placeholder="提出問題"></textarea><span class="input-group-btn">
+                      <button class="btn" type="button">送出提問</button></span>
+                  </div>
                 </div>
               </div>
             </div>

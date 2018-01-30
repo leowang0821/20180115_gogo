@@ -14,6 +14,8 @@ block header
 	-var type ="buyer"
 	-var page ="cart"
 	-var pagetitle ="購物車"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
 	include ./_header.jade
 
 block content
@@ -21,132 +23,147 @@ block content
 		.container-fluid
 			section#itemCartListBox
 				.panel
-					.panel-heading
-						| 購物車
 					.panel-body
 						.inner
 							.items
-								h2 冷凍
+								.heading
+									h2 冷凍
 								.item
-									.choose
-										input(type='checkbox', aria-label='...')
-									.info
-										.owner
-											a(href='#', title='李氏有機農莊')
-												img(src='http://placehold.it/40x40.png')
-												| 李氏有機農莊
+									.inner
+										.choose
+											input(type='checkbox', aria-label='...')
 										.pic
-											a(href='#', title='有機紅藜(台灣藜')
-												img(src='http://placehold.it/100x100.png')
-										.name
-											a(href='#', title='有機紅藜(台灣藜')
-												| 有機紅藜(台灣藜
-											br
-											| 方案
-											span A
-									.cont
-										| 數量
-										span 9999
-									.price
-										| $999
-										br
-										mark 常溫
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											.owner
+												a(href='#', title='李氏有機農莊')
+													img(src='http://placehold.it/40x40.png')
+													| 李氏有機農莊
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.normal 常溫
+											.choose.form-group
+												select.form-control
+													option(selected='selected', value='') 選擇方案
+													option(value='1') 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											select.form-control.inLine.words-6
+												option(selected='selected', value='') 數量
+												option(value='1') 9999
+										.price
+											span NT$.9999
 								.item
-									.choose
-										input(type='checkbox', aria-label='...')
-									.info
-										.owner
-											a(href='#', title='李氏有機農莊')
-												img(src='http://placehold.it/40x40.png')
-												| 李氏有機農莊
+									.inner
+										.choose
+											input(type='checkbox', aria-label='...')
 										.pic
-											a(href='#', title='有機紅藜(台灣藜')
-												img(src='http://placehold.it/100x100.png')
-										.name
-											a(href='#', title='有機紅藜(台灣藜')
-												| 有機紅藜(台灣藜
-											br
-											| 方案
-											span A
-									.cont
-										| 數量
-										span 9999
-									.price
-										| $999
-										br
-										mark 常溫
-								.total
-									.useCoin
-										| 使用台東金幣
-										span (目前有20000000)
-									.fare
-										| 冷凍運費
-										span (再消費99999可以免運費)
-									.price
-										input.form-control(type='text', placeholder='', aria-describedby='basic-addon1')
-										br
-										| 總計: 9999
-							.items
-								h2 冷凍
-								.item
-									.choose
-										input(type='checkbox', aria-label='...')
-									.info
-										.owner
-											a(href='#', title='李氏有機農莊')
-												img(src='http://placehold.it/40x40.png')
-												| 李氏有機農莊
-										.pic
-											a(href='#', title='有機紅藜(台灣藜')
-												img(src='http://placehold.it/100x100.png')
-										.name
-											a(href='#', title='有機紅藜(台灣藜')
-												| 有機紅藜(台灣藜
-											br
-											| 方案
-											span A
-									.cont
-										| 數量
-										span 9999
-									.price
-										| $999
-										br
-										mark 常溫
-								.item
-									.choose
-										input(type='checkbox', aria-label='...')
-									.info
-										.owner
-											a(href='#', title='李氏有機農莊')
-												img(src='http://placehold.it/40x40.png')
-												| 李氏有機農莊
-										.pic
-											a(href='#', title='有機紅藜(台灣藜')
-												img(src='http://placehold.it/100x100.png')
-										.name
-											a(href='#', title='有機紅藜(台灣藜')
-												| 有機紅藜(台灣藜
-											br
-											| 方案
-											span A
-									.cont
-										span 數量
-										span 9999
-									.price
-										span $999
-										span 常溫
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											.owner
+												a(href='#', title='李氏有機農莊')
+													img(src='http://placehold.it/40x40.png')
+													| 李氏有機農莊
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.cold 冷藏
+											.choose.form-group
+												select.form-control
+													option(selected='selected', value='') 選擇方案
+													option(value='1') 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											select.form-control.inLine.words-6
+												option(selected='selected', value='') 數量
+												option(value='1') 9999
+										.price
+											span NT$.9999
 								.total
 									.useCoin
 										span 使用台東金幣
-										span (目前有20000000)
+											small (目前有20000000)
+										input.form-control(type='text', placeholder='', aria-describedby='basic-addon1')
 									.fare
 										span 冷凍運費
-										span (再消費99999可以免運費)
-									.price
+											small (再消費99999可以免運費)
+										.price
+											span 總計:
+											strong  9999
+							.items
+								h2 冷凍
+								.item
+									.inner
+										.choose
+											input(type='checkbox', aria-label='...')
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											.owner
+												a(href='#', title='李氏有機農莊')
+													img(src='http://placehold.it/40x40.png')
+													| 李氏有機農莊
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.freezing 冷凍
+											.choose.form-group
+												select.form-control
+													option(selected='selected', value='') 選擇方案
+													option(value='1') 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											select.form-control.inLine.words-6
+												option(selected='selected', value='') 數量
+												option(value='1') 9999
+										.price
+											span NT$.9999
+								.item
+									.inner
+										.choose
+											input(type='checkbox', aria-label='...')
+										.pic
+											.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													i
+										.info
+											.owner
+												a(href='#', title='李氏有機農莊')
+													img(src='http://placehold.it/40x40.png')
+													| 李氏有機農莊
+											h4.name
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.temp.normal 常溫
+											.choose.form-group
+												select.form-control
+													option(selected='selected', value='') 選擇方案
+													option(value='1') 優惠方案A 限時$999
+										.cont.form-group
+											.form-control-static 數量
+											select.form-control.inLine.words-6
+												option(selected='selected', value='') 數量
+												option(value='1') 9999
+										.price
+											span NT$.9999
+								.total
+									.useCoin
+										span 使用台東金幣
+											small (目前有20000000)
 										input.form-control(type='text', placeholder='', aria-describedby='basic-addon1')
-										strong
-											| 總計:
-											span 9999
+									.fare
+										span 冷凍運費
+											small (再消費99999可以免運費)
+										.price
+											span 總計:
+											strong  9999
 							.checkout
 								.total
 									| 總金額

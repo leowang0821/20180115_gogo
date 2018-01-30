@@ -6,17 +6,18 @@
 @import "mixin";
 
 footer#six-footer {
-  position:relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   padding: 0;
   z-index: 1;
-  height: 40px;
+  height: $footerSize;
   box-shadow: 0 0px 40px rgba($colorC0, 0.2);
   background-color: $colorA5;
   .six-copyright {
     // border-top: 1px solid rgba($colorCf, .2);
     text-align: center;
-    line-height: 40px;
+    line-height: $footerSize;
     letter-spacing: .1em;
     font-size: .85em;
   }

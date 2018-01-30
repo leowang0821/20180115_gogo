@@ -16,31 +16,38 @@
     <div id="wrapper">
       <header class="navbar seller login" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo_seller.svg"/></a></div>
-          <ul class="navbar-nav six-topNvbar">
-            <li><a href="javascript: void(0);"><i class="fa fa-bell-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-plus-square-o"></i></a></li>
-            <li><a href="javascript: void(0);"><i class="fa fa-trash-o"> </i></a></li>
-            <li><a class="btn btn-primary btn-lg toggle" id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
-              <div id="sidebar-wrapper">
-                <div class="inner">
-                  <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
-                  <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
-                  <div class="six-userNvbar">
-                    <ul class="navbar-nav">
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
-                      <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
-                      <li class="dropdown"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
+          <button class="btn bars" id="menu-toggle"></button>
+          <ul class="six-topNvbar">
+            <li>
+              <button class="btn bell">
+                <div class="badge">9</div>
+              </button>
+            </li>
+            <li>
+              <button class="btn plus"></button>
+            </li>
+            <li>
+              <button class="btn trash"></button>
             </li>
           </ul>
+          <div id="sidebar-wrapper">
+            <div class="inner">
+              <figure class="six-avatar"><img class="img-circle" src="../images/avatar.jpg" alt="莫孟娜"/></figure>
+              <div class="six-userName"><a href="/user-home">莫孟娜</a><a class="btn btn-primary btn-xs pull-right" href="/logout" title="會員登出">登出</a></div>
+              <div class="six-userNvbar">
+                <ul class="navbar-nav">
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;訊息通知&quot;);" title="訊息通知"><span>訊息通知</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;商品列表&quot;);" title="商品列表"><span>我的商品</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;農莊品牌館&quot;);" title="農莊品牌館"><span>我的商品組合</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;訂單查詢&quot;);" title="訂單查詢"><span>已下架商品</span></a></li>
+                  <li class="dropdown hidden-md hidden-lg"><a href="javascript: console.log(&quot;我的最愛&quot;);" title="我的最愛"><span>出貨紀錄</span></a></li>
+                  <li class="dropdown"><a href="javascript: console.log(&quot;個人設定&quot;);" title="個人設定"><span>農莊介紹</span></a></li>
+                  <li class="dropdown conversion"><a href="javascript: console.log(&quot;切換成農莊&quot;);" title="切換成農莊"><span>切換成買家</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <!-- *-------------------//--header--------------------------*-->
@@ -59,10 +66,10 @@
                 <div class="tab-content">
                   <div class="tab-pane active" id="join" role="tabpanel">
                     <div class="form-group">
-                      <input class="form-control" type="text" placeholder="輸入姓名"/>
-                      <input class="form-control" type="text" placeholder="輸入手機號碼"/>
-                      <input class="form-control" type="text" placeholder="設定您的密碼"/>
-                      <input class="form-control" type="text" placeholder="再次輸入密碼"/>
+                      <input class="form-control" type="name" placeholder="輸入姓名"/>
+                      <input class="form-control" type="phone" placeholder="輸入手機號碼"/>
+                      <input class="form-control" type="password" placeholder="設定您的密碼"/>
+                      <input class="form-control" type="password" placeholder="再次輸入密碼"/>
                     </div>
                     <div class="form-group">
                       <label class="control-label">
@@ -78,8 +85,8 @@
                   </div>
                   <div class="tab-pane" id="signin" role="tabpanel">
                     <div class="form-group">
-                      <input class="form-control" type="text" placeholder="帳號"/>
-                      <input class="form-control" type="text" placeholder="密碼"/>
+                      <input class="form-control" type="id" placeholder="帳號"/>
+                      <input class="form-control" type="password" placeholder="密碼"/>
                     </div>
                     <div class="form-group">
                       <button class="btn">忘記密碼</button>

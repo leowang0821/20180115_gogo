@@ -22,7 +22,7 @@
 }
 
 #six-container {
-  margin: 80px 0 20px 0;
+  margin: 60px 0 20px 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -41,7 +41,7 @@
   }
   .container-fluid ~ .container-fluid {
     margin-top: 30px;
-    
+
   }
   .container-fluid.six-whiteBg + .container-fluid {
     margin-top: 0px;
@@ -50,7 +50,7 @@
     &+.container-fluid {
       margin-top: 0px;
     }
-  } 
+  }
   &.main {
     // margin:30px 0;
     .container-fluid.six-whiteBg >.container ,
@@ -78,7 +78,7 @@
   }
 }
 @media(max-width: 490px){
-  #six-container , 
+  #six-container ,
   .six-container {
     .container-fluid,
     .container {
@@ -97,9 +97,9 @@
   }
 }
 @media(max-width: 768px){
-  #six-container , 
+  #six-container ,
   .six-container {
-    margin-top: 90px;
+    margin-top: 60px;
     .container-fluid,
     .container {
       >.container-fluid,
@@ -111,9 +111,6 @@
     section + section {
       margin-top: 5px;
     }
-    &.seller {
-      margin-top: 60px;
-    }
   }
   .six-content {
     padding: 10px 5px;
@@ -121,7 +118,7 @@
   }
 }
 @media(min-width: 768px){
-  #six-container , 
+  #six-container ,
   .six-container {
     .container-fluid,
     .container {
@@ -155,7 +152,7 @@
   }
 }
 @media(min-width: 970px){
-  #six-container , 
+  #six-container ,
   .six-container {
     .container-fluid,
     .container {
@@ -184,7 +181,7 @@
   }
 }
 @media(min-width: 1200px){
-  #six-container , 
+  #six-container ,
   .six-container {
     .container-fluid,
     .container {
@@ -377,7 +374,7 @@
   & aside {
     -webkit-flex: 1 auto;
     flex: 1 auto;
-    height: auto !important;    
+    height: auto !important;
   }
 }
 

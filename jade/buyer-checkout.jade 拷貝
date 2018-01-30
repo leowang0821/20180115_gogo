@@ -1,0 +1,242 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+
+block prepend scripts
+
+block append scripts
+
+block header
+	-var type ="buyer"
+	-var page ="checkout"
+	-var pagetitle ="結帳"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		.container-fluid
+
+			section#checkoutBox
+				.panel.form-horizontal
+					.panel-heading.userInfo-field
+						h2 訂購人資料
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-2.control-label(for='username') 訂購人姓名：
+								.col-sm-10
+									input#username.form-control(type='text')
+							.form-group
+								label.col-sm-2.control-label(for='userphone') 聯絡電話：
+								.col-sm-10
+									input#userphone.form-control(type='text')
+							.form-group
+								label.col-sm-2.control-label(for='useremail') 聯絡Email：
+								.col-sm-10
+									input#useremail.form-control(type='email')
+					.panel-heading.payType-field
+						h2 付款方式
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='payment', value='1')
+									| 信用卡付款：
+								.col-sm-10
+									| 1234 5678 9012 1234
+								.clear
+								#creditcard.box.col-sm-11.col-sm-offset-1
+									.inner
+										fieldset
+											label(for='card-number') 信用卡號碼 Card Number
+											input#card-number.input-cart-number(type='num', maxlength='4')
+											input#card-number-1.input-cart-number(type='num', maxlength='4')
+											input#card-number-2.input-cart-number(type='num', maxlength='4')
+											input#card-number-3.input-cart-number(type='num', maxlength='4')
+										fieldset
+											label(for='card-holder') 持卡人姓名 Card holder
+											input#card-holder(type='text')
+										fieldset.fieldset-expiration
+											label(for='card-expiration-month') 卡片期限 Expiration date
+											.select
+												select#card-expiration-month
+													option
+													option 01
+													option 02
+													option 03
+													option 04
+													option 05
+													option 06
+													option 07
+													option 08
+													option 09
+													option 10
+													option 11
+													option 12
+											.select
+												select#card-expiration-year
+													option
+													option 2016
+													option 2017
+													option 2018
+													option 2019
+													option 2020
+													option 2021
+													option 2022
+													option 2023
+													option 2024
+													option 2025
+										fieldset.fieldset-type
+											label(for='card-expiration-month') 卡片種類 
+											.select
+												select#card-type
+													option
+													option VISA
+													option MASTER
+										fieldset.fieldset-ccv
+											label(for='card-ccv') CCV
+											input#card-ccv(type='text', maxlength='3')
+										.clear
+
+
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='payment', value='2')
+									| ATM付款：
+								.col-sm-10
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='payment', value='3')
+									| 貨到付款：
+								.col-sm-10
+									//- input#useremail.form-control(type='email')
+					.panel-heading.ttcoin-field
+						h2 台東金幣
+					.panel-body
+						.inner
+							.text-box.col-sm-11.col-sm-offset-1
+								| 日前尚有 台東金幣
+								span 2000
+								| 枚
+							.text-box.col-sm-11.col-sm-offset-1
+								| 剩餘
+								span 2000
+								| 枚台東金幣
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 全部折抵：
+								.col-sm-10
+									//- input#username.form-control(type='text')
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 部分折抵：
+								.col-sm-10
+									//- input#userphone.form-control(type='text')
+							#ttcoin.box.col-sm-11.col-sm-offset-1
+								.inner
+									.form-group
+										.form-control-static 我想要折抵
+										input.form-control.inLine.words-6(type='text')
+										.form-control-static 台幣
+									.text-box
+										| 剩餘
+										span 2000
+										| 枚台東金幣
+					.panel-heading.pickup-field
+						h2 取貨方式
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 宅配到府：
+								.col-sm-10
+							#ttcoin.box.col-sm-11.col-sm-offset-1
+								.inner
+									.form-group
+										.form-control-static 送達地址
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 所在縣市
+											option(value='1') 桃園市
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 鄉鎮市區
+											option(value='1') 桃園區
+										input.form-control.inLine.words-20(type='text')
+									.form-group
+										.form-control-static 指定送達時段
+										select.form-control.inLine.words-12
+											option(selected='selected', value='') 選擇時段
+											option(value='1') 中午前
+											option(value='1') 下午
+											option(value='1') 晚上
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 宅配到府：
+								.col-sm-10
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 全家超商取貨
+								.col-sm-10
+
+
+					.panel-heading.pickuper-field
+						h2 取貨人資料
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 與訂購人資料相同
+								.col-sm-10
+							.form-group
+								.col-sm-11.col-sm-offset-1
+									.form-group
+										.form-control-static 取貨人姓名：
+										input.form-control.inLine.words-20(type='text')
+									.form-group
+										.form-control-static 聯絡電話：
+										input.form-control.inLine.words-20(type='text')
+									.form-group
+										.form-control-static 聯絡Email：
+										input.form-control.inLine.words-20(type='text')
+					.panel-heading.billinfo-field
+						h2 發票資訊
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 捐贈發票
+								.col-sm-10
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 二聯電子發票
+								.col-sm-10
+							.form-group
+								label.col-sm-2.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| 三聯電子發票
+								.col-sm-10
+
+					.panel-heading.provision-field
+						h2 同意條款
+					.panel-body
+						.inner
+							.form-group
+								label.col-sm-12.control-label
+									input(type='radio', name='ttcoin', value='1')
+									| | 我已仔細詳閱.... 我已仔細詳閱.... 我已仔細詳閱 我已仔細詳閱.... 我已仔細詳閱.... 
+					.panel-footer
+						button.btn.btn-lg(type='button')
+							| 確認送出
+

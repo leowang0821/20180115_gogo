@@ -5,119 +5,173 @@ if type==="notsigned"
 if type==="buyer"
 	header.navbar#six-header(class=type)(class=page)(role='navigation')
 		.navbar-header#six-head
-				.navbar-brand
+				.navbar-brand(class=headBrand)
+					//- 桌機出現 手機消失  =.hidden-xs
+					//- 桌機消失 手機消失  =.hidden
 					a.page-scroll(href='http://google.com')
-						img(src="../images/logo.svg")
+						img(src="../images/logo.png")
 
-				form.navbar-form
-					.form-group
-						input.form-control(value='Search')
-						button.btn.btn-success(type='submit')
-							span.glyphicon.glyphicon-search
+				if pagetitle
+					.headTitle
+						h2=pagetitle
 
-				ul.navbar-nav.six-topNvbar
-					li
-						a(href='javascript: void(0);')
-							i.fa.fa-bell-o
-					li
-						a(href='javascript: void(0);')
-							i.fa.fa-heart-o
-					li
-						a(href='javascript: void(0);')
-							i.fa.fa-shopping-cart
-					li
-						a#menu-toggle(href="#" class="btn btn-primary btn-lg toggle")
-							i.fa.fa-bars
+				section.searchbar.hidden-xs(class=headSearch)
+					//- 桌機出現 手機消失  =.hidden-xs
+					//- 桌機消失 手機消失  =.hidden-xs.hidden-sm.hidden-md.hidden-lg
+					.input-group
+						input.form-control(type='text', placeholder='Search for...')
+						span.input-group-btn
+							button.btn.btn-default(type='button')
 
-						#sidebar-wrapper
-							.inner
-								figure.six-avatar
-									img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
-								.six-userName
-									a(href='/user-home') 莫孟娜
-									a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
-								.six-userNvbar
-									ul.navbar-nav
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("訊息通知");', title='訊息通知')
-												span 訊息通知
-										li.dropdown
-											a(href='javascript: console.log("商品列表");', title='商品列表')
-												span 商品列表
-										li.dropdown
-											a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
-												span 農莊品牌館
-										li.dropdown
-											a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
-												span 訂單查詢
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("我的最愛");', title='我的最愛')
-												span 我的最愛
-										li.dropdown
-											a(href='javascript: console.log("個人設定");', title='個人設定')
-												span 個人設定
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("購物車");', title='購物車')
-												span 購物車
-										li.dropdown
-											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
-												span 切換成農莊
+				button#menu-toggle.btn.bars
+					//- 回上頁= button#menu-toggle.btn.back
+				ul.six-topNvbar
+					li
+						button.btn.bell
+							.badge 9
+					li
+						button.btn.heart
+							.badge 99
+					li
+						button.btn.cart
+							.badge 99
+				#sidebar-wrapper
+					.inner
+						figure.six-avatar
+							img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
+						.six-userName
+							a(href='/user-home') 莫孟娜
+							a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
+						.six-userNvbar
+							ul.navbar-nav
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("訊息通知");', title='訊息通知')
+										span 訊息通知
+								li.dropdown
+									a(href='javascript: console.log("商品列表");', title='商品列表')
+										span 商品列表
+								li.dropdown
+									a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
+										span 農莊品牌館
+								li.dropdown
+									a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
+										span 訂單查詢
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("我的最愛");', title='我的最愛')
+										span 我的最愛
+								li.dropdown
+									a(href='javascript: console.log("個人設定");', title='個人設定')
+										span 個人設定
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("購物車");', title='購物車')
+										span 購物車
+								li.dropdown.conversion
+									a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
+										span 切換成農莊
 
 if type==="seller"
 	header.navbar#six-header(class=type)(class=page)(role='navigation')
 		.navbar-header#six-head
 				.navbar-brand
 					a.page-scroll(href='http://google.com')
-						img(src="../images/logo_seller.svg")
+						img(src="../images/logo.png")
 
 				if pagetitle
 					.headTitle
 						h2=pagetitle
 
-				ul.navbar-nav.six-topNvbar
+				button#menu-toggle.btn.bars
+					//- 回上頁= button#menu-toggle.btn.back
+				ul.six-topNvbar
 					li
-						a(href='javascript: void(0);')
-							i.fa.fa-bell-o
+						button.btn.bell
+							.badge 9
 					li
-						a(href='javascript: void(0);')
-							i.fa.fa-plus-square-o
+						button.btn.plus
 					li
-						a(href='javascript: void(0);')
-							i.fa.fa-trash-o 
-					li
-						a#menu-toggle(href="#" class="btn btn-primary btn-lg toggle")
-							i.fa.fa-bars
+						button.btn.trash
+				#sidebar-wrapper
+					.inner
+						figure.six-avatar
+							img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
+						.six-userName
+							a(href='/user-home') 莫孟娜
+							a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
+						.six-userNvbar
+							ul.navbar-nav
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("訊息通知");', title='訊息通知')
+										span 訊息通知
+								li.dropdown
+									a(href='javascript: console.log("商品列表");', title='商品列表')
+										span 我的商品
+								li.dropdown
+									a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
+										span 我的商品組合
+								li.dropdown
+									a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
+										span 已下架商品
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("我的最愛");', title='我的最愛')
+										span 出貨紀錄
+								li.dropdown
+									a(href='javascript: console.log("個人設定");', title='個人設定')
+										span 農莊介紹
+								li.dropdown.conversion
+									a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
+										span 切換成買家
 
-						#sidebar-wrapper
-							.inner
-								figure.six-avatar
-									img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
-								.six-userName
-									a(href='/user-home') 莫孟娜
-									a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
-								.six-userNvbar
-									ul.navbar-nav
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("訊息通知");', title='訊息通知')
-												span 訊息通知
-										li.dropdown
-											a(href='javascript: console.log("商品列表");', title='商品列表')
-												span 我的商品
-										li.dropdown
-											a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
-												span 我的商品組合
-										li.dropdown
-											a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
-												span 已下架商品
-										li.dropdown.hidden-md.hidden-lg
-											a(href='javascript: console.log("我的最愛");', title='我的最愛')
-												span 出貨紀錄
-										li.dropdown
-											a(href='javascript: console.log("個人設定");', title='個人設定')
-												span 農莊介紹
-										li.dropdown
-											a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
-												span 切換成買家
+if type==="manager"
+	header.navbar#six-header(class=type)(class=page)(role='navigation')
+		.navbar-header#six-head
+				.navbar-brand
+					a.page-scroll(href='http://google.com')
+						img(src="../images/logo.png")
+
+				if pagetitle
+					.headTitle
+						h2=pagetitle
+
+				button#menu-toggle.btn.bars
+					//- 回上頁= button#menu-toggle.btn.back
+				ul.six-topNvbar
+					li
+						button.btn.bell
+							.badge 9
+					li
+						button.btn.plus
+					li
+						button.btn.trash
+				#sidebar-wrapper
+					.inner
+						figure.six-avatar
+							img.img-circle(src='../images/avatar.jpg', alt='莫孟娜')
+						.six-userName
+							a(href='/user-home') 莫孟娜
+							a.btn.btn-primary.btn-xs.pull-right(href='/logout', title='會員登出') 登出
+						.six-userNvbar
+							ul.navbar-nav
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("訊息通知");', title='訊息通知')
+										span 訊息通知
+								li.dropdown
+									a(href='javascript: console.log("商品列表");', title='商品列表')
+										span 我的商品
+								li.dropdown
+									a(href='javascript: console.log("農莊品牌館");', title='農莊品牌館')
+										span 我的商品組合
+								li.dropdown
+									a(href='javascript: console.log("訂單查詢");', title='訂單查詢')
+										span 已下架商品
+								li.dropdown.hidden-md.hidden-lg
+									a(href='javascript: console.log("我的最愛");', title='我的最愛')
+										span 出貨紀錄
+								li.dropdown
+									a(href='javascript: console.log("個人設定");', title='個人設定')
+										span 農莊介紹
+								li.dropdown.conversion
+									a(href='javascript: console.log("切換成農莊");', title='切換成農莊')
+										span 切換成買家
 //- if page
 //- 	header.header(class=page)
 //- 		+buyer
