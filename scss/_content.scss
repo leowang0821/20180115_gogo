@@ -37,6 +37,13 @@
 		}
 		&.order-search {
 		}
+		&.message {
+			>.container-fluid {
+				background-color: $colorZ8;
+				min-height: 600px;
+				height: 100%;
+			}
+		}
 	}
 
 
@@ -84,9 +91,39 @@
 									line-height: 35px;
 									text-decoration: none;
 									padding: 5px;
-									@media (max-width:790px) {
-										text-align: center;
-									}
+								}
+							}
+						}
+						.panel-body {
+							@media (max-width:768px) {
+								padding:0;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.editdiscountportfolio {
+			>.container-fluid {
+				max-width: 1170px;
+				padding-top: 15px;
+				.panel-group {
+					.panel {
+						border-radius: 0;
+						box-shadow: none;
+						.panel-heading {
+							padding: 0;
+							background-color: transparent;;
+							border-bottom: 1px dashed $colorZ6;
+							.panel-title {
+								font-size: 1.5em;
+								font-weight: 100;
+								>a {
+									display: block;
+									width: 100%;
+									line-height: 35px;
+									text-decoration: none;
+									padding: 5px;
 								}
 							}
 						}

@@ -18,7 +18,7 @@
     <div id="wrapper">
       <header class="navbar buyer main" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
+          <div class="navbar-brand"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
           <section class="searchbar hidden-xs">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search for..."/><span class="input-group-btn">
@@ -26,6 +26,7 @@
             </div>
           </section>
           <button class="btn bars" id="menu-toggle"></button>
+          <button class="btn back" id="menu-back"></button>
           <ul class="six-topNvbar">
             <li>
               <button class="btn bell">
@@ -66,16 +67,38 @@
       <!-- *-------------------//--header--------------------------*-->
       <div class="buyer main" id="six-container">
         <div class="container-fluid">
-          <section id="carousel">
-            <div class="owl-carousel owl-theme" id="showCarousel" data-val="1">
-              <div class="owl-item" style="background-image:url('//placehold.it/1980x400.png');"><a href="#" title="農莊名稱">
-                  <div class="caption">廣告標題</div></a></div>
-              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
-                  <div class="caption">廣告標題</div></a></div>
-              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
-                  <div class="caption">廣告標題</div></a></div>
-              <div class="owl-item" style="background-image:url('../images/carousel.jpg');"><a href="#" title="農莊名稱">
-                  <div class="caption">廣告標題</div></a></div>
+          <section id="mainCarousel">
+            <div class="owl-carousel">
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('../images/carousel.jpg');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1024x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1280x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1600x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1980x450.png');"></div></a></div>
+                </div>
+              </div>
             </div>
           </section>
           <section id="recommendedfarm">
@@ -90,66 +113,86 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="owl-carousel owl-theme" id="farmCarousel">
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
-                    <div class="owl-item"><a href="#" title="農莊名稱">
-                        <div class="pic"><img src="../images/formLogo.jpg" alt="農莊名稱"/></div>
-                        <div class="caption">
-                          <div class="farmname">農莊名稱</div>
-                        </div></a></div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="農莊名稱">
+                            <div class="img" style="background-image:url('../images/formLogo.jpg');"></div></a>
+                          <div class="caption"><a href="#" title="農莊名稱"><span>農莊名稱農莊名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -161,100 +204,154 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love off"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love off"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
                   <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="inside">
-                      <figure><a href="#" title=""><img src="../images/goodsPic.jpg" alt="南瓜米胚芽鳳梨酥"/></a></figure>
-                      <div class="body">
-                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨酥</a></h4>
-                        <div class="price">
-                          <del>NT.9999</del>NT.9999
-                        </div>
-                        <div class="medal">1</div>
-                        <button class="btn btn-info toLove"></button>
-                        <button class="btn btn-info toCart"></button>
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="南瓜米胚芽鳳梨酥">
+                            <div class="img" style="background-image:url('../images/goodsPic.jpg');"></div></a></div>
+                      </div>
+                      <div class="info">
+                        <h4 class="name"><a href="#" title="">南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥</a></h4>
+                      </div>
+                      <div class="price">
+                        <del>$350</del><strong>$999</strong>
+                      </div>
+                      <div class="certificate"><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate1.jpg" alt="標章"/></a><a href="#" title=""><img src="../images/certificate2.jpg" alt="標章"/></a></div>
+                      <div class="form-group btnbox">
+                        <button class="btn love on"></button>
+                        <button class="btn cart"></button>
                       </div>
                     </div>
                   </div>
@@ -284,7 +381,7 @@
   <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
-    	var owlC = $('#showCarousel');
+    	var owlC = $('#mainCarousel .owl-carousel');
     	owlC.owlCarousel({
     		animateOut: 'slideOutDown',
     		animateIn: 'flipInX',
@@ -307,7 +404,7 @@
     		loop: true,
     		responsive:{
     			0:{
-    				items:4,
+    				items:3,
     				nav:true
     			},
     			600:{

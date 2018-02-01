@@ -12,7 +12,7 @@ block append scripts
 	script(src="../vendors/owl-carousel/owl.carousel.min.js")
 	script.
 		$(document).ready(function () {
-			var owl = $('.owl-carousel');
+			var owl = $('#itemCarousel .owl-carousel');
 			owl.owlCarousel({
 				margin: 0,
 				autoplay: true,
@@ -49,21 +49,33 @@ block content
 				.subtitle
 					| 以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆
 
-			section#carouselBox
+			section#itemCarousel
 				.owl-carousel
-					.item
-						img(src='//placehold.it/800x450.png')
-					.item
-						img(src='//placehold.it/800x450.png')
-					.item
-						img(src='//placehold.it/800x450.png')
-					.item
-						img(src='//placehold.it/800x450.png')
-					.item
-						img(src='//placehold.it/800x450.png')
-					.item
-						img(src='//placehold.it/800x450.png')
-
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/900x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1024x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1280x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1600x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1980x450.png');")
 			section#itemPriceBox
 				.price
 					del 定價 NT.9999
@@ -101,8 +113,10 @@ block content
 						| 農莊主人
 					.panel-body
 						.inner
-							.pic
-								img(src="../images/owner.jpg")
+							.six-thumb.bg
+								.inner
+									a(href='#', title='圖片說明')
+										.img(style="background-image:url('../images/owner.jpg');")
 							.name 阮勇光
 							.info
 								| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
@@ -197,29 +211,53 @@ block content
 						.inner
 							.items
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 								.item
-									a(href='#', title='食譜名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 食譜名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='食譜名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='食譜名稱')
+													span 食譜名稱
 			section#itemAddressBox
 				.panel
 					.panel-heading
@@ -271,8 +309,11 @@ block content
 							.items
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -284,21 +325,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
-										.star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											| (9999)
-										.price
-											del $350
-											strong $999起
-								.item
-									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -310,8 +341,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -323,8 +357,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -336,8 +373,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -349,8 +389,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -362,8 +405,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -382,8 +428,11 @@ block content
 							.items
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -395,21 +444,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
-										.star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											| (9999)
-										.price
-											del $350
-											strong $999起
-								.item
-									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -421,8 +460,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -434,8 +476,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -447,8 +492,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -460,8 +508,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -473,8 +524,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -622,8 +676,11 @@ block content
 							.items
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -635,21 +692,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
-										.star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											i.fa.fa-star
-											| (9999)
-										.price
-											del $350
-											strong $999起
-								.item
-									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -661,8 +708,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -674,8 +724,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -687,8 +740,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -700,8 +756,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -713,8 +772,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										img(src='//placehold.it/300x300.png')
-										h4 商品名稱
+										.six-thumb.bg
+											.inner
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+												.caption
+														span 商品名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star

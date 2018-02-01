@@ -10,11 +10,16 @@ block prepend scripts
 	//- script(src="../js/velocity.min.js")
 block append scripts
 	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	script.
+		var pixW
+		window.documentBy
 
 block header
 	-var type ="seller"
 	-var page ="myitems"
 	-var pagetitle ="我的商品"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
 	include ./_header.jade
 
 block content
@@ -40,9 +45,10 @@ block content
 						.inner
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
 								.inner
-									.itemPic.scale
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.pic
+										.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												i
 									.body
 										.id
 											| 編號：
@@ -60,9 +66,10 @@ block content
 										span &gt;
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
 								.inner
-									.itemPic.scale
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.pic
+										.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												i
 									.body
 										.id
 											| 編號：
@@ -80,9 +87,10 @@ block content
 										span &gt;
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
 								.inner
-									.itemPic.scale
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.pic
+										.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												i
 									.body
 										.id
 											| 編號：
@@ -100,9 +108,10 @@ block content
 										span &gt;
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
 								.inner
-									.itemPic.scale
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.pic
+										.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												i
 									.body
 										.id
 											| 編號：
@@ -120,9 +129,10 @@ block content
 										span &gt;
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
 								.inner
-									.itemPic.scale
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
+									.pic
+										.itemPic(style="background-image:url('../images/goodsPic.jpg');")
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												i
 									.body
 										.id
 											| 編號：

@@ -1,0 +1,204 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	//- link(href='../css/owl.carousel.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
+
+block header
+	-var type ="seller"
+	-var page ="stopSelling"
+	-var pagetitle ="已下架商品"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		section.searchbar
+			.input-group
+				input.form-control(type='text', placeholder='Search for...')
+				span.input-group-btn
+					button.btn(type='button')
+		.container-fluid
+				section#nav-tabs
+					ul.nav.nav-tabs(role='tablist')
+						li.active(role='presentation')
+							a(href='#tag1', aria-controls='tag1', role='tab', data-toggle='tab') 商品
+						li(role='presentation')
+							a(href='#tag2', aria-controls='tag2', role='tab', data-toggle='tab') 組合
+
+					.tab-content
+						#tag1.tab-pane.active(role='tabpanel')
+
+							section#itemsStopSelling
+								.panel
+									.panel-heading
+										.filter
+											div
+												| 共
+												span 4
+												| 項商品
+											.form-group
+												button.btn 篩選
+									.panel-body
+										.inner
+											.items
+												.item
+													.inner
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+														.info
+															.id
+																| 編號：
+																span 20654283
+															h4.name
+																a(href='#', title='')
+																	| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+															.choose
+																span 優惠NT$.999
+														button.btn
+															span ×
+												.item
+													.inner
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+														.info
+															.id
+																| 編號：
+																span 20654283
+															h4.name
+																a(href='#', title='')
+																	| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+															.choose
+																span 優惠NT$.999
+														button.btn
+															span ×
+												.item
+													.inner
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+														.info
+															.id
+																| 編號：
+																span 20654283
+															h4.name
+																a(href='#', title='')
+																	| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+															.choose
+																span 優惠NT$.999
+														button.btn
+															span ×
+
+						#tag2.tab-pane(role='tabpanel')
+							section#setStopSelling
+								.panel
+									.panel-heading
+										.filter
+											div
+												| 共
+												span 4
+												| 項商品
+											.form-group
+												button.btn 篩選
+									.panel-body
+										.inner
+											.items
+												.price
+													| 促銷價
+													span NT$999
+												.id
+													| 編號：
+													span 20654283
+												h4.name
+													a(href='#', title='') 健康三入組(紅藜+香米+青秧米) 健康三入組(紅藜+香米+青秧米)
+												.itemBox
+													.inset
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+												button.btn
+													span &gt;
+											.items
+												.price
+													| 促銷價
+													span NT$999
+												.id
+													| 編號：
+													span 20654283
+												h4.name
+													a(href='#', title='') 健康三入組(紅藜+香米+青秧米) 健康三入組(紅藜+香米+青秧米)
+												.itemBox
+													.inset
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+												button.btn
+													span &gt;
+											.items
+												.price
+													| 促銷價
+													span NT$999
+												.id
+													| 編號：
+													span 20654283
+												h4.name
+													a(href='#', title='') 健康三入組(紅藜+香米+青秧米) 健康三入組(紅藜+香米+青秧米)
+												.itemBox
+													.inset
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.bg
+															.inner
+																a(href='#', title='南瓜米胚芽鳳梨酥')
+																	.img(style="background-image:url('../images/goodsPic.jpg');")
+																.caption 組合名稱
+														.six-thumb.more
+															a(href='#', title='')
+																| +2
+															.caption 還有2項商品
+												button.btn
+													span &gt;

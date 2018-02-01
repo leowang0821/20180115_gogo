@@ -12,7 +12,7 @@ block append scripts
 	script(src="../vendors/owl-carousel/owl.carousel.min.js")
 	script.
 		$(document).ready(function () {
-			var owlC = $('#showCarousel');
+			var owlC = $('#mainCarousel .owl-carousel');
 			owlC.owlCarousel({
 				animateOut: 'slideOutDown',
 				animateIn: 'flipInX',
@@ -35,7 +35,7 @@ block append scripts
 				loop: true,
 				responsive:{
 					0:{
-						items:4,
+						items:3,
 						nav:true
 					},
 					600:{
@@ -61,20 +61,33 @@ block header
 block content
 	#six-container(class=type)(class=page)
 		.container-fluid
-			section#carousel
-				#showCarousel.owl-carousel.owl-theme(data-val="1")
-					.owl-item(style="background-image:url('//placehold.it/1980x400.png');")
-						a(href='#', title='農莊名稱')
-							.caption 廣告標題
-					.owl-item(style="background-image:url('../images/carousel.jpg');")
-						a(href='#', title='農莊名稱')
-							.caption 廣告標題
-					.owl-item(style="background-image:url('../images/carousel.jpg');")
-						a(href='#', title='農莊名稱')
-							.caption 廣告標題
-					.owl-item(style="background-image:url('../images/carousel.jpg');")
-						a(href='#', title='農莊名稱')
-							.caption 廣告標題
+			section#mainCarousel
+				.owl-carousel
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('../images/carousel.jpg');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1024x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1280x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1600x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1980x450.png');")
 
 			section#recommendedfarm
 				.panel
@@ -82,192 +95,304 @@ block content
 						| 每日推薦農莊
 						.pull-right
 							.btn-group
-
 								button.btn.btn-primary.btn-xs(type='button')
 									| MORE
 					.panel-body
 						.inner
 							#farmCarousel.owl-carousel.owl-theme
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
-								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
-								.owl-item
-									a(href='#', title='農莊名稱')
-										.pic
-											img(src='../images/formLogo.jpg', alt='農莊名稱')
-										.caption
-											.farmname 農莊名稱
+									.six-thumb.bg
+										.inner
+											a(href='#', title='農莊名稱')
+												.img(style="background-image:url('../images/formLogo.jpg');")
+											.caption
+												a(href='#', title='農莊名稱')
+													span 農莊名稱農莊名稱
 			section#goodslist
 				.panel
 					.panel-heading
 					.panel-body
 						.inner
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
+
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
+
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.off
+										button.btn.cart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.off
+										button.btn.cart
 							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
-								.inside
-									figure
-										a(href='#', title='')
-											img(src='../images/goodsPic.jpg', alt='南瓜米胚芽鳳梨酥')
-									.body
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
 										h4.name
-											a(href='#', title='') 南瓜米胚芽鳳梨酥
-										.price
-											del NT.9999
-											| NT.9999
-										.medal
-											| 1
-										button.btn.btn-info.toLove
-										button.btn.btn-info.toCart
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
+							.item.col-lg-3.col-md-4.col-sm-6.col-xs-12
+								.inner
+									.six-thumb.bg
+										.inner
+											a(href='#', title='南瓜米胚芽鳳梨酥')
+												.img(style="background-image:url('../images/goodsPic.jpg');")
+									.info
+										h4.name
+											a(href='#', title='')
+												| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+									.price
+										del $350
+										strong $999
+									.certificate
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate1.jpg', alt='標章')
+										a(href='#', title='')
+											img(src='../images/certificate2.jpg', alt='標章')
+
+									.form-group.btnbox
+										button.btn.love.on
+										button.btn.cart
 

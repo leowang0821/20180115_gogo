@@ -1,0 +1,119 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+
+block prepend scripts
+
+block append scripts
+
+block header
+	-var type ="buyer"
+	-var page ="message"
+	-var pagetitle ="訊息通知"
+	-var headBrand ="hidden-xs"
+	-var headSearch ="hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+			.container-fluid
+				section#nav-tabs
+					ul.nav.nav-tabs(role='tablist')
+						li.active(role='presentation')
+							a(href='#tag1', aria-controls='tag1', role='tab', data-toggle='tab') 訊息通知
+						li(role='presentation')
+							a(href='#tag2', aria-controls='tag2', role='tab', data-toggle='tab') 訊息通知
+						li(role='presentation')
+							a(href='#tag3', aria-controls='tag3', role='tab', data-toggle='tab') 訊息通知
+
+					.tab-content
+						#tag1.tab-pane.active(role='tabpanel')
+							section#messageListBox.panel-group(role='tablist', aria-multiselectable='true')
+								.panel
+									#heading1.panel-heading(role='tab')
+										a(role='button', data-toggle='collapse', data-parent='#messageListBox', href='#msg1', aria-expanded='true', aria-controls='msg1')
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+												.open
+									#msg1.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading1')
+										.panel-body
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+
+
+								.panel
+									#heading2.panel-heading(role='tab')
+										a.collapsed(role='button', data-toggle='collapse', data-parent='#messageListBox', href='#msg2', aria-expanded='false', aria-controls='msg2')
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+												.open
+									#msg2.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading2')
+										.panel-body
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+
+
+								.panel
+									#heading3.panel-heading(role='tab')
+										a.collapsed(role='button', data-toggle='collapse', data-parent='#messageListBox', href='#msg3', aria-expanded='false', aria-controls='msg3')
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+												.open
+									#msg3.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading3')
+										.panel-body
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+											blockquote
+												p
+													| [出貨通知]訂單編號：99999999999
+												footer
+													| 2018/01/01 上午5:30 已從關山集貨中心出貨！
+
+						#tag2.tab-pane(role='tabpanel') ...
+						#tag3.tab-pane(role='tabpanel') ...

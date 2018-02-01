@@ -18,7 +18,7 @@
     <div id="wrapper">
       <header class="navbar buyer item" id="six-header" role="navigation">
         <div class="navbar-header" id="six-head">
-          <div class="navbar-brand hidden-xs"><a class="page-scroll" href="http://google.com"><img src="../images/logo.png"/></a></div>
+          <div class="navbar-brand hidden-xs"><a class="page-scroll" href="http://google.com"><img src="../images/logo.svg"/></a></div>
           <div class="headTitle">
             <h2>商品資訊</h2>
           </div>
@@ -29,6 +29,7 @@
             </div>
           </section>
           <button class="btn bars" id="menu-toggle"></button>
+          <button class="btn back" id="menu-back"></button>
           <ul class="six-topNvbar">
             <li>
               <button class="btn bell">
@@ -79,14 +80,38 @@
             </div>
             <div class="subtitle">以自然農法栽培的咖啡果實，透過體內酵素淬煉，「產」出風味絕佳的咖啡豆</div>
           </section>
-          <section id="carouselBox">
+          <section id="itemCarousel">
             <div class="owl-carousel">
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
-              <div class="item"><img src="//placehold.it/800x450.png"/></div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/900x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1024x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1280x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1600x450.png');"></div></a></div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="six-thumb bg">
+                  <div class="inner"><a href="#" title="圖片說明">
+                      <div class="img" style="background-image:url('http://placehold.it/1980x450.png');"></div></a></div>
+                </div>
+              </div>
             </div>
           </section>
           <section id="itemPriceBox">
@@ -119,7 +144,10 @@
               <div class="panel-heading">農莊主人</div>
               <div class="panel-body">
                 <div class="inner">
-                  <div class="pic"><img src="../images/owner.jpg"/></div>
+                  <div class="six-thumb bg">
+                    <div class="inner"><a href="#" title="圖片說明">
+                        <div class="img" style="background-image:url('../images/owner.jpg');"></div></a></div>
+                  </div>
                   <div class="name">阮勇光</div>
                   <div class="info">喝我家的果子狸咖啡，滋味會在舌尖上跳舞！</div>
                   <div class="clear"></div>
@@ -205,18 +233,54 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="items">
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
-                    <div class="item"><a href="#" title="食譜名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>食譜名稱</h4></a></div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="six-thumb bg">
+                        <div class="inner"><a href="#" title="食譜名稱">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div></a>
+                          <div class="caption"><a href="#" title="食譜名稱"><span>食譜名稱</span></a></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -280,50 +344,79 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="items">
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999起</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
+                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
+                        <div class="price">
+                          <del>$350</del><strong>$999</strong>
+                        </div></a></div>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>食譜名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
@@ -339,50 +432,79 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="items">
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999起</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
+                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
+                        <div class="price">
+                          <del>$350</del><strong>$999</strong>
+                        </div></a></div>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
@@ -515,50 +637,79 @@
               <div class="panel-body">
                 <div class="inner">
                   <div class="items">
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999起</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
-                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
-                        <div class="price">
-                          <del>$350</del><strong>$999</strong>
-                        </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
                         </div></a></div>
-                    <div class="item"><a href="#" title="商品名稱"><img src="//placehold.it/300x300.png"/>
-                        <h4>商品名稱</h4>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
+                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
+                        <div class="price">
+                          <del>$350</del><strong>$999</strong>
+                        </div></a></div>
+                    <div class="item"><a href="#" title="商品名稱">
+                        <div class="six-thumb bg">
+                          <div class="inner">
+                            <div class="img" style="background-image:url('http://placehold.it/600x600.png');"></div>
+                            <div class="caption"><span>商品名稱</span></div>
+                          </div>
+                        </div>
                         <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>(9999)</div>
                         <div class="price">
                           <del>$350</del><strong>$999</strong>
@@ -590,7 +741,7 @@
   <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
-    	var owl = $('.owl-carousel');
+    	var owl = $('#itemCarousel .owl-carousel');
     	owl.owlCarousel({
     		margin: 0,
     		autoplay: true,

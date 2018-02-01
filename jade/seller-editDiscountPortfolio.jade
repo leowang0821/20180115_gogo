@@ -1,0 +1,335 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	//- link(href='../css/owl.carousel.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	//- script(src="../vendors/owl-carousel/owl.carousel.min.js")
+
+block header
+	-var type ="seller"
+	-var page ="editdiscountportfolio"
+	-var pagetitle ="新增商品組合"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		section.searchbar
+			.input-group
+				input.form-control(type='text', placeholder='Search for...')
+				span.input-group-btn
+					button.btn(type='button')
+		.container-fluid
+			#accordion.panel-group(role='tablist', aria-multiselectable='true')
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a(role='button', data-toggle='collapse', data-parent='#accordion', href='#step1', aria-expanded='true', aria-controls='step1')
+								| 1. 重要資訊
+					#step1.panel-collapse.collapse.in(role='tabpanel')
+						.panel-body
+							section#add-dp1.formlist
+								.row
+									label.col-sm-12.control-label
+										| 商品名稱
+									.col-sm-12
+										input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+								.row.items
+									.item
+										.inner
+											.six-thumb.bg
+												.inner
+													a(href='#', title='南瓜米胚芽鳳梨酥')
+														.img(style="background-image:url('../images/goodsPic.jpg');")
+											.info
+												h4.name
+													a(href='#', title='')
+														| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+												.choose
+													span 2組 優惠NT$.999
+												.temp.normal 常溫
+												.owner
+													a(href='#', title='李氏有機農莊')
+														img(src='http://placehold.it/40x40.png')
+														| 李氏有機農莊
+											button.btn
+												span ×
+									.item
+										.inner
+											.six-thumb.bg
+												.inner
+													a(href='#', title='南瓜米胚芽鳳梨酥')
+														.img(style="background-image:url('../images/goodsPic.jpg');")
+											.info
+												h4.name
+													a(href='#', title='')
+														| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+												.choose
+													span 2組 優惠NT$.999
+												.temp.normal 常溫
+												.owner
+													a(href='#', title='李氏有機農莊')
+														img(src='http://placehold.it/40x40.png')
+														| 李氏有機農莊
+											button.btn
+												span ×
+									.item
+										.inner
+											.six-thumb.bg
+												.inner
+													a(href='#', title='南瓜米胚芽鳳梨酥')
+														.img(style="background-image:url('../images/goodsPic.jpg');")
+											.info
+												h4.name
+													a(href='#', title='')
+														| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+												.choose
+													span 2組 優惠NT$.999
+												.temp.normal 常溫
+												.owner
+													a(href='#', title='李氏有機農莊')
+														img(src='http://placehold.it/40x40.png')
+														| 李氏有機農莊
+											button.btn
+												span ×
+									.form-group.plus
+										button.btn 新增
+									label.col-sm-12.control-label
+										| 商品庫存量
+									.col-sm-12.form-group
+										input.form-control.inLine.words-8(type='text')
+										.form-control-static 組
+								.row
+									label.col-sm-12.control-label
+										| 包裝尺寸
+										small 40*40*20公分
+									.col-sm-12.form-group.input-flex
+										select.form-control
+											option(selected='selected', value='') 長度
+											option(value='1') 40
+										select.form-control
+											option(selected='selected', value='') 寬度
+											option(value='1') 40
+										select.form-control
+											option(selected='selected', value='') 高度
+											option(value='1') 40
+								.row
+									label.col-sm-12.control-label
+										| 商品重量
+									.col-sm-12.form-group
+										.form-control-static 1
+										.form-control-static 組
+										input.form-control.inLine.words-6(type='text')
+										select.form-control.inLine.words-6
+											option(selected='selected', value='') 公斤
+											option(value='1') 公斤
+								.row
+									label.col-sm-12.control-label
+										| 課稅別
+									.col-sm-12.form-group
+										select.form-control
+											option(selected='selected', value='') 應稅
+											option(value='1') 未稅
+								.row
+									label.col-sm-12.control-label
+										| 總價 NT$
+									.col-sm-12.form-group
+										input.form-control.inLine.words-6(type='text')
+								.row
+									label.col-sm-12.control-label
+										| 促銷價 NT$
+									.col-sm-12.form-group
+										input.form-control.inLine.words-6(type='text')
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
+
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#step2', aria-expanded='false', aria-controls='step2')
+								| 2.上傳圖片或影片
+					#step2.panel-collapse.collapse(role='tabpanel')
+						.panel-body
+							section#addItemstep3.formlist
+								.row
+									.col-xs-4.col-sm-4.form-group
+										span.btn.btn-default.btn-file.img-select-btn
+											span
+											input(type='file', name='img-file-input')
+									.col-xs-4.col-sm-4.form-group
+										span.btn.btn-default.btn-file.img-select-btn
+											span
+											input(type='file', name='img-file-input')
+									.col-xs-4.col-sm-4.form-group
+										span.btn.btn-default.btn-file.img-select-btn
+											span
+											input(type='file', name='img-file-input')
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
+
+
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#step3', aria-expanded='false', aria-controls='step3')
+								| 3.上/下架時間設定
+					#step3.panel-collapse.collapse(role='tabpanel')
+						.panel-body
+							section#addItemstep4.formlist
+								.timer.row
+									label.col-xs-12.col-sm-12.control-label
+										| 預計上架時間
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
+											|  立即上架
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
+											|  指定時間
+									.col-xs-12.col-sm-12.input-flex
+										select.form-control
+											option(selected='selected', value='') 年
+											option(value='1') 2018
+										select.form-control
+											option(selected='selected', value='') 月
+											option(value='1') 12
+										select.form-control
+											option(selected='selected', value='') 日
+											option(value='1') 31
+										select.form-control
+											option(selected='selected', value='') 時
+											option(value='1') 23
+										select.form-control
+											option(selected='selected', value='') 分
+											option(value='1') 59
+								.timer.row
+									label.col-xs-12.col-sm-12.control-label
+										| 預計下架時間
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='1')
+											|  長期販售
+									.col-xs-12.col-sm-12.form-group
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='inlineRadioOptions', value='2')
+											|  指定時間
+									.col-xs-12.col-sm-12.input-flex
+										select.form-control
+											option(selected='selected', value='') 年
+											option(value='1') 2018
+										select.form-control
+											option(selected='selected', value='') 月
+											option(value='1') 12
+										select.form-control
+											option(selected='selected', value='') 日
+											option(value='1') 31
+										select.form-control
+											option(selected='selected', value='') 時
+											option(value='1') 23
+										select.form-control
+											option(selected='selected', value='') 分
+											option(value='1') 59
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
+
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#step4', aria-expanded='false', aria-controls='step4')
+								| 4.出貨設定
+					#step4.panel-collapse.collapse(role='tabpanel')
+						.panel-body
+							section#addItemstep5.formlist
+								.row
+									.col-xs-12.col-sm-12
+										label.control-label
+											| 集貨中心地點
+										select.form-control
+											option(selected='selected', value='') 集貨中心地點
+											option(value='1') 集貨中心地點
+								.row
+									.col-xs-12.col-sm-12
+										label.control-label
+											| 取貨方式
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='tak', value='1')
+											|  宅配到府
+										label.radio-inline
+											input#inlineRadio2(type='radio', name='tak', value='2')
+											|  超商取貨
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
+
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#step5', aria-expanded='false', aria-controls='step5')
+								| 5.更多說明
+					#step5.panel-collapse.collapse(role='tabpanel')
+						.panel-body
+							section#addItemstep6.formlist
+								.row
+									label.col-xs-12.col-sm-12.control-label
+										| 商品簡述
+									.col-xs-12.col-sm-12
+										textarea.form-control(rows='3')
+								.row
+									label.col-xs-12.col-sm-12.control-label
+										| 商品說明
+									.col-xs-12.col-sm-12
+										textarea.form-control(rows='3')
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
+
+
+				.panel.panel-default
+					.panel-heading(role='tab')
+						h4.panel-title
+							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#step6', aria-expanded='false', aria-controls='step6')
+								| 6.增加標籤
+					#step6.panel-collapse.collapse(role='tabpanel')
+						.panel-body
+							section#addItemstep8.formlist
+								.row
+									label.col-sm-12.control-label
+										| 我的標籤
+									.col-xs-12.col-sm-12
+										.tag
+											a(href='#', title='有錢不一定買得到') 有錢不一定買得到
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+										.tag
+											a(href='#', title='蔬果') 蔬果
+								.row
+									label.col-xs-12.col-sm-12.control-label
+										| 新增標籤
+									.col-xs-12.col-sm-12.input-group
+										input.form-control(type='text', placeholder='標籤')
+										span.input-group-btn
+											button.btn.btn-default(type='button') 新增
+
+								.row
+									label.col-sm-12.form-group.next
+										button.btn.btn-next 下一步
