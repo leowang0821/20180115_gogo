@@ -436,136 +436,136 @@ section#goodslist {
 		}
 		.panel-body {
 			padding: 10px 0;
-			.item {
-				display: inline-block;
-				float: left;
-				padding: 8px 4px;
-				@media(max-width: 768px) {
-					display: block;
-				}
-				>.inner {
-					border: 1px solid $colorZ7;
-					padding: 4px;
-					&:hover {
-						border: 1px solid $colorA5;
-					}
-					&:after {
-						content: "";
-						display: block;
-						width: 100%;
-						height: 0;
-						clear: both;
-					}
-				}
-				.six-thumb {
-					.img {
-						min-height: 200px;
-					}
-				}
-				.info {
-					position: relative;
-					width: 100%;
-					min-height: 40px;
-					display: inline-block;
-					margin-top: 10px;
-					margin-bottom: 10px;
-					.name {
-						line-height: 1.6em;
-					}
-					.medal {
-						position: absolute;
-						top: 15px;
-						right: 5px;
-						width: 25px;
-						height: 40px;
-						background-image: url('../images/medal.png');
-						background-size: 100%;
-						background-repeat: no-repeat;
-						background-position: center center;
-						text-align: center;
-						padding-top: 8px;
-						color: $colorA4;
-						font-weight: bold;
-					}
-				}
+			// .item {
+			// 	display: inline-block;
+			// 	float: left;
+			// 	padding: 8px 4px;
+			// 	@media(max-width: 768px) {
+			// 		display: block;
+			// 	}
+			// 	>.inner {
+			// 		border: 1px solid $colorZ7;
+			// 		padding: 4px;
+			// 		&:hover {
+			// 			border: 1px solid $colorA5;
+			// 		}
+			// 		&:after {
+			// 			content: "";
+			// 			display: block;
+			// 			width: 100%;
+			// 			height: 0;
+			// 			clear: both;
+			// 		}
+			// 	}
+			// 	.six-thumb {
+			// 		.img {
+			// 			min-height: 200px;
+			// 		}
+			// 	}
+			// 	.info {
+			// 		position: relative;
+			// 		width: 100%;
+			// 		min-height: 40px;
+			// 		display: inline-block;
+			// 		margin-top: 10px;
+			// 		margin-bottom: 10px;
+			// 		.name {
+			// 			line-height: 1.6em;
+			// 		}
+			// 		.medal {
+			// 			position: absolute;
+			// 			top: 15px;
+			// 			right: 5px;
+			// 			width: 25px;
+			// 			height: 40px;
+			// 			background-image: url('../images/medal.png');
+			// 			background-size: 100%;
+			// 			background-repeat: no-repeat;
+			// 			background-position: center center;
+			// 			text-align: center;
+			// 			padding-top: 8px;
+			// 			color: $colorA4;
+			// 			font-weight: bold;
+			// 		}
+			// 	}
 
-				.price {
-					margin-bottom: 10px;
-					del {
-						font-size: .975em;
-						color: #aaa;
-						margin-right: 10px;
-					}
-					strong {
-						font-size: 1.2em;
-						color: #d53200;
-						font-weight: 600;
-					}
-				}
+			// 	.price {
+			// 		margin-bottom: 10px;
+			// 		del {
+			// 			font-size: .975em;
+			// 			color: #aaa;
+			// 			margin-right: 10px;
+			// 		}
+			// 		strong {
+			// 			font-size: 1.2em;
+			// 			color: #d53200;
+			// 			font-weight: 600;
+			// 		}
+			// 	}
 
-				.certificate {
-					float: left;
-					>a {
-						margin-left: 5px;
-					}
-					img {
-						transition: all .3s;
-						max-height: 20px;
-						&:hover {
-							transform: scale(1.4);
-						}
-					}
-				}
+			// 	.certificate {
+			// 		float: left;
+			// 		>a {
+			// 			margin-left: 5px;
+			// 		}
+			// 		img {
+			// 			transition: all .3s;
+			// 			max-height: 20px;
+			// 			&:hover {
+			// 				transform: scale(1.4);
+			// 			}
+			// 		}
+			// 	}
 
-				.btnbox {
-					display: inline-block;
-					float: right;
-					button {
-						border-radius: 0;
-						padding: 2px;
-						background-color: #ddd;
-						&:before {
-							display: inline-block;
-							font-family: FontAwesome;
-							font-style: normal;
-							font-weight: normal;
-							text-decoration: inherit;
-							width: 50px;
-							height: 36px;
-							line-height: 36px;
-							text-align: center;
-							color: $colorZ9;
-							font-size: 1.1em;
-						}
-						&.love {
-							background-color: transparent;
-							&:before {
-								color: #dd1c5d;
-								content: '\f08a';
-							}
-							&.on:before {
-								content: '\f004';
-							}
-							&.off:before {
-								content: '\f08a';
-							}
-						}
-						&.cart {
-							border-radius: 4px;
-							&:before {
-								color: #888;
-								content: '\f07a';
-							}
-							&:hover {
-								background-color: $colorA5;
-								&:before {
-									color: $colorZ9;
-								}
-							}
-						}
-					}
-				}
-			}
+			// 	.btnbox {
+			// 		display: inline-block;
+			// 		float: right;
+			// 		button {
+			// 			border-radius: 0;
+			// 			padding: 2px;
+			// 			background-color: #ddd;
+			// 			&:before {
+			// 				display: inline-block;
+			// 				font-family: FontAwesome;
+			// 				font-style: normal;
+			// 				font-weight: normal;
+			// 				text-decoration: inherit;
+			// 				width: 50px;
+			// 				height: 36px;
+			// 				line-height: 36px;
+			// 				text-align: center;
+			// 				color: $colorZ9;
+			// 				font-size: 1.1em;
+			// 			}
+			// 			&.love {
+			// 				background-color: transparent;
+			// 				&:before {
+			// 					color: #dd1c5d;
+			// 					content: '\f08a';
+			// 				}
+			// 				&.on:before {
+			// 					content: '\f004';
+			// 				}
+			// 				&.off:before {
+			// 					content: '\f08a';
+			// 				}
+			// 			}
+			// 			&.cart {
+			// 				border-radius: 4px;
+			// 				&:before {
+			// 					color: #888;
+			// 					content: '\f07a';
+			// 				}
+			// 				&:hover {
+			// 					background-color: $colorA5;
+			// 					&:before {
+			// 						color: $colorZ9;
+			// 					}
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }
