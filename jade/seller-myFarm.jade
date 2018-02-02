@@ -1,0 +1,270 @@
+extends ./_model.jade
+
+block append meta
+block title
+	title GOGO
+block append link
+	link(href='../vendors/owl-carousel/assets/owl.carousel.css', rel='stylesheet')
+	link(href='../vendors/owl-carousel/assets/owl.theme.default.css', rel='stylesheet')
+block prepend scripts
+	//- script(src="../js/velocity.min.js")
+block append scripts
+	script(src="../vendors/owl-carousel/owl.carousel.min.js")
+	script.
+		$(document).ready(function () {
+			var owlC = $('#farmCarousel .owl-carousel');
+			owlC.owlCarousel({
+				animateOut: 'slideOutDown',
+				animateIn: 'flipInX',
+				margin: 0,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				loop: true,
+				items: 1,
+				autoHeight: true,
+				nav: true,
+				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+			})
+		});
+
+block header
+	-var type ="seller"
+	-var page ="myFarm"
+	-var pagetitle ="農莊介紹"
+	-var headBrand = "hidden-xs"
+	-var headSearch = "hidden"
+	include ./_header.jade
+
+block content
+	#six-container(class=type)(class=page)
+		.container-fluid
+
+			section#farmCarousel
+				.owl-carousel
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/900x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1024x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1280x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1600x450.png');")
+					.owl-item
+						.six-thumb.bg
+							.inner
+								a(href='#', title='圖片說明')
+									.img(style="background-image:url('http://placehold.it/1980x450.png');")
+			section#article.farm
+				.panel
+					.panel-heading
+						| 小農故事
+					.panel-body
+						.inner
+							p 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+			section#article.farm
+				.panel
+					.panel-heading
+						| 農莊介紹
+					.panel-body
+						.inner
+							p 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+			section#article.farm
+				.panel
+					.panel-heading
+						| 影片介紹
+					.panel-body
+						.inner
+							.video
+								.six-thumb.ratio16-9
+									.inner
+										a(href='#', title='圖片說明')
+											.img
+												iframe(src='https://www.youtube.com/embed/EGjgJ20l09M', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+			section#article.farm
+				.panel
+					.panel-heading
+						| 相關報導
+					.panel-body
+						.inner
+							.news
+								.six-thumb.ratio16-9
+									.inner
+										a(href='#', title='圖片說明')
+											.img(style="background-image:url('../images/owner.jpg');")
+								.info
+									| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！喝我家的果子狸咖啡，滋味會在舌尖上跳舞！喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
+
+			section#buyerItemsList
+				.panel
+					.panel-body
+						.inner
+							.items
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													.img(style="background-image:url('../images/goodsPic.jpg');")
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚芽鳳梨酥南瓜米胚芽鳳梨酥酥
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.off
+												button.btn.cart
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='圖片說明')
+													.img
+														iframe(src='https://www.youtube.com/embed/EGjgJ20l09M', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.on
+												button.btn.cart.on
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													.img(style="background-image:url('../images/goodsPic.jpg');")
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.on
+												button.btn.cart
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													.img(style="background-image:url('../images/goodsPic.jpg');")
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.on
+												button.btn.cart
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													.img(style="background-image:url('../images/goodsPic.jpg');")
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.on
+												button.btn.cart
+								.item.goods.col-lg-3.col-md-4.col-sm-6.col-xs-12
+									.inner
+										.six-thumb.ratio4-3
+											.inner
+												a(href='#', title='南瓜米胚芽鳳梨酥')
+													.img(style="background-image:url('../images/goodsPic.jpg');")
+										.info
+											.title
+												a(href='#', title='')
+													| 南瓜米胚芽鳳梨南瓜米胚
+											.price
+												del $350
+												strong $999
+											.certificate
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate1.jpg', alt='標章')
+												a(href='#', title='')
+													img(src='../images/certificate2.jpg', alt='標章')
+
+											.form-group.btnbox
+												button.btn.love.on
+												button.btn.cart

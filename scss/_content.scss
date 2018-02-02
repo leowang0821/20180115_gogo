@@ -136,5 +136,17 @@
 				}
 			}
 		}
+		&.message {
+			>.container-fluid {
+				background-color: $colorZ8;
+				height: 100%;
+			}
+		}
+		&.tag {
+			>.container-fluid {
+				background-color: $colorZ8;
+				height: 100%;
+			}
+		}
 	}
 }
