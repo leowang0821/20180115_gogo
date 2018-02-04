@@ -180,6 +180,9 @@ header#six-header {
           height: 40px;
           border-radius: 20px;
           background-color: rgba($colorZ0, .05);
+          @media (max-width:768px) {
+            background-color: transparent;
+          }
           text-align: center;
           &:before {
             display: inline-block;
@@ -196,6 +199,9 @@ header#six-header {
           }
           &:active {
             background-color: rgba($colorZ0, .1);
+            @media (max-width:768px) {
+              background-color: transparent;
+            }
           }
           .badge {
             position: absolute;

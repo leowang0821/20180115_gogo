@@ -2,6 +2,9 @@
 @import "mixin";
 @import "componer";
 
+a , a:hover , a:focus {
+  text-decoration: none !important;
+}
 #wrapper {
   padding-left: 0;
   width: 100%;
@@ -383,4 +386,7 @@
 .day,.time.heading .title-demarcation {
   background:transparent\9\0 !important;
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='transparent', EndColorStr='transparent') !important;
+}
+.btn:focus , .btn:active , .btn:hover{
+    outline: 0;
 }

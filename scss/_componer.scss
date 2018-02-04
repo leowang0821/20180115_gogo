@@ -13,8 +13,8 @@ section#mainCarousel {
 		overflow: hidden;
 		border-bottom: 1px solid $colorZ8;
 		@media (max-width:768px) {
-			min-height: 200px;
-			max-height: 200px;
+			min-height: 145px;
+			// padding-top: calc(100% * .4545);
 		}
 		.owl-item {
 			width: 100%;
@@ -23,8 +23,8 @@ section#mainCarousel {
 				.img {
 					min-height: 450px;
 					background-color: rgba(255, 255, 255, 1);
-					@media (max-width:768px) {
-						min-height: 200px;
+					@media(max-width:768px){
+						min-height: 145px;
 					}
 				}
 			}
@@ -45,9 +45,18 @@ section#mainCarousel {
 		}
 		.owl-dots {
 			margin-bottom: 15px;
+			@media(max-width:768px){
+				margin-bottom: 0;
+			}
 			.owl-dot.active span,
 			.owl-dot:hover span {
 				background: $colorA5;
+			}
+			&:after {
+				content: "";
+				width: 100%;
+				display: block;
+				clear: both;
 			}
 		}
 		.owl-nav {
@@ -324,6 +333,9 @@ section#farmCarousel {
 }
 section#recommendedfarm {
 	padding: 0 15px;
+	@media(max-width:768px){
+		padding: 0;
+	}
 	.panel {
 		margin: 0;
 		box-shadow: none;
@@ -358,38 +370,78 @@ section#recommendedfarm {
 			>.inner {
 				padding-left: 40px;
 				padding-right: 40px;
+				@media(max-width:768px){
+				padding-left: 0;
+				padding-right: 0;
+				}
 			}
 			#farmCarousel {
 				max-height: 140px;
-				.owl-item {
+				.owl-item , .owl-item * {
+					border-color: transparent;
+					background-color: transparent;
+				}
+				.item {
 					width: 100%;
-					min-height: 128px;
-					max-height: 140px;
-					display: table;
 					.six-thumb {
-						.img {
-					    	background-color: $colorZ9;
+						transition: all .3s;
+						>.inner {
+
 						}
-					}
-					.farmname {
-						display: table-row;
-						text-align: center;
-						margin-top: 8px;
-						overflow: hidden;
-						>a {
-							line-height: 1.6em;
+						.inner > a {
+							@include aspect-ratio(1,1);
+							.img {
+								&:before {
+									content: none;
+								}
+								&:after {
+									content: none;
+								}
+							}
+							&:after {
+								content: "";
+								display: block;
+								width: 100%;
+								clear: both;
+							}
+						}
+						.inner .caption {
+						    a {
+						    	span {
+						    		font-size: .95em;
+									width: 100%;
+									text-align: center;
+								    white-space: nowrap;
+								    text-overflow: ellipsis;
+								    overflow: hidden;
+						    	}
+							    &:hover {
+							    	text-decoration: none;
+							    }
+						    }
+						}
+						&:hover {
+							transform: scale(1.1);
+							z-index: 9999;
+							border: 0;
 						}
 					}
 				}
 				.owl-dots {
-					margin-bottom: 0;
+					margin-bottom: 20px;
 					.owl-dot.active span,
 					.owl-dot:hover span {
 						background: $colorA5;
 					}
+					@media(max-width:768px){
+						padding: 0;
+					}
 				}
 				.owl-nav {
 					display: block !important;
+					@media(max-width:768px){
+						display: none !important;
+					}
 					.owl-prev,
 					.owl-next {
 						position: absolute;
@@ -426,13 +478,15 @@ section#recommendedfarm {
 
 section#goodslist {
 	padding: 0 15px;
+	@media(max-width:768px){
+		padding: 0;
+	}
 	.panel {
 		box-shadow: none;
 		.panel-heading {
 			border-bottom: 1px solid $colorA5;
 			color: $colorA5;
-			padding-left: 0;
-			padding-right: 0;
+			padding: 0;
 		}
 		.panel-body {
 			padding: 10px 0;
@@ -569,7 +623,11 @@ section#goodslist {
 		}
 	}
 }
-
+section#mainCarousel + section#goodslist {
+	.panel-heading {
+		border-bottom: 0;
+	}
+}
 section#itemTitleBox {
 	position: relative;
 	max-width: 1170px;
@@ -743,7 +801,7 @@ section#itemPriceBox {
 		}
 	}
 }
-
+// 要刪
 section#itemAboutBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -766,6 +824,7 @@ section#itemAboutBox {
 	}
 }
 
+// 要刪
 section#itemOwnerBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -816,7 +875,7 @@ section#itemOwnerBox {
 		}
 	}
 }
-
+// 要刪
 section#itemNutrientBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -866,7 +925,7 @@ section#itemNutrientBox {
 		}
 	}
 }
-
+// 要刪
 section#itemCertificateBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -897,6 +956,7 @@ section#itemCertificateBox {
 	}
 }
 
+// 要刪
 section#itemSeasonBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -918,6 +978,7 @@ section#itemSeasonBox {
 	}
 }
 
+// 要刪
 section#itemStorageBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -939,6 +1000,7 @@ section#itemStorageBox {
 	}
 }
 
+// 要刪
 section#itemPlantingAreaBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -960,6 +1022,7 @@ section#itemPlantingAreaBox {
 	}
 }
 
+// 要刪
 section#itemRecipeBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -977,22 +1040,11 @@ section#itemRecipeBox {
 			padding-top: 10px;
 			padding-bottom: 10px;
 			>.inner {}
-			.items {
-				.item {
-					display: inline-block;
-					margin-bottom: 10px;
-					.six-thumb {
-						.img {
-							width: 110px;
-							min-height: 110px;
-						}
-					}
-				}
-			}
 		}
 	}
 }
 
+// 要刪
 section#itemAddressBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -1036,6 +1088,7 @@ section#itemAddressBox {
 	}
 }
 
+// 要刪
 section#itemShippingInfoBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -1057,6 +1110,7 @@ section#itemShippingInfoBox {
 	}
 }
 
+// 要刪
 section#itemDeliveryMethodBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -1078,6 +1132,7 @@ section#itemDeliveryMethodBox {
 	}
 }
 
+// 要刪
 section#itemDiscountPortfolioBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -1147,16 +1202,17 @@ section#itemDiscountPortfolioBox {
 	}
 }
 
-section#itemRelatedBox {
+section.relatedBox {
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px !important;
 	.panel {
 		box-shadow: none;
+		background-color: transparent;
 		.panel-heading {
 			// border-bottom: 1px solid $colorA5;
-			// color: #FC8C10;
+			// color: #FC8C10;orientation: 76trewq;	
 			padding: 0 0 5px 0;
 			// border-radius: 0;
 			font-size: 1.3em;
@@ -1170,7 +1226,7 @@ section#itemRelatedBox {
 				padding-bottom: 10px;
 				overflow-x: auto;
 			}
-			.items {
+			.related {
 				min-width: 1170px;
 				.item {
 					display: inline-block;
@@ -1178,18 +1234,18 @@ section#itemRelatedBox {
 					margin-right: 10px;
 					a {
 						.six-thumb {
-							.img {
-								width: 110px;
-								min-height: 110px;
+							.inner {
+								@include aspect-ratio(1,1);
 							}
 						}
 						.star {
-							font-size: .9em;
+							font-size: .75em;
 							text-align: right;
 							color: $colorZ3;
 							i {
 								float: left;
 								color: $colorA5;
+								font-size: 1.1em;
 								&:last-child {
 									margin-right: 4px;
 								}
@@ -1199,11 +1255,13 @@ section#itemRelatedBox {
 							text-align: right;
 							padding-top: 8px;
 							del {
+								color: $colorZ3;
 								font-size: .9em;
 								margin-right: 5px;
 							}
 							strong {
 								// font-size: 1.2em;
+								color: $colorZ1;
 							}
 						}
 					}
@@ -1388,6 +1446,37 @@ section#itemQABox {
 	}
 }
 
+
+section.setBox {
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	.panel {
+		box-shadow: none;
+		.panel-heading {
+			padding: 0 0 10px 0;
+			font-size: 1.3em;
+		}
+		.panel-body {
+			padding: 10px;
+			border: 1px solid $colorZ7;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+		.panel-footer {
+			padding: 10px;
+			border: 1px solid $colorZ7;
+			border-top: 0;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+			button {
+				width: 100%;
+				font-weight: 100;
+				font-size: 1.1em;
+			}
+		}
+	}
+}
 section#itemFeedbackBox {
 	max-width: 1170px;
 	margin-left: auto;
@@ -1404,7 +1493,8 @@ section#itemFeedbackBox {
 		.panel-body {
 			padding: 10px 8px;
 			border: 1px solid rgba($colorZ0, .2);
-			border-radius: 5px;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
 			>.inner {}
 			ul.list-unstyled {
 				li.media {
@@ -1419,7 +1509,7 @@ section#itemFeedbackBox {
 					.star {
 						i {
 							color: $colorA5;
-							font-size: 1.4em;
+							font-size: 1.1em;
 						}
 					}
 					.comment {
@@ -1452,6 +1542,18 @@ section#itemFeedbackBox {
 				.btn {
 					width: 100%;
 				}
+			}
+		}
+		.panel-footer {
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+			padding: 8px;
+			border: 1px solid $colorZ7;
+			border-top: 0;
+			button {
+				width: 100%;
+				font-weight: 100;
+				font-size: 1.1em;
 			}
 		}
 	}
@@ -1655,7 +1757,7 @@ section#itemCartListBox {
 					}
 					.choose {
 						width: auto;
-						line-height: 1.4em;
+						line-height: 116px;
 						&.form-group {
 							line-height: 150px;
 						}
@@ -2539,13 +2641,6 @@ section#wellcome {
 				}
 			}
 		}
-		&:after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 0;
-			clear: both;
-		}
 	}
 	.tab-content {
 		.tab-pane {
@@ -2590,7 +2685,7 @@ section#wellcome {
 }
 section.searchbar {
 	width: 100%;
-	background-color: rgba($colorB4, .8);
+	background-color: rgba($colorZ7, .8);
 	padding: 5px 20px;
 	.input-group {
 		margin-left: auto;
@@ -2599,10 +2694,16 @@ section.searchbar {
 		padding: 0 10px;
 		input.form-control {
 			border-color: $colorZ6;
+			border-top-left-radius: 17px;
+			border-bottom-left-radius: 17px;
 		}
 		span {
 			button.btn {
 				border-color: $colorZ6;
+				border-top-right-radius: 17px;
+				border-bottom-right-radius: 17px;
+				padding-left: 20px;
+				padding-right: 20px;
 				&:before {
 					content: '\f002';
 					display: inline-block;
@@ -2611,24 +2712,48 @@ section.searchbar {
 					font-weight: normal;
 					text-decoration: inherit;
 					text-align: center;
-					color: $colorZ1;
+					color: $colorZ9;
 				}
 			}
 		}
 	}
 }
-// #six-container.seller.myitems section.searchbar {
-// 	// border: 1px solid #f00;
-// 	width: 100%;
-// 	background-color: rgba($colorB4, .8);
-// 	padding: 5px 20px;
-// 	.input-group {
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 		max-width:990px;
-// 		padding: 0 10px;
-// 	}
-// }
+.buyer {
+	section.searchbar {
+		background-color: transparent;
+		input.form-control {
+			border: 1px solid $colorA5;
+		}
+		button.btn {
+			border: 1px solid $colorA5 !important;
+			background-color: $colorA4;
+		}
+	}
+}
+.seller {
+	section.searchbar {
+		// background-color: transparent;
+		input.form-control {
+			border: 1px solid $colorB5;
+		}
+		button.btn {
+			border: 1px solid $colorB5 !important;
+			background-color: $colorB4;
+		}
+		@media(max-width:768px){
+			padding: 0;
+			.input-group {
+				padding: 0;
+				input.form-control {
+					border-radius: 0;
+				}
+				button.btn {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
 
 section#myitemlist {
 	.panel {
@@ -2824,63 +2949,12 @@ section#itemDiscountPortfolioSet {
 						margin-left: 5px;
 					}
 				}
-				.itemBox {
+				.set {
 					display: block;
 					overflow-y: hidden;
 					height: 120px;
-					.inset {
+					>.inner {
 						width: 1000px;
-					}
-					&:after {
-						content:"";
-						display: block;
-						width: 100%;
-						height: 0;
-						clear: both;
-					}
-					.item {
-						position: relative;
-						display: inline-block;
-						float: left;
-						width: 100px;
-						height: 100px;
-						padding-right: 20px;
-						img {
-							width: 100%;
-						}
-						h4 {
-							line-height: 1.4em;
-							font-size: .9em;
-							text-align: center;
-						}
-						&:after {
-							position: absolute;
-							right: 3px;
-							top: 30px;
-							content: "+";
-							font-size: 1.6em;
-							color: $colorZ5;
-						}
-						&:last-child:after {
-							content: none;
-						}
-						&.more {
-							line-height: 80px;
-							a {
-								text-align: center;
-								width: 80px;
-								height: 80px;
-								font-size: 1.4em;
-								font-weight: 100;
-								display: block;
-								background-color: $colorB8;
-								color: $colorZ9;
-								text-decoration: none;
-								&:hover {
-									background-color: $colorB7;
-								}
-							}
-						}
 					}
 				}
 				button.btn {
@@ -2933,9 +3007,15 @@ section#itemsStopSelling {
 		box-shadow: none;
 		.panel-heading {
 			padding: 0;
+			@media (max-width:768px) {
+				padding: 10px 10px 0 10px;
+			}
 		}
 		.panel-body {
 			padding: 10px 0;
+			@media (max-width:768px) {
+				padding: 10px;
+			}
 			.items {
 				position: relative;
 				padding: 0;
@@ -3128,9 +3208,15 @@ section#setStopSelling {
 		box-shadow: none;
 		.panel-heading {
 			padding: 0;
+			@media (max-width:768px) {
+				padding: 10px 10px 0 10px;
+			}
 		}
 		.panel-body {
 			padding: 10px 0;
+			@media (max-width:768px) {
+				padding: 10px;
+			}
 			.items {
 				position: relative;
 				padding: 15px 0;
@@ -3444,53 +3530,19 @@ section#orderSearchBox {
 							border-bottom: 1px solid #1E90C3;
 						}
 					}
-					.pic {
+					.six-thumb {
 						width: 100px;
-						.itemPic {
-							display: inline-block;
-							background-position: center center;
-							background-size: auto 100%;
-							background-repeat: no-repeat;
-							background-color: #000;
-							width: 100px;
-							// max-width: 150px;
-							a {
-								display: block;
-								width: 100%;
-								min-height: 100px;
-								line-height: 100px;
-								text-align: center;
-								transition: all .3s;
-								i {
-									opacity: 0;
-									&:before {
-										content:"\f0c1";
-										display: inline-block;
-										font-family: FontAwesome;
-										font-style: normal;
-										font-weight: normal;
-										text-decoration: inherit;
-										color: $colorZ9;
-										font-size: 1.1em;
-									}
-								}
-								&:hover {
-									background-color: rgba($colorZ0, .2);
-									i {
-										opacity: 1;
-									}
-								}
-							}
+						.img {
 						}
 						@media (max-width: 768px) {
 							width: 80px;
 							height: 100%;
-							.itemPic {
+							.img {
 								width: 80px;
-								a {
-									min-height: 80px;
-									line-height: 80px;
-								}
+								// a {
+								// 	min-height: 80px;
+								// 	line-height: 80px;
+								// }
 							}
 						}
 					}
@@ -3794,7 +3846,7 @@ section#nav-tabs {
 				a {
 					border: 0;
 					border-bottom: 4px solid $colorB5;
-					
+
 				}
 			}
 		}
@@ -3820,9 +3872,15 @@ section#sellerItemsList {
 		box-shadow: none;
 		.panel-heading {
 			padding: 0;
+			@media (max-width:768px) {
+				padding: 10px 10px  0 10px;
+			}
 		}
 		.panel-body {
 			padding: 10px 0;
+			@media (max-width:768px) {
+				padding: 10px;
+			}
 			.items {
 				position: relative;
 				padding: 0;
@@ -4085,7 +4143,7 @@ section#sellerItemsList {
 		}
 	}
 }
-section#article {
+section.article {
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
@@ -4172,6 +4230,72 @@ section#article {
 					}
 				}
 			}
+		}
+	}
+	.nutrientcntent {
+		border: 1px solid $colorZ7;
+		margin: 10px 0;
+		.row {
+			margin: 0;
+			border-bottom: 1px solid $colorZ7;
+			[class^="col-"] {
+				padding: 8px 10px;
+			}
+			&:first-child {
+				strong {
+					display: block;
+				}
+			}
+		}
+	}
+	.certificate {
+		li {
+			display: inline-block;
+			max-width: 80px;
+			margin-right: 10px;
+		}
+	}
+	.recipe {
+		// border: 1px solid #f00;
+		.item {
+			display: inline-block;
+			width: 110px;
+			.six-thumb {
+				 //
+				 .inner {
+					 >a {
+					 	@include aspect-ratio(1,1);
+						.img {
+							// max-width: 150px;
+							min-width: 110px;
+						}
+					 }
+					 .caption {
+
+					 }
+				 }
+			}
+		}
+	}
+	&.item {
+		.panel {
+			border-bottom: 0;
+		}
+		.panel-body {
+			padding-top: 0;
+		}
+		.panel-heading {
+			// border-bottom: 1px solid $colorA5;
+			color: #FC8C10;
+			padding: 0 0 10px 0;
+			border-radius: 0;
+			font-size: 1.3em;
+			&:before {
+				content: none;
+			}
+		}
+		.panel-footer {
+
 		}
 	}
 }

@@ -98,30 +98,46 @@ block content
 						a(href='#', title='蔬果') 蔬果
 					.tag
 						a(href='#', title='蔬果') 蔬果
-
-			section#itemAboutBox
+			section.article.item
 				.panel
 					.panel-heading
-						| 關於本商品
+						| 小農故事
 					.panel-body
 						.inner
-							| 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
-
-			section#itemOwnerBox
+							p 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+			section.article.item
 				.panel
 					.panel-heading
-						| 農莊主人
+						| 農莊介紹
 					.panel-body
 						.inner
-							.six-thumb.bg
-								.inner
-									a(href='#', title='圖片說明')
-										.img(style="background-image:url('../images/owner.jpg');")
-							.name 阮勇光
-							.info
-								| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
-							.clear
-			section#itemNutrientBox
+							p 嚴選全球唯一珍貴稀有與台灣麝香猫同科台灣特有亞種，黃金果子狸腸道益生菌微生物體外熱醱酵科技生產，以環保健康概念的烘焙設備熱風間接加熱恒温低烘焙咖啡更衛生安全美味。
+			section.article.item
+				.panel
+					.panel-heading
+						| 影片介紹
+					.panel-body
+						.inner
+							.video
+								.six-thumb.ratio16-9
+									.inner
+										a(href='#', title='圖片說明')
+											.img
+												iframe(src='https://www.youtube.com/embed/EGjgJ20l09M', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+			section.article.item
+				.panel
+					.panel-heading
+						| 相關報導
+					.panel-body
+						.inner
+							.news
+								.six-thumb.ratio16-9
+									.inner
+										a(href='#', title='圖片說明')
+											.img(style="background-image:url('../images/owner.jpg');")
+								.info
+									| 喝我家的果子狸咖啡，滋味會在舌尖上跳舞！喝我家的果子狸咖啡，滋味會在舌尖上跳舞！喝我家的果子狸咖啡，滋味會在舌尖上跳舞！
+			section.article.item
 				.panel
 					.panel-heading
 						| 營養成分
@@ -171,47 +187,52 @@ block content
 									.col-xs-5.col-sm-5
 										strong 0
 										span 大卡
-			section#itemCertificateBox
+			section.article.item
 				.panel
 					.panel-heading
 						| 認證標章
 					.panel-body
 						.inner
-							ul
-								li
-									img(src="../images/certificate1.jpg")
-								li
-									img(src="../images/certificate2.jpg")
-			section#itemSeasonBox
+							.certificate
+								ul
+									li
+										img(src="../images/certificate1.jpg")
+									li
+										img(src="../images/certificate2.jpg")
+									li
+										img(src="../images/certificate2.jpg")
+									li
+										img(src="../images/certificate2.jpg")
+			section.article.item
 				.panel
 					.panel-heading
 						| 商品產季
 					.panel-body
 						.inner
 							| 每年11月至隔年4月
-			section#itemStorageBox
+			section.article.item
 				.panel
 					.panel-heading
 						| 保存方式
 					.panel-body
 						.inner
 							| 常溫保存3個月
-			section#itemPlantingAreaBox
+			section.article.item
 				.panel
 					.panel-heading
 						| 栽種面積
 					.panel-body
 						.inner
 							| 3公頃
-			section#itemRecipeBox
+			section.article.item
 				.panel
 					.panel-heading
 						| 烹調食譜
 					.panel-body
 						.inner
-							.items
+							.recipe
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
@@ -219,7 +240,7 @@ block content
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
@@ -227,7 +248,7 @@ block content
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
@@ -235,7 +256,7 @@ block content
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
@@ -243,7 +264,7 @@ block content
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
@@ -251,69 +272,91 @@ block content
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
 								.item
-									.six-thumb.bg
+									.six-thumb
 										.inner
 											a(href='#', title='食譜名稱')
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
 											.caption
 												a(href='#', title='食譜名稱')
 													span 食譜名稱
-			section#itemAddressBox
+			section.article.item#originbox
 				.panel
 					.panel-heading
 						| 產地位置
 					.panel-body
 						.inner
-							.add 台東縣卑南鄉龍過脈112號
-							.map
-								iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0523471663555!2d121.09390545154055!3d22.874524584954656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fbab570a366db%3A0x8f4da6cb310cc84c!2z5bGx6LGs5ZySLyDmnpzlrZDni7jlkpbllaE!5e0!3m2!1szh-TW!2stw!4v1516564425316" width="800" height="400" frameborder="0" style="border:0" allowfullscreen)
-			section#itemShippingInfoBox
+							.addmap
+								.add 台東縣卑南鄉龍過脈112號
+								.map
+									iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0523471663555!2d121.09390545154055!3d22.874524584954656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fbab570a366db%3A0x8f4da6cb310cc84c!2z5bGx6LGs5ZySLyDmnpzlrZDni7jlkpbllaE!5e0!3m2!1szh-TW!2stw!4v1516564425316" width="800" height="400" frameborder="0" style="border:0" allowfullscreen)
+			section.article.item#arrivalbox
 				.panel
 					.panel-heading
 						| 到貨時間說明
 					.panel-body
 						.inner
 							| 每年11月至隔年4月
-			section#itemDeliveryMethodBox
+			section.article.item#shipbox
 				.panel
 					.panel-heading
 						| 運送方式
 					.panel-body
 						.inner
 							| 常溫配送
-			section#itemDiscountPortfolioBox
+			section.setBox
 				.panel
 					.panel-heading
 						| 超值組合
 					.panel-body
-						.inner
-							.items
+						.set
+							.inner
 								.item
-									img(src='//placehold.it/300x300.png')
-									h4 組合名稱
+									.six-thumb
+										.inner
+											a(href='#', title='組合名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='組合名稱')
+													span 組合名稱
 								.item
-									img(src='//placehold.it/300x300.png')
-									h4 組合名稱
+									.six-thumb
+										.inner
+											a(href='#', title='組合名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='組合名稱')
+													span 組合名稱
 								.item
-									img(src='//placehold.it/300x300.png')
-									h4 組合名稱
-							.btnBox
-								button.btn.btn-primary
-									| 商品組合包   共 $750
-			section#itemRelatedBox
+									.six-thumb
+										.inner
+											a(href='#', title='組合名稱')
+												.img(style="background-image:url('http://placehold.it/600x600.png');")
+											.caption
+												a(href='#', title='組合名稱')
+													span 組合名稱
+								.item.more
+									a(href='#', title='')
+										| +2
+									.caption
+										a(href='#', title='組合名稱')
+											span 組合名稱
+					.panel-footer
+						button.btn.btn-primary
+							| 商品組合包   共 $750
+			section.relatedBox#relatedItem
 				.panel
 					.panel-heading
 						| 經常一起購買的商品
 					.panel-body
 						.inner
-							.items
+							.related
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -325,11 +368,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -341,11 +384,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -357,11 +400,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -373,11 +416,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -389,11 +432,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -405,11 +448,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 食譜名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -419,20 +462,21 @@ block content
 										.price
 											del $350
 											strong $999
-			section#itemOrderRelatedBox
+			section.relatedBox#otherRelated
 				.panel
 					.panel-heading
 						| 其他相關商品
 					.panel-body
+					.panel-body
 						.inner
-							.items
+							.related
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -444,11 +488,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -460,11 +504,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -476,11 +520,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -492,11 +536,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -508,11 +552,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -524,11 +568,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -664,23 +708,23 @@ block content
 										.author
 											.name 安娜
 											.date 六個月前
-							.btnBox
-								button.btn.btn-primary
-									| 查看全部5個評論
-			section#itemOrderUserBox
+					.panel-footer
+						button.btn.btn-primary
+							| 查看全部5個評論
+			section.relatedBox#otherUseralso
 				.panel
 					.panel-heading
 						| 其他的人也看了
 					.panel-body
 						.inner
-							.items
+							.related
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -692,11 +736,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -708,11 +752,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -724,11 +768,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -740,11 +784,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -756,11 +800,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
@@ -772,11 +816,11 @@ block content
 											strong $999
 								.item
 									a(href='#', title='商品名稱')
-										.six-thumb.bg
+										.six-thumb
 											.inner
 												.img(style="background-image:url('http://placehold.it/600x600.png');")
-												.caption
-														span 商品名稱
+											.caption
+												span 食譜名稱
 										.star
 											i.fa.fa-star
 											i.fa.fa-star
