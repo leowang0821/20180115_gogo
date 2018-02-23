@@ -34,7 +34,7 @@ header#six-header {
       @media (max-width: 768px) {
         left: 50%;
         padding: 15px;
-        margin-left: -65px;
+        margin-left: -100px;
       }
     }
     .headTitle {
@@ -254,6 +254,10 @@ header#six-header {
       right: auto;
       margin-left: -210px;
       left: 0;
+    }
+    @media(max-height: 569px) {
+      overflow-y: auto;
+      padding-bottom: 65px;
     }
     >.inner {
       &:after {

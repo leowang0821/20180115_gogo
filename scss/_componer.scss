@@ -13,7 +13,7 @@ section#mainCarousel {
 		overflow: hidden;
 		border-bottom: 1px solid $colorZ8;
 		@media (max-width:768px) {
-			min-height: 145px;
+			min-height: 200px;
 			// padding-top: calc(100% * .4545);
 		}
 		.owl-item {
@@ -24,24 +24,27 @@ section#mainCarousel {
 					min-height: 450px;
 					background-color: rgba(255, 255, 255, 1);
 					@media(max-width:768px){
-						min-height: 145px;
+						min-height: 200px;
+					}
+					&:before , &:after{
+						content: none;
 					}
 				}
 			}
-			.caption {
-				position: absolute;
-				bottom: 0;
-				line-height: 30px;
-				width: 100%;
-				display: block;
-				color: $colorZ9;
-				text-align: center;
-				background-color: rgba(255, 255, 255, 1);
-				opacity: 0;
-				&:hover {
-					opacity: .8;
-				}
-			}
+			// .caption {
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	line-height: 30px;
+			// 	width: 100%;
+			// 	display: block;
+			// 	color: $colorZ9;
+			// 	text-align: center;
+			// 	background-color: rgba(255, 255, 255, 1);
+			// 	opacity: 0;
+			// 	&:hover {
+			// 		opacity: .8;
+			// 	}
+			// }
 		}
 		.owl-dots {
 			margin-bottom: 15px;
@@ -364,13 +367,16 @@ section#recommendedfarm {
 					}
 				}
 			}
+			@media(max-width:768px){
+				display: none;
+			}
 		}
 		.panel-body {
 			padding: 10px 0;
 			>.inner {
 				padding-left: 40px;
 				padding-right: 40px;
-				overflow: hidden;
+				// overflow: hidden;
 				@media(max-width:768px){
 				padding-left: 0;
 				padding-right: 0;
@@ -384,16 +390,22 @@ section#recommendedfarm {
 				}
 				.item {
 					width: 100%;
-					max-width: 300px;
+					max-width: 200px;
 					display: inline-block;
 					.six-thumb {
 						transition: all .3s;
 						>.inner {
-
+							// @media(max-width:768px){
+							// 	padding: 0 15px;
+							// }
 						}
 						.inner > a {
 							@include aspect-ratio(1,1);
 							.img {
+								background-size: 100%;
+								@media(max-width:768px){
+									min-height: auto;
+								}
 								&:before {
 									content: none;
 								}
@@ -405,10 +417,12 @@ section#recommendedfarm {
 								content: "";
 								display: block;
 								width: 100%;
+								height: 1px;
 								clear: both;
 							}
 						}
 						.inner .caption {
+							display: none;
 						    a {
 						    	span {
 						    		font-size: .95em;
@@ -431,7 +445,7 @@ section#recommendedfarm {
 					}
 				}
 				.owl-dots {
-					margin-bottom: 20px;
+					// margin-bottom: 20px;
 					.owl-dot.active span,
 					.owl-dot:hover span {
 						background: $colorA5;
@@ -439,9 +453,13 @@ section#recommendedfarm {
 					@media(max-width:768px){
 						padding: 0;
 					}
+					@media(min-width:1750px){
+						margin-bottom: 20px;
+					}
 				}
 				.owl-nav {
 					display: block !important;
+					margin-top: 0;
 					@media(max-width:768px){
 						display: none !important;
 					}
@@ -481,6 +499,7 @@ section#recommendedfarm {
 
 section#goodslist {
 	padding: 0 15px;
+	margin-top: 0 !important;
 	@media(max-width:768px){
 		padding: 0;
 	}
