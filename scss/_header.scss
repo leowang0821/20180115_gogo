@@ -254,11 +254,13 @@ header#six-header {
       right: auto;
       margin-left: -210px;
       left: 0;
-    }
-    @media(max-height: 569px) {
       overflow-y: auto;
       padding-bottom: 65px;
     }
+    // @media(max-height: 569px) {
+    //   overflow-y: auto;
+    //   padding-bottom: 65px;
+    // }
     >.inner {
       &:after {
         content:"";
